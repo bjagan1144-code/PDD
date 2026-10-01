@@ -1,0 +1,17 @@
+fastapi
+uvicorn
+sqlalchemy
+pydantic
+pydantic-settings
+PyJWT
+bcrypt
+python-multipart
+scikit-learn
+pandas
+numpy
+joblib
+email-validator
+firebase-admin
+requests
+gunicorn
+

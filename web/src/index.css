@@ -1,0 +1,48 @@
+@import "tailwindcss";
+@config "../tailwind.config.js";
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-[#0b0f19] text-slate-100 font-sans antialiased min-h-screen overflow-x-hidden;
+  }
+
+  /* Custom Scrollbar for Biotech Interface */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-darkbg-950;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-medical-700/50 rounded-full hover:bg-medical-500/70 transition-colors;
+  }
+}
+
+@layer components {
+  /* Premium Glass Card Effect */
+  .glass-card {
+    @apply bg-[#111827]/70 backdrop-blur-md border border-slate-800 rounded-xl shadow-lg shadow-black/20 transition-all duration-300;
+  }
+  
+  .glass-card-hover {
+    @apply hover:border-medical-500/30 hover:shadow-medical-500/5 hover:-translate-y-0.5;
+  }
+
+  .interactive-glow {
+    @apply relative overflow-hidden;
+  }
+
+  .interactive-glow::after {
+    content: '';
+    @apply absolute inset-0 opacity-0 bg-gradient-to-r from-medical-500/10 via-biotech-500/10 to-transparent transition-opacity duration-300 pointer-events-none;
+  }
+
+  .interactive-glow:hover::after {
+    @apply opacity-100;
+  }
+}

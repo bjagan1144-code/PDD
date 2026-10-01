@@ -1,0 +1,91 @@
+{
+  "drugs": {
+    "Metformin": {
+      "id": "Metformin",
+      "name": "Metformin",
+      "solubility": 200.0,
+      "molecular_weight": 129.16,
+      "description": "Metformin hydrochloride is a highly water-soluble anti-diabetic biguanide drug."
+    },
+    "Paracetamol": {
+      "id": "Paracetamol",
+      "name": "Paracetamol",
+      "solubility": 14.0,
+      "molecular_weight": 151.16,
+      "description": "Paracetamol (acetaminophen) is a widely used analgesic and antipyretic drug sparingly soluble in water."
+    },
+    "Losartan": {
+      "id": "Losartan",
+      "name": "Losartan",
+      "solubility": 3.3,
+      "molecular_weight": 422.9,
+      "description": "Losartan potassium is an angiotensin II receptor antagonist used to treat high blood pressure, hydrophobic with moderate MW."
+    },
+    "Ibuprofen": {
+      "id": "Ibuprofen",
+      "name": "Ibuprofen",
+      "solubility": 0.021,
+      "molecular_weight": 206.29,
+      "description": "Ibuprofen is a non-steroidal anti-inflammatory drug (NSAID) with low water solubility."
+    }
+  },
+  "polymers": {
+    "PLA": {
+      "id": "PLA",
+      "name": "PLA",
+      "type": "Erodible",
+      "biodegradable": true,
+      "ph_response": "Low",
+      "description": "Polylactic acid (PLA) is a biodegradable, hydrophobic thermoplastic aliphatic polyester."
+    },
+    "Alginate": {
+      "id": "Alginate",
+      "name": "Alginate",
+      "type": "Hydrogel",
+      "biodegradable": true,
+      "ph_response": "Medium",
+      "description": "Alginate is a natural anionic polysaccharide hydrogel widely used for cell encapsulation and drug delivery."
+    },
+    "Gelatin": {
+      "id": "Gelatin",
+      "name": "Gelatin",
+      "type": "Swellable Matrix",
+      "biodegradable": true,
+      "ph_response": "High",
+      "description": "Gelatin is a swellable protein matrix obtained from collagen hydrolysate, highly temperature sensitive."
+    },
+    "Pectin": {
+      "id": "Pectin",
+      "name": "Pectin",
+      "type": "Swellable Matrix",
+      "biodegradable": true,
+      "ph_response": "Medium",
+      "description": "Pectin is a structural heteropolysaccharide polymer, moderately swellable and slightly pH responsive."
+    },
+    "Cellulose": {
+      "id": "Cellulose",
+      "name": "Cellulose",
+      "type": "Inert Matrix",
+      "biodegradable": true,
+      "ph_response": "Low",
+      "description": "Cellulose is an inert structural polysaccharide, biocompatible with low swelling indexes."
+    },
+    "Chitosan": {
+      "id": "Chitosan",
+      "name": "Chitosan",
+      "type": "Hydrogel",
+      "biodegradable": true,
+      "ph_response": "High",
+      "description": "Chitosan is a cationic biopolymer matrix swellable in acidic pH media."
+    }
+  },
+  "users": {
+    "mock-uid-b.jagan1144": {
+      "id": "mock-uid-b.jagan1144",
+      "name": "b.jagan1144",
+      "email": "b.jagan1144@gmail.com",
+      "role": "Researcher",
+      "created_at": "2026-10-01T09:58:24.589306"
+    }
+  }
+}
