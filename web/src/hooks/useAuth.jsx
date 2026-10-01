@@ -1,4 +1,6 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
+import { GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
+import { auth } from '../services/firebase';
 import { getStorageItem, setStorageItem, KEYS } from '../utils/storage';
 import api, { checkBackendHealth, isMockMode } from '../services/api';
 
@@ -82,6 +84,41 @@ export const AuthProvider = ({ children }) => {
       } else {
         setLoading(false);
         throw new Error("Invalid email or password");
+      }
+    }
+  };
+
+  const loginWithGoogle = async () => {
+    setLoading(true);
+    try {
+      const provider = new GoogleAuthProvider();
+      provider.setCustomParameters({ prompt: 'select_account' });
+      const result = await signInWithPopup(auth, provider);
+      const firebaseUser = result.user;
+
+      const userData = {
+        id: firebaseUser.uid,
+        name: firebaseUser.displayName || firebaseUser.email?.split('@')[0] || 'Researcher',
+        email: firebaseUser.email,
+        role: 'Researcher',
+        avatarUrl: firebaseUser.photoURL || 'https://images.unsplash.com/photo-1537368910025-700350fe46c7?auto=format&fit=crop&q=80&w=200'
+      };
+
+      setUser(userData);
+      setStorageItem(KEYS.USER, userData);
+      setLoading(false);
+      return userData;
+    } catch (err) {
+      setLoading(false);
+      console.error("Google Authentication error:", err);
+      if (err.code === 'auth/popup-closed-by-user' || err.code === 'auth/cancelled-popup-request') {
+        throw new Error("Google sign-in was cancelled.");
+      } else if (err.code === 'auth/operation-not-allowed') {
+        throw new Error("Google sign-in is not enabled in Firebase Console.");
+      } else if (err.code === 'auth/unauthorized-domain') {
+        throw new Error("This domain is not authorized for Google Sign-In in Firebase Console.");
+      } else {
+        throw new Error(err.message || "Google sign-in failed. Please try again.");
       }
     }
   };
@@ -174,10 +211,12 @@ export const AuthProvider = ({ children }) => {
     user,
     loading,
     login,
+    loginWithGoogle,
     loginAsDemo,
     register,
     logout
   };
+
 
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
 };
