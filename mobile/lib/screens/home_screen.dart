@@ -115,29 +115,6 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
               ),
               const Spacer(),
-              // Warning Disclaimer
-              Container(
-                padding: const EdgeInsets.all(12),
-                decoration: BoxDecoration(
-                  color: Colors.red.withOpacity(0.05),
-                  borderRadius: BorderRadius.circular(10),
-                  border: Border.all(color: Colors.red.withOpacity(0.15)),
-                ),
-                child: Row(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Icon(Icons.warning_amber_rounded, size: 18, color: Colors.red[300]),
-                    const SizedBox(width: 10),
-                    const Expanded(
-                      child: Text(
-                        'Academic research prototype only. Simulation profiles are computational estimates, not clinical dosing recommendations.',
-                        style: TextStyle(fontSize: 10, color: Colors.grey, height: 1.3),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-              const SizedBox(height: 24),
               // Explore CTA Button
               ElevatedButton(
                 onPressed: () {

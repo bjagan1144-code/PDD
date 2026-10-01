@@ -3,8 +3,8 @@ import 'package:http/http.dart' as http;
 import 'package:shared_preferences/shared_preferences.dart';
 
 class ApiService {
-  // Default to Android Emulator local loopback gateway
-  String baseUrl = 'http://10.0.2.2:8000/api';
+  // Default to live Render backend with emulator/local toggle support
+  String baseUrl = 'https://biopatch-backend.onrender.com/api';
 
   static final ApiService _instance = ApiService._internal();
   factory ApiService() => _instance;
@@ -14,7 +14,7 @@ class ApiService {
 
   Future<void> _loadConfig() async {
     final prefs = await SharedPreferences.getInstance();
-    baseUrl = prefs.getString('api_base_url') ?? 'http://10.0.2.2:8000/api';
+    baseUrl = prefs.getString('api_base_url') ?? 'https://biopatch-backend.onrender.com/api';
   }
 
   Future<void> setBaseUrl(String url) async {
