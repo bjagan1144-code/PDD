@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "site": "biopatch-ai",
+    "site": "biopatch-ai-fire",
     "public": "dist",
     "ignore": [
       "firebase.json",
