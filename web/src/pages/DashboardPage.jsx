@@ -12,8 +12,7 @@ import {
   Ruler, 
   Gauge, 
   ArrowUpRight,
-  History as HistoryIcon,
-  AlertTriangle
+  History as HistoryIcon
 } from 'lucide-react';
 import { 
   ResponsiveContainer, 
@@ -113,15 +112,6 @@ const DashboardPage = () => {
 
   return (
     <div className="space-y-6 animate-fadeIn">
-      {/* Safety Notice Banner */}
-      <div className="flex items-start space-x-3 p-4 rounded-lg border border-amber-500/20 bg-amber-500/5 text-xs text-amber-300 leading-normal">
-        <AlertTriangle className="h-5 w-5 text-amber-400 flex-shrink-0 mt-0.5" />
-        <div>
-          <span className="font-bold uppercase tracking-wider block mb-0.5">Academic Research Prototype Notice:</span>
-          BioPatch AI is an academic research and simulation prototype. Predictions and release profiles are computational estimates based on mathematical and machine-learning models. They are not clinical dosing recommendations, medical advice, or validated pharmaceutical specifications. The results must not be used for patient treatment or real-world drug formulation decisions.
-        </div>
-      </div>
-
       {/* Welcome Header */}
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
         <div>

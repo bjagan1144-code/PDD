@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { FileText, Eye, Download, Trash2, Printer, Activity, AlertTriangle, ShieldCheck } from 'lucide-react';
+import { FileText, Eye, Download, Trash2, Printer, Activity, ShieldCheck } from 'lucide-react';
 import Button from '../components/Button';
 import Badge from '../components/Badge';
 import Modal from '../components/Modal';
@@ -117,14 +117,11 @@ Kinetics Analysis Summary:
 ${sim.analysis}
 
 --------------------------------------------------
-4. MODEL ACCREDITATION & IMPORTANT SAFETY NOTICE
+4. MODEL ACCREDITATION
 --------------------------------------------------
 Modeling Algorithm: Random Forest Regression
 Accreditation: Computational Research Prototype
 Dataset: Synthetic Research Dataset — For Academic Demonstration
-
-IMPORTANT SAFETY NOTICE:
-BioPatch AI is an academic research and simulation prototype. Predictions and release profiles are computational estimates based on mathematical and machine-learning models. They are not clinical dosing recommendations, medical advice, or validated pharmaceutical specifications. The results must not be used for patient treatment or real-world drug formulation decisions.
 ==================================================
     `;
 
@@ -341,18 +338,11 @@ BioPatch AI is an academic research and simulation prototype. Predictions and re
               </div>
             </div>
  
-            {/* Model Info & Disclaimer */}
-            <div className="space-y-3 pt-3 border-t border-slate-800 text-[10px] text-slate-500 font-medium">
+            {/* Model Info */}
+            <div className="pt-3 border-t border-slate-800 text-[10px] text-slate-500 font-medium">
               <div className="flex justify-between">
                 <span>Model Calibration: Random Forest ensemble</span>
                 <span>Dataset: Synthetic Research Dataset — For Academic Demonstration</span>
-              </div>
-              <div className="flex items-start space-x-2.5 p-3 rounded bg-rose-500/5 border border-rose-500/10 text-rose-300/80 leading-normal">
-                <AlertTriangle className="h-4.5 w-4.5 text-rose-400 flex-shrink-0" />
-                <div>
-                  <span className="font-bold uppercase tracking-wider block text-rose-300 mb-1">Academic Research Prototype Notice:</span>
-                  BioPatch AI is an academic research and simulation prototype. Predictions and release profiles are computational estimates based on mathematical and machine-learning models. They are not clinical dosing recommendations, medical advice, or validated pharmaceutical specifications. The results must not be used for patient treatment or real-world drug formulation decisions.
-                </div>
               </div>
             </div>
 

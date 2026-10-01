@@ -236,12 +236,6 @@ const LandingPage = () => {
             <p className="mt-1 text-[10px] text-slate-600">Development of an Intelligent Biopolymer Drug-Delivery Patch with Real-Time Release Modeling</p>
           </div>
         </div>
-        <div className="max-w-7xl mx-auto px-6 lg:px-12 mt-6 pt-6 border-t border-slate-900/50 text-slate-500 leading-normal text-center">
-          <p className="max-w-4xl mx-auto text-[10px]">
-            <strong className="text-slate-400 uppercase tracking-wider block mb-1">Medical Disclaimer & Academic Limitations</strong>
-            BioPatch AI is an academic research and simulation prototype. Predictions and release profiles are computational estimates based on mathematical and machine-learning models. They are not clinical dosing recommendations, medical advice, or validated pharmaceutical specifications. The results must not be used for patient treatment or real-world drug formulation decisions.
-          </p>
-        </div>
       </footer>
     </div>
   );

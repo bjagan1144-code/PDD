@@ -144,9 +144,6 @@ const LoginPage = () => {
           <GoogleIcon />
           Sign In with Google
         </Button>
-        <div className="pt-4 border-t border-slate-800 text-[10px] text-slate-500 leading-normal text-center">
-          <strong>Academic & Safety Disclaimer:</strong> BioPatch AI is an academic research and simulation prototype. Predictions and release profiles are computational estimates based on mathematical and machine-learning models. They are not clinical dosing recommendations, medical advice, or validated pharmaceutical specifications. The results must not be used for patient treatment or real-world drug formulation decisions.
-        </div>
       </div>
 
       {toastMessage && (

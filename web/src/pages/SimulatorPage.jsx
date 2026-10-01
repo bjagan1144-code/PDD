@@ -7,7 +7,6 @@ import {
   FileText, 
   HelpCircle, 
   Info, 
-  AlertTriangle, 
   CheckCircle,
   Database,
   Sliders,
@@ -547,16 +546,6 @@ const SimulatorPage = () => {
                   </p>
                 </div>
               </div>
-
-              {/* Academic Disclaimer */}
-              <div className="flex items-start space-x-3 p-4 rounded-lg border border-rose-500/20 bg-rose-500/5 text-[11px] text-rose-300 leading-normal">
-                <AlertTriangle className="h-5.5 w-5.5 text-rose-400 flex-shrink-0 mt-0.5" />
-                <div>
-                  <span className="font-bold uppercase tracking-wider block mb-1">Academic Research Prototype Notice:</span>
-                  BioPatch AI is an academic research and simulation prototype. Predictions and release profiles are computational estimates based on mathematical and machine-learning models. They are not clinical dosing recommendations, medical advice, or validated pharmaceutical specifications. The results must not be used for patient treatment or real-world drug formulation decisions.
-                </div>
-              </div>
-
             </div>
           )}
 
