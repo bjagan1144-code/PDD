@@ -228,7 +228,9 @@ const SimulationHistoryPage = () => {
                         {sim.riskLevel}
                       </Badge>
                     </td>
-                    <td className="py-3.5 px-4 text-slate-500">{sim.date}</td>
+                    <td className="py-3.5 px-4 text-slate-500">
+                      {sim.date || (sim.created_at ? sim.created_at.replace('T', ' ').substring(0, 16) : 'Recent')}
+                    </td>
                     <td className="py-3.5 px-4 text-center">
                       <div className="flex items-center justify-center space-x-1.5">
                         <button

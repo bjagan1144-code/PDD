@@ -1,5 +1,5 @@
-from pydantic import BaseModel, EmailStr, Field
-from typing import List, Optional
+from pydantic import BaseModel, EmailStr, Field, ConfigDict
+from typing import List, Optional, Union
 from datetime import datetime
 
 # --- AUTH SCHEMAS ---
@@ -18,10 +18,9 @@ class UserResponse(BaseModel):
     name: str
     email: EmailStr
     role: str
-    created_at: datetime
+    created_at: Union[datetime, str]
 
-    class Config:
-        from_attributes = True
+    model_config = ConfigDict(from_attributes=True)
 
 class Token(BaseModel):
     access_token: str
@@ -36,11 +35,14 @@ class DrugResponse(BaseModel):
     id: str
     name: str
     description: Optional[str] = None
-    solubility: float
-    molecular_weight: float
+    solubility: Union[float, str]
+    molecular_weight: Optional[float] = None
+    molecularWeight: Optional[float] = None
+    category: Optional[str] = "General Active"
+    halfLife: Optional[str] = "N/A"
+    status: Optional[str] = "Completed"
 
-    class Config:
-        from_attributes = True
+    model_config = ConfigDict(from_attributes=True)
 
 class PolymerResponse(BaseModel):
     id: str
@@ -49,16 +51,20 @@ class PolymerResponse(BaseModel):
     type: str
     biodegradable: bool
     ph_response: Optional[str] = None
+    phResponse: Optional[str] = None
+    concentrationRange: Optional[str] = "1.0% - 5.0%"
+    releaseBehavior: Optional[str] = "Sustained matrix erosion diffusion."
+    swellingRatio: Optional[str] = "200%"
+    degradationRate: Optional[str] = "14-30 days"
 
-    class Config:
-        from_attributes = True
+    model_config = ConfigDict(from_attributes=True)
 
 
 # --- SIMULATION SCHEMAS ---
 class SimulationRunRequest(BaseModel):
     drugName: str
     polymerName: str
-    drugLoading: float = Field(..., gt=0)
+    drugLoading: float = Field(..., ge=0)
     polymerConcentration: float = Field(..., gt=0)
     patchThickness: float = Field(..., gt=0)
     temperature: float = Field(..., ge=10, le=60)
@@ -70,6 +76,8 @@ class ReleaseCurvePoint(BaseModel):
     time: float
     predicted: float
     target: float
+    releasedMg: Optional[float] = None
+    remainingMg: Optional[float] = None
 
 class SimulationResponse(BaseModel):
     id: str
@@ -89,10 +97,14 @@ class SimulationResponse(BaseModel):
     controlledReleaseScore: int
     riskLevel: str
     analysis: str
+    releasedAmountMg: Optional[float] = None
+    remainingDrugMg: Optional[float] = None
+    date: Optional[str] = None
+    created_at: Optional[str] = None
+    createdAt: Optional[str] = None
     releaseCurve: List[ReleaseCurvePoint]
 
-    class Config:
-        from_attributes = True
+    model_config = ConfigDict(from_attributes=True)
 
 
 # --- REPORT SCHEMAS ---
@@ -104,5 +116,4 @@ class ReportResponse(BaseModel):
     summary: str
     date: str
 
-    class Config:
-        from_attributes = True
+    model_config = ConfigDict(from_attributes=True)

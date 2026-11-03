@@ -98,13 +98,15 @@ const DashboardPage = () => {
   // Build the chart data using the latest simulation curve
   const latestSim = simulations[0] || {
     drugName: 'No Active Formulation',
-    polymerName: 'None',
-    releaseCurve: [
-      { time: 0, predicted: 0, target: 0 },
-      { time: 6, predicted: 50, target: 50 },
-      { time: 12, predicted: 100, target: 100 }
-    ]
+    polymerName: 'None'
   };
+  const chartCurve = (latestSim.releaseCurve && latestSim.releaseCurve.length > 0)
+    ? latestSim.releaseCurve
+    : [
+        { time: 0, predicted: 0, target: 0 },
+        { time: 6, predicted: 50, target: 50 },
+        { time: 12, predicted: 100, target: 100 }
+      ];
 
   if (isLoading) {
     return <LoadingSpinner message="Generating analytics workspace..." size="lg" />;
@@ -190,7 +192,7 @@ const DashboardPage = () => {
 
           <div className="h-72 w-full">
             <ResponsiveContainer width="100%" height="100%">
-              <AreaChart data={latestSim.releaseCurve}>
+              <AreaChart data={chartCurve}>
                 <defs>
                   <linearGradient id="colorPredicted" x1="0" y1="0" x2="0" y2="1">
                     <stop offset="5%" stopColor="#0ea5e9" stopOpacity={0.2}/>
@@ -316,7 +318,9 @@ const DashboardPage = () => {
                         {sim.riskLevel}
                       </Badge>
                     </td>
-                    <td className="py-3.5 px-3 text-right text-slate-500">{sim.date.split(' ')[0]}</td>
+                    <td className="py-3.5 px-3 text-right text-slate-500">
+                      {sim.date ? sim.date.split(' ')[0] : 'Recent'}
+                    </td>
                   </tr>
                 ))}
                 {simulations.length === 0 && (

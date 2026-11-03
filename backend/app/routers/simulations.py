@@ -44,7 +44,9 @@ def run_simulation(
 
     # Generate a unique simulation ID
     sim_id = f"sim-{uuid.uuid4().hex[:6]}"
-    now_str = datetime.datetime.utcnow().isoformat()
+    now_dt = datetime.datetime.now(datetime.timezone.utc)
+    now_str = now_dt.isoformat()
+    formatted_date = now_dt.strftime("%Y-%m-%d %H:%M")
 
     # Save simulation configuration and outputs to Firestore simulations collection
     sim_data = {
@@ -64,7 +66,10 @@ def run_simulation(
         "time_to_50_percent": result["timeTo50Percent"],
         "controlled_release_score": result["controlledReleaseScore"],
         "simulation_risk_indicator": result["riskLevel"],
-        "created_at": now_str
+        "released_amount_mg": result.get("releasedAmountMg", 0.0),
+        "remaining_drug_mg": result.get("remainingDrugMg", 0.0),
+        "created_at": now_str,
+        "date": formatted_date
     }
     
     try:
@@ -90,7 +95,13 @@ def run_simulation(
 
     # Format output curve array
     curve_points = [
-        {"time": float(pt["time"]), "predicted": float(pt["predicted"]), "target": float(pt["target"])}
+        {
+            "time": float(pt["time"]),
+            "predicted": float(pt["predicted"]),
+            "target": float(pt["target"]),
+            "releasedMg": float(pt.get("releasedMg", 0.0)),
+            "remainingMg": float(pt.get("remainingMg", 0.0))
+        }
         for pt in result["releaseCurve"]
     ]
 
@@ -112,6 +123,11 @@ def run_simulation(
         "controlledReleaseScore": result["controlledReleaseScore"],
         "riskLevel": result["riskLevel"],
         "analysis": result["analysis"],
+        "releasedAmountMg": result.get("releasedAmountMg", 0.0),
+        "remainingDrugMg": result.get("remainingDrugMg", 0.0),
+        "date": formatted_date,
+        "created_at": now_str,
+        "createdAt": now_str,
         "releaseCurve": curve_points
     }
 
@@ -146,6 +162,13 @@ def get_simulations_history(
             }
             res = simulate_release(params)
             
+            created_at_str = sim.get("created_at", "")
+            try:
+                dt = datetime.datetime.fromisoformat(created_at_str)
+                date_str = dt.strftime("%Y-%m-%d %H:%M")
+            except Exception:
+                date_str = sim.get("date") or created_at_str
+
             response_list.append({
                 "id": sim["id"],
                 "drugName": sim["drug_id"],
@@ -164,6 +187,11 @@ def get_simulations_history(
                 "controlledReleaseScore": sim["controlled_release_score"],
                 "riskLevel": sim["simulation_risk_indicator"],
                 "analysis": res["analysis"],
+                "releasedAmountMg": res.get("releasedAmountMg", 0.0),
+                "remainingDrugMg": res.get("remainingDrugMg", 0.0),
+                "date": date_str,
+                "created_at": created_at_str,
+                "createdAt": created_at_str,
                 "releaseCurve": res["releaseCurve"]
             })
             
@@ -199,6 +227,13 @@ def get_simulation(
         }
         res = simulate_release(params)
 
+        created_at_str = sim.get("created_at", "")
+        try:
+            dt = datetime.datetime.fromisoformat(created_at_str)
+            date_str = dt.strftime("%Y-%m-%d %H:%M")
+        except Exception:
+            date_str = sim.get("date") or created_at_str
+
         return {
             "id": sim["id"],
             "drugName": sim["drug_id"],
@@ -217,6 +252,11 @@ def get_simulation(
             "controlledReleaseScore": sim["controlled_release_score"],
             "riskLevel": sim["simulation_risk_indicator"],
             "analysis": res["analysis"],
+            "releasedAmountMg": res.get("releasedAmountMg", 0.0),
+            "remainingDrugMg": res.get("remainingDrugMg", 0.0),
+            "date": date_str,
+            "created_at": created_at_str,
+            "createdAt": created_at_str,
             "releaseCurve": res["releaseCurve"]
         }
     except HTTPException:

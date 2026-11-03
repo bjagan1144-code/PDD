@@ -32,6 +32,18 @@ ephemeral/
 .env
 .env.local
 *.pem
+secrets/
+backend/secrets/
+*service-account*.json
+*firebase-adminsdk*.json
+*.backup.json
+
+# Local database dumps and backups
+mobile_flutter_backup/
+backend/mock_firestore.json
+backend/mock_firestore.backup.json
+backend/load_test_results.json
+
 
 # IDEs & System files
 .vscode/

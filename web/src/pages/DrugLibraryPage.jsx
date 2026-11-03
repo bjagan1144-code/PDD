@@ -62,9 +62,9 @@ const DrugLibraryPage = () => {
   const handleOpenEdit = (drug) => {
     setSelectedDrug(drug);
     setName(drug.name);
-    setCategory(drug.category);
-    setDescription(drug.description);
-    setMolecularWeight(drug.molecularWeight || '');
+    setCategory(drug.category || 'General Active');
+    setDescription(drug.description || '');
+    setMolecularWeight(drug.molecularWeight || drug.molecular_weight || '');
     setSolubility(drug.solubility || '');
     setHalfLife(drug.halfLife || '');
     setIsAddEditOpen(true);
@@ -205,7 +205,7 @@ const DrugLibraryPage = () => {
                 </p>
 
                 <div className="grid grid-cols-2 gap-2 text-[10px] font-semibold text-slate-500 uppercase tracking-wider pt-2 border-t border-slate-800/60">
-                  <div>MW: <span className="text-slate-300 font-bold">{drug.molecularWeight ? `${drug.molecularWeight} g/mol` : 'N/A'}</span></div>
+                  <div>MW: <span className="text-slate-300 font-bold">{(drug.molecularWeight || drug.molecular_weight) ? `${drug.molecularWeight || drug.molecular_weight} g/mol` : 'N/A'}</span></div>
                   <div>Half-life: <span className="text-slate-300 font-bold">{drug.halfLife || 'N/A'}</span></div>
                 </div>
               </div>
@@ -259,7 +259,7 @@ const DrugLibraryPage = () => {
             <div className="grid grid-cols-2 gap-4">
               <div>
                 <span className="text-[10px] font-bold text-slate-500 uppercase tracking-wider block">Molecular Weight</span>
-                <span className="text-slate-300">{selectedDrug.molecularWeight ? `${selectedDrug.molecularWeight} g/mol` : 'N/A'}</span>
+                <span className="text-slate-300">{(selectedDrug.molecularWeight || selectedDrug.molecular_weight) ? `${selectedDrug.molecularWeight || selectedDrug.molecular_weight} g/mol` : 'N/A'}</span>
               </div>
               <div>
                 <span className="text-[10px] font-bold text-slate-500 uppercase tracking-wider block">Biological Half-Life</span>

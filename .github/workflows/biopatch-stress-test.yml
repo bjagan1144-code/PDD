@@ -1,0 +1,71 @@
+name: BioPatch AI Multi-Stage Stress Performance Test
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+  workflow_dispatch:
+
+jobs:
+  stress-test:
+    name: Execute Multi-Stage Stress Test (100 -> 1000 Users)
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install Backend Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r backend/requirements.txt
+
+      - name: Install Performance-Testing Dependencies
+        run: |
+          pip install locust httpx pandas openpyxl numpy
+
+      - name: Start FastAPI Backend Service
+        run: |
+          cd backend
+          nohup python -m uvicorn app.main:app --host 127.0.0.1 --port 8000 > uvicorn.log 2>&1 &
+          echo "Backend server process launched in background."
+
+      - name: Wait for Backend Health Readiness
+        run: |
+          python -c "
+          import time, httpx
+          url = 'http://127.0.0.1:8000/health'
+          for i in range(30):
+              try:
+                  res = httpx.get(url, timeout=2.0)
+                  if res.status_code == 200:
+                      print('Backend is ready and responding to health check!')
+                      exit(0)
+              except Exception:
+                  pass
+              time.sleep(1)
+          print('Backend health check timed out!')
+          exit(1)
+          "
+
+      - name: Execute BioPatch AI Multi-Stage Stress Test
+        run: |
+          python tests/performance/stress/run_stress_test.py --url http://127.0.0.1:8000 --stage-duration 20
+
+      - name: Upload Stress Test Reports Artifacts
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: BioPatch_Stress_Test_Reports
+          path: |
+            tests/performance/reports/BioPatch_Stress_Test_Report.xlsx
+            tests/performance/reports/BioPatch_Stress_Test_Report.html
+            tests/performance/reports/BioPatch_Stress_Test_Summary.json
+          retention-days: 30

@@ -5,8 +5,15 @@ import firebase_admin
 from firebase_admin import credentials, firestore
 from dotenv import load_dotenv
 
-# Locate and load the root env configuration
-load_dotenv(os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))), '.env'))
+# Locate and load the env configuration (search backend/.env first, then root .env)
+_backend_env = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), '.env')
+_root_env = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))), '.env')
+if os.path.exists(_backend_env):
+    load_dotenv(_backend_env)
+elif os.path.exists(_root_env):
+    load_dotenv(_root_env)
+else:
+    load_dotenv()
 
 # --- MOCK FIRESTORE INTERFACE COMPATIBILITY LAYER ---
 class MockDocument:
@@ -98,53 +105,62 @@ class MockCollectionReference:
         docs = self.store.get_collection(self.collection_name)
         return MockQuery(self.collection_name, docs).stream()
 
+import threading
+
 class MockFirestoreStore:
     def __init__(self, filename="mock_firestore.json"):
         # Put mock database file inside backend workspace
         self.filename = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", filename)
         self.data = {}
+        self._lock = threading.RLock()
         self.load()
 
     def load(self):
-        if os.path.exists(self.filename):
-            try:
-                with open(self.filename, "r") as f:
-                    self.data = json.load(f)
-            except:
+        with self._lock:
+            if os.path.exists(self.filename):
+                try:
+                    with open(self.filename, "r") as f:
+                        self.data = json.load(f)
+                except:
+                    self.data = {}
+            else:
                 self.data = {}
-        else:
-            self.data = {}
 
     def save(self):
-        try:
-            with open(self.filename, "w") as f:
-                json.dump(self.data, f, indent=2)
-        except Exception as e:
-            print(f"Error saving mock firestore data: {e}")
+        with self._lock:
+            try:
+                with open(self.filename, "w") as f:
+                    json.dump(self.data, f, indent=2)
+            except Exception as e:
+                print(f"Error saving mock firestore data: {e}")
 
     def get_collection(self, collection_name):
-        return self.data.setdefault(collection_name, {})
+        with self._lock:
+            return self.data.setdefault(collection_name, {})
 
     def get_doc(self, collection_name, doc_id):
-        coll = self.get_collection(collection_name)
-        return coll.get(doc_id)
+        with self._lock:
+            coll = self.get_collection(collection_name)
+            return coll.get(doc_id)
 
     def set_doc(self, collection_name, doc_id, data):
-        coll = self.get_collection(collection_name)
-        cleaned_data = {}
-        for k, v in data.items():
-            if hasattr(v, "isoformat"):
-                cleaned_data[k] = v.isoformat()
-            else:
-                cleaned_data[k] = v
-        coll[doc_id] = cleaned_data
-        self.save()
+        with self._lock:
+            coll = self.get_collection(collection_name)
+            cleaned_data = {}
+            for k, v in data.items():
+                if hasattr(v, "isoformat"):
+                    cleaned_data[k] = v.isoformat()
+                else:
+                    cleaned_data[k] = v
+            coll[doc_id] = cleaned_data
+            self.save()
 
     def delete_doc(self, collection_name, doc_id):
-        coll = self.get_collection(collection_name)
-        if doc_id in coll:
-            del coll[doc_id]
-            self.save()
+        with self._lock:
+            coll = self.get_collection(collection_name)
+            if doc_id in coll:
+                del coll[doc_id]
+                self.save()
 
 class MockFirestoreClient:
     def __init__(self):
@@ -154,6 +170,19 @@ class MockFirestoreClient:
         return MockCollectionReference(collection_name, self.store)
 
 # --- INITIALIZATION LOGIC ---
+backend_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+# 1. Check for service account JSON file
+service_account_path = os.getenv("FIREBASE_SERVICE_ACCOUNT_KEY_PATH")
+if service_account_path and not os.path.isabs(service_account_path):
+    service_account_path = os.path.normpath(os.path.join(backend_dir, service_account_path))
+
+if not service_account_path or not os.path.exists(service_account_path):
+    default_sa = os.path.normpath(os.path.join(backend_dir, "secrets", "firebase-service-account.json"))
+    if os.path.exists(default_sa):
+        service_account_path = default_sa
+
+# 2. Check for inline environment variables
 private_key = os.getenv("FIREBASE_PRIVATE_KEY")
 if private_key:
     private_key = private_key.replace("\\n", "\n")
@@ -171,32 +200,48 @@ firebase_config_dict = {
     "client_x509_cert_url": os.getenv("FIREBASE_CLIENT_X509_CERT_URL")
 }
 
-use_live_firebase = False
-has_credentials = firebase_config_dict["private_key"] is not None and firebase_config_dict["client_email"] is not None
+has_service_account_file = service_account_path is not None and os.path.exists(service_account_path)
+has_credentials_dict = firebase_config_dict["private_key"] is not None and firebase_config_dict["client_email"] is not None
 has_adc = os.getenv("GOOGLE_APPLICATION_CREDENTIALS") is not None
 
-if has_credentials or has_adc:
-    if not firebase_admin._apps:
-        try:
-            if has_credentials:
+use_live_firebase = False
+
+if has_service_account_file or has_credentials_dict or has_adc:
+    try:
+        if not firebase_admin._apps:
+            if has_service_account_file:
+                cred = credentials.Certificate(service_account_path)
+                firebase_admin.initialize_app(cred)
+            elif has_credentials_dict:
                 cred = credentials.Certificate(firebase_config_dict)
                 firebase_admin.initialize_app(cred)
             else:
                 firebase_admin.initialize_app()
-            use_live_firebase = True
-            print("Firebase Admin SDK successfully initialized.")
-        except Exception as e:
-            print(f"Warning: Firebase Admin initialization error: {e}. Falling back to MockFirestoreClient.")
-            use_live_firebase = False
-    else:
         use_live_firebase = True
+        print("Firebase Admin SDK successfully initialized with live credentials.")
+    except Exception as e:
+        # STRICT REQUIREMENT: Do not silently fall back to mock storage if Firebase connection fails
+        raise RuntimeError(
+            f"FATAL: Firebase Admin SDK initialization failed: {e}. "
+            "Credentials were provided, so silent fallback to mock storage is disabled. "
+            "Please check service account key permissions and network connectivity."
+        ) from e
 else:
     print("No Firebase credentials detected. Falling back to local MockFirestoreClient.")
 
+storage_mode = "live_firestore" if use_live_firebase else "mock_firestore"
+
 if use_live_firebase:
-    db = firestore.client()
+    try:
+        db = firestore.client()
+        # Verify connection
+        _ = db.project
+    except Exception as e:
+        raise RuntimeError(f"FATAL: Failed to obtain live Firestore client: {e}") from e
 else:
     db = MockFirestoreClient()
+
+db.storage_mode = storage_mode
 
 def get_db():
     """ Dependency yielding the active Cloud Firestore or MockFirestore client """

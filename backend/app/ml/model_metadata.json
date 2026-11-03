@@ -1,0 +1,158 @@
+{
+  "r2": 0.7638,
+  "mae": "6.59%",
+  "mae_raw": 6.5851,
+  "rmse": "11.51%",
+  "rmse_raw": 11.5065,
+  "mse": 132.4003,
+  "samples": 1200,
+  "train_samples": 960,
+  "test_samples": 240,
+  "model_name": "Random Forest Regressor",
+  "version": "2.0-verified",
+  "dataset": "Synthetic In-Silico Formulation Dataset (1,200 runs)",
+  "dataset_file": "synthetic_dataset.csv",
+  "is_synthetic": true,
+  "experimental_data_status": "No clinical wet-lab transdermal release dataset is present in local repository; trained on reproducible mathematical Weibull/Korsmeyer-Peppas formulations with 80/20 train/test split.",
+  "feature_names": [
+    "drugLoading",
+    "polymerConcentration",
+    "patchThickness",
+    "temperature",
+    "pH",
+    "moisture",
+    "duration",
+    "drug_Metformin",
+    "drug_Paracetamol",
+    "drug_Losartan",
+    "drug_Ibuprofen",
+    "polymer_PLA",
+    "polymer_Alginate",
+    "polymer_Gelatin",
+    "polymer_Pectin",
+    "polymer_Cellulose",
+    "polymer_Chitosan"
+  ],
+  "feature_importances": [
+    {
+      "name": "patchThickness",
+      "importance": 33.05
+    },
+    {
+      "name": "temperature",
+      "importance": 14.66
+    },
+    {
+      "name": "drug_Metformin",
+      "importance": 12.45
+    },
+    {
+      "name": "polymer_PLA",
+      "importance": 8.89
+    },
+    {
+      "name": "polymer_Gelatin",
+      "importance": 6.39
+    },
+    {
+      "name": "moisture",
+      "importance": 5.74
+    },
+    {
+      "name": "polymerConcentration",
+      "importance": 5.2
+    },
+    {
+      "name": "duration",
+      "importance": 3.52
+    },
+    {
+      "name": "drugLoading",
+      "importance": 3.32
+    },
+    {
+      "name": "pH",
+      "importance": 2.39
+    },
+    {
+      "name": "drug_Ibuprofen",
+      "importance": 1.71
+    },
+    {
+      "name": "drug_Paracetamol",
+      "importance": 1.04
+    },
+    {
+      "name": "polymer_Chitosan",
+      "importance": 0.78
+    },
+    {
+      "name": "polymer_Cellulose",
+      "importance": 0.25
+    },
+    {
+      "name": "polymer_Alginate",
+      "importance": 0.24
+    },
+    {
+      "name": "polymer_Pectin",
+      "importance": 0.23
+    },
+    {
+      "name": "drug_Losartan",
+      "importance": 0.13
+    }
+  ],
+  "validation_samples": [
+    {
+      "sample": 1,
+      "actual": 7.5,
+      "predicted": 9.5
+    },
+    {
+      "sample": 2,
+      "actual": 7.8,
+      "predicted": 9.5
+    },
+    {
+      "sample": 3,
+      "actual": 6.1,
+      "predicted": 9.3
+    },
+    {
+      "sample": 4,
+      "actual": 1.0,
+      "predicted": 3.4
+    },
+    {
+      "sample": 5,
+      "actual": 0.6,
+      "predicted": 1.4
+    },
+    {
+      "sample": 6,
+      "actual": 10.0,
+      "predicted": 22.8
+    },
+    {
+      "sample": 7,
+      "actual": 3.1,
+      "predicted": 10.2
+    },
+    {
+      "sample": 8,
+      "actual": 0.7,
+      "predicted": 1.8
+    },
+    {
+      "sample": 9,
+      "actual": 16.3,
+      "predicted": 26.1
+    },
+    {
+      "sample": 10,
+      "actual": 15.6,
+      "predicted": 34.8
+    }
+  ]
+}

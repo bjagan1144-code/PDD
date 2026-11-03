@@ -1,0 +1,50 @@
+{
+  "test_type": "STRESS_TESTING",
+  "timestamp": "2026-11-03 23:08:26",
+  "stages": [
+    {
+      "users": 50,
+      "duration_sec": 10,
+      "total_requests": 653,
+      "successful_requests": 107,
+      "failed_requests": 546,
+      "error_percentage": 83.61,
+      "requests_per_second": 65.3,
+      "avg_latency_ms": 652.09,
+      "min_latency_ms": 5.23,
+      "p50_latency_ms": 608.04,
+      "p90_latency_ms": 1329.88,
+      "p95_latency_ms": 1446.7,
+      "p99_latency_ms": 1857.56,
+      "max_latency_ms": 2726.28,
+      "cpu_usage_pct": 34.5,
+      "memory_usage_pct": 89.5,
+      "firebase_latency_ms": -1.0
+    }
+  ],
+  "recovery": {
+    "users": 25,
+    "duration_sec": 8,
+    "total_requests": 388,
+    "successful_requests": 70,
+    "failed_requests": 318,
+    "error_percentage": 81.96,
+    "requests_per_second": 48.5,
+    "avg_latency_ms": 399.14,
+    "min_latency_ms": 4.77,
+    "p50_latency_ms": 290.33,
+    "p90_latency_ms": 906.08,
+    "p95_latency_ms": 1006.35,
+    "p99_latency_ms": 1365.83,
+    "max_latency_ms": 1568.29,
+    "cpu_usage_pct": 43.8,
+    "memory_usage_pct": 90.1,
+    "firebase_latency_ms": 84.28
+  },
+  "breaking_point_analysis": {
+    "highest_stable_concurrency": 200,
+    "peak_system_throughput_rps": 65.3,
+    "degradation_knee_users": 150,
+    "recovery_status": "PARTIAL_RECOVERY"
+  }
+}

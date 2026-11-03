@@ -209,7 +209,7 @@ const PolymerLibraryPage = () => {
                 </div>
                 
                 <div className="text-xs text-slate-400 leading-normal space-y-1.5 pt-1 font-medium">
-                  <p><span className="text-slate-500 font-bold uppercase text-[9px] tracking-wider block">Kinetics:</span> {poly.releaseBehavior}</p>
+                  <p><span className="text-slate-500 font-bold uppercase text-[9px] tracking-wider block">Kinetics:</span> {poly.releaseBehavior || poly.description || 'Sustained matrix diffusion.'}</p>
                 </div>
 
                 <div className="grid grid-cols-2 gap-2 text-[10px] font-semibold text-slate-500 uppercase tracking-wider pt-2 border-t border-slate-800/60">

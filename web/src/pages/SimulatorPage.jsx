@@ -164,23 +164,15 @@ const SimulatorPage = () => {
     try {
       const result = await simulationService.runSimulation(params);
       
-      // Inject physical noise into a secondary curve called "Simulated Curve"
-      // to make it look like a real experimental overlay
-      const enhancedCurve = result.releaseCurve.map(point => {
-        const noise = (Math.random() - 0.5) * 2.5; // +-1.25% noise
-        let simulatedVal = parseFloat((point.predicted + noise).toFixed(1));
-        if (simulatedVal < 0) simulatedVal = 0;
-        if (simulatedVal > 100) simulatedVal = 100;
-        
-        return {
-          ...point,
-          simulated: simulatedVal
-        };
-      });
+      // Map curve points deterministically without artificial random noise
+      const cleanCurve = result.releaseCurve.map(point => ({
+        ...point,
+        simulated: point.predicted
+      }));
 
       setSimulationResult({
         ...result,
-        releaseCurve: enhancedCurve
+        releaseCurve: cleanCurve
       });
       setToastType('success');
       setToastMessage("AI simulation run complete and registered in history.");
@@ -295,7 +287,7 @@ const SimulatorPage = () => {
             <Slider
               label="Drug Loading Dose"
               name="drugLoading"
-              min={10}
+              min={0}
               max={100}
               step={1}
               value={drugLoading}

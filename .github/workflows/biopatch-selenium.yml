@@ -1,0 +1,90 @@
+name: BioPatch AI Selenium Web Automation Test Suite
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+  workflow_dispatch:
+
+jobs:
+  selenium-tests:
+    name: Execute Selenium End-to-End Web Automation Tests
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js 20
+        uses: actions/setup-node@v5
+        with:
+          node-version: '20'
+          cache: 'npm'
+          cache-dependency-path: 'web/package-lock.json'
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install Web & Backend Dependencies
+        run: |
+          cd web
+          npm install
+          cd ../backend
+          pip install -r requirements.txt
+          pip install selenium httpx openpyxl pandas pyyaml
+
+      - name: Install Chrome Browser for Selenium
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y google-chrome-stable
+
+      - name: Start FastAPI Backend Service
+        run: |
+          cd backend
+          nohup python -m uvicorn app.main:app --host 127.0.0.1 --port 8000 > uvicorn.log 2>&1 &
+          echo "FastAPI backend started."
+
+      - name: Start React Vite Web Application
+        run: |
+          cd web
+          nohup npm run dev -- --host 127.0.0.1 --port 5173 > vite.log 2>&1 &
+          echo "React Vite web app server started."
+
+      - name: Wait for Web & Backend Readiness
+        run: |
+          python -c "
+          import time, httpx
+          backend_url = 'http://127.0.0.1:8000/health'
+          web_url = 'http://localhost:5173'
+          for i in range(30):
+              try:
+                  res_b = httpx.get(backend_url, timeout=2.0)
+                  res_w = httpx.get(web_url, timeout=2.0)
+                  if res_b.status_code == 200 and res_w.status_code == 200:
+                      print('Backend & Web App ready for Selenium tests!')
+                      exit(0)
+              except Exception:
+                  pass
+              time.sleep(1)
+          print('Health check timed out!')
+          exit(1)
+          "
+
+      - name: Execute Selenium E2E Web Tests
+        run: |
+          python tests/selenium/run_selenium_tests.py --web-url http://localhost:5173 --backend-url http://127.0.0.1:8000
+
+      - name: Upload Selenium Test Reports Artifacts
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: BioPatch_Selenium_Test_Reports
+          path: |
+            tests/performance/reports/BioPatch_Selenium_Test_Report.xlsx
+            tests/performance/reports/BioPatch_Selenium_Test_Report.html
+            tests/performance/reports/BioPatch_Selenium_Test_Summary.json
+          retention-days: 30

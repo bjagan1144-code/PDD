@@ -16,7 +16,14 @@ def is_valid_num(v, min_val=None, max_val=None):
 def simulate_release(params: dict) -> dict:
     """
     Simulates cumulative drug release kinetics using Higuchi / Korsmeyer-Peppas models.
-    Conforms to input validation, extreme parameters limits, and numerical stability guards.
+    Conforms to input validation, boundary condition limits, and numerical stability guards.
+
+    Assumptions & Limitations:
+    1. Zero drug loading yields exactly 0.0% release and 0.0 mg delivered.
+    2. Kinetics follow Weibull/Korsmeyer-Peppas diffusion: Q(t) = 100 * (1 - exp(-K * t^n)).
+    3. Exponent n: 0.45 for Fickian matrix erosion (PLA), 0.55 for swellable networks (Alginate, Chitosan), 0.50 default.
+    4. Release percentage is strictly monotonically non-decreasing and bounded between 0% and 100%.
+    5. Released drug (mg) + remaining drug (mg) equals initial drug loading within rounding tolerance.
     """
     raw_drug_loading = params.get("drugLoading")
     raw_polymer_concentration = params.get("polymerConcentration")
@@ -29,8 +36,8 @@ def simulate_release(params: dict) -> dict:
     drug_name = params.get("drugName", "Ibuprofen")
     polymer_name = params.get("polymerName", "Chitosan")
 
-    # Strict Validation Check
-    if not (is_valid_num(raw_drug_loading, 0.001) and
+    # Strict Validation Check (drug loading >= 0 allowed)
+    if not (is_valid_num(raw_drug_loading, 0.0) and
             is_valid_num(raw_polymer_concentration, 0.001) and
             is_valid_num(raw_patch_thickness, 0.001) and
             is_valid_num(raw_temperature, 10, 60) and
@@ -46,6 +53,43 @@ def simulate_release(params: dict) -> dict:
     ph = float(raw_ph)
     moisture = float(raw_moisture)
     duration = float(raw_duration)
+
+    # Special Boundary Case: Zero drug loading produces exactly zero release
+    if drug_loading == 0.0:
+        steps = []
+        hours_step = max(1.0, round(duration / 10.0))
+        t_val = 0.0
+        while t_val <= duration:
+            target = (t_val / duration) * 100.0 if duration > 0 else 0.0
+            steps.append({
+                "time": float(t_val),
+                "predicted": 0.0,
+                "target": round(target, 1),
+                "releasedMg": 0.0,
+                "remainingMg": 0.0
+            })
+            t_val += hours_step
+        if steps[-1]["time"] != duration:
+            steps.append({
+                "time": float(duration),
+                "predicted": 0.0,
+                "target": 100.0,
+                "releasedMg": 0.0,
+                "remainingMg": 0.0
+            })
+        return {
+            "predictedRelease": 0.0,
+            "peakReleaseRate": 0.0,
+            "timeTo50Percent": "N/A",
+            "estimatedDuration": f"{duration} hours",
+            "controlledReleaseScore": 100,
+            "riskLevel": "Low",
+            "analysis": "Zero drug loading specified (blank vehicle patch). Formulation contains polymer matrix only; cumulative drug release is 0.0 mg (0.0%).",
+            "releasedAmountMg": 0.0,
+            "remainingDrugMg": 0.0,
+            "drugLoading": 0.0,
+            "releaseCurve": steps
+        }
 
     # 1. Establish baseline drug diffusion constant
     drug_solubility_modifier = 1.0
@@ -139,13 +183,21 @@ def simulate_release(params: dict) -> dict:
         predicted = 100.0 * (1.0 - math.exp(-release_rate_constant * math.pow(t_val, n)))
         if predicted > 100.0:
             predicted = 100.0
+        # Enforce strict monotonicity (cumulative release never decreases)
+        if predicted < last_val:
+            predicted = last_val
 
-        target = (t_val / duration) * 100.0
+        target = (t_val / duration) * 100.0 if duration > 0 else 0.0
+        pred_rounded = round(predicted, 1)
+        rel_mg = round((pred_rounded / 100.0) * drug_loading, 2)
+        rem_mg = round(max(0.0, drug_loading - rel_mg), 2)
 
         steps.append({
             "time": float(t_val),
-            "predicted": round(predicted, 1),
-            "target": round(target, 1)
+            "predicted": pred_rounded,
+            "target": round(target, 1),
+            "releasedMg": rel_mg,
+            "remainingMg": rem_mg
         })
 
         if t_val > 0:
@@ -162,13 +214,21 @@ def simulate_release(params: dict) -> dict:
     # Ensure last element matches exactly duration
     if steps[-1]["time"] != duration:
         final_predicted = 100.0 * (1.0 - math.exp(-release_rate_constant * math.pow(duration, n)))
+        final_predicted = min(100.0, max(last_val, final_predicted))
+        pred_rounded = round(final_predicted, 1)
+        rel_mg = round((pred_rounded / 100.0) * drug_loading, 2)
+        rem_mg = round(max(0.0, drug_loading - rel_mg), 2)
         steps.append({
             "time": float(duration),
-            "predicted": round(min(100.0, final_predicted), 1),
-            "target": 100.0
+            "predicted": pred_rounded,
+            "target": 100.0,
+            "releasedMg": rel_mg,
+            "remainingMg": rem_mg
         })
 
     final_release = steps[-1]["predicted"]
+    released_amount_mg = round((final_release / 100.0) * drug_loading, 2)
+    remaining_drug_mg = round(max(0.0, drug_loading - released_amount_mg), 2)
 
     # Calculate time to 50%
     if time_to_50 == -1.0:
@@ -232,5 +292,8 @@ def simulate_release(params: dict) -> dict:
         "controlledReleaseScore": int(score),
         "riskLevel": risk_level,
         "analysis": analysis,
+        "releasedAmountMg": float(released_amount_mg),
+        "remainingDrugMg": float(remaining_drug_mg),
+        "drugLoading": float(drug_loading),
         "releaseCurve": steps
     }

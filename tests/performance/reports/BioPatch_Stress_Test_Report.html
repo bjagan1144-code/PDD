@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BioPatch AI - Multi-Stage Stress Test Report</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #0F172A;
+            --card-bg: #1E293B;
+            --accent: #38BDF8;
+            --accent-glow: rgba(56, 189, 248, 0.15);
+            --text: #F8FAFC;
+            --text-muted: #94A3B8;
+            --border: #334155;
+            --success: #22C55E;
+            --warning: #F59E0B;
+            --danger: #EF4444;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            margin: 0;
+            padding: 30px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+        .title h1 {
+            margin: 0;
+            font-size: 28px;
+            color: var(--text);
+        }
+        .subtitle {
+            color: var(--text-muted);
+            font-size: 14px;
+            margin-top: 5px;
+        }
+        .status-badge {
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 14px;
+            background: rgba(239, 68, 68, 0.15);
+            color: var(--danger);
+            border: 1px solid var(--danger);
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 20px;
+        }
+        .card-label {
+            font-size: 12px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 8px;
+        }
+        .card-value {
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--accent);
+        }
+        .card-sub {
+            font-size: 12px;
+            color: var(--text-muted);
+            margin-top: 4px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: var(--card-bg);
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid var(--border);
+            margin-bottom: 30px;
+        }
+        th, td {
+            padding: 14px 18px;
+            text-align: left;
+            border-bottom: 1px solid var(--border);
+            font-size: 14px;
+        }
+        th {
+            background: #0F172A;
+            color: var(--text-muted);
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 11px;
+            letter-spacing: 0.05em;
+        }
+        code {
+            background: #090D16;
+            padding: 4px 8px;
+            border-radius: 4px;
+            color: #38BDF8;
+            font-family: monospace;
+        }
+        .badge {
+            padding: 4px 8px;
+            border-radius: 6px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        .badge-success { background: rgba(34, 197, 94, 0.15); color: var(--success); }
+        .badge-warning { background: rgba(245, 158, 11, 0.15); color: var(--warning); }
+        .badge-danger { background: rgba(239, 68, 68, 0.15); color: var(--danger); }
+        .error-item {
+            background: #2D1517;
+            border: 1px solid #7F1D1D;
+            padding: 12px 16px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            display: flex;
+            gap: 12px;
+            align-items: center;
+        }
+        .error-count {
+            background: var(--danger);
+            color: white;
+            font-weight: bold;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+        }
+        .no-errors {
+            background: rgba(34, 197, 94, 0.1);
+            border: 1px solid var(--success);
+            color: var(--success);
+            padding: 16px;
+            border-radius: 8px;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="title">
+                <h1>BioPatch AI Multi-Stage Stress Test Report</h1>
+                <div class="subtitle">Execution Timestamp: 2026-10-06 12:50:40 | Host: http://127.0.0.1:8000</div>
+            </div>
+            <div class="status-badge">STRESS TEST COMPLETE</div>
+        </div>
+
+        <div class="grid">
+            <div class="card">
+                <div class="card-label">Max Stable Load</div>
+                <div class="card-value">Below 100 Users</div>
+                <div class="card-sub">Error Rate &lt; 5%</div>
+            </div>
+            <div class="card">
+                <div class="card-label">Degradation Threshold</div>
+                <div class="card-value">100 Virtual Users (P95: 33180.98 ms)</div>
+                <div class="card-sub">Latency Increase Point</div>
+            </div>
+            <div class="card">
+                <div class="card-label">Breaking Point</div>
+                <div class="card-value">250 Virtual Users (Error Rate: 100.0%, Timeouts: 201)</div>
+                <div class="card-sub">Failure / Queue Starvation</div>
+            </div>
+            <div class="card">
+                <div class="card-label">Recovery Status</div>
+                <div class="card-value" style="font-size: 16px;">FAILED RECOVERY (Persistent thread pool exhaustion or error state)</div>
+                <div class="card-sub">Post-Stress Resilience</div>
+            </div>
+        </div>
+
+        <h2>Multi-Stage Concurrency Progression</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Stage</th>
+                    <th>Users</th>
+                    <th>Total Reqs</th>
+                    <th>Passed</th>
+                    <th>Failed</th>
+                    <th>Error Rate</th>
+                    <th>RPS</th>
+                    <th>Avg</th>
+                    <th>P50</th>
+                    <th>P95</th>
+                    <th>P99</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+        <tr>
+            <td><strong>Stage 1 (100 Users)</strong></td>
+            <td>100</td>
+            <td>100</td>
+            <td>59</td>
+            <td>41</td>
+            <td><span class="badge badge-danger">41.0%</span></td>
+            <td><strong>2.56</strong></td>
+            <td>17647.97 ms</td>
+            <td>17713.86 ms</td>
+            <td><strong>33180.98 ms</strong></td>
+            <td>36619.2 ms</td>
+        </tr>
+        
+        <tr>
+            <td><strong>Stage 2 (250 Users)</strong></td>
+            <td>250</td>
+            <td>250</td>
+            <td>0</td>
+            <td>250</td>
+            <td><span class="badge badge-danger">100.0%</span></td>
+            <td><strong>3.3</strong></td>
+            <td>43873.06 ms</td>
+            <td>46707.45 ms</td>
+            <td><strong>71756.22 ms</strong></td>
+            <td>74017.56 ms</td>
+        </tr>
+        
+        <tr>
+            <td><strong>Stage 3 (500 Users)</strong></td>
+            <td>500</td>
+            <td>500</td>
+            <td>0</td>
+            <td>500</td>
+            <td><span class="badge badge-danger">100.0%</span></td>
+            <td><strong>2.57</strong></td>
+            <td>95128.21 ms</td>
+            <td>100786.92 ms</td>
+            <td><strong>174868.0 ms</strong></td>
+            <td>189493.89 ms</td>
+        </tr>
+        
+        <tr>
+            <td><strong>Stage 4 (750 Users)</strong></td>
+            <td>750</td>
+            <td>750</td>
+            <td>0</td>
+            <td>750</td>
+            <td><span class="badge badge-danger">100.0%</span></td>
+            <td><strong>3.08</strong></td>
+            <td>107924.73 ms</td>
+            <td>99872.64 ms</td>
+            <td><strong>230712.77 ms</strong></td>
+            <td>240117.23 ms</td>
+        </tr>
+        
+        <tr>
+            <td><strong>Stage 5 (1000 Users)</strong></td>
+            <td>1000</td>
+            <td>1000</td>
+            <td>0</td>
+            <td>1000</td>
+            <td><span class="badge badge-danger">100.0%</span></td>
+            <td><strong>5.27</strong></td>
+            <td>95724.7 ms</td>
+            <td>95927.3 ms</td>
+            <td><strong>179484.64 ms</strong></td>
+            <td>186787.94 ms</td>
+        </tr>
+        
+        <tr>
+            <td><strong>Stage 6 (Recovery - 50 Users)</strong></td>
+            <td>50</td>
+            <td>50</td>
+            <td>0</td>
+            <td>50</td>
+            <td><span class="badge badge-danger">100.0%</span></td>
+            <td><strong>3.91</strong></td>
+            <td>6871.84 ms</td>
+            <td>6503.94 ms</td>
+            <td><strong>11364.25 ms</strong></td>
+            <td>11722.91 ms</td>
+        </tr>
+        
+            </tbody>
+        </table>
+
+        <h2>Overall Endpoint Statistics</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Endpoint</th>
+                    <th>Total</th>
+                    <th>Passed</th>
+                    <th>Failed</th>
+                    <th>Error Rate</th>
+                    <th>Avg</th>
+                    <th>Min</th>
+                    <th>Max</th>
+                    <th>P50</th>
+                    <th>P95</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+        <tr>
+            <td><code>GET /api/drugs</code></td>
+            <td>563</td>
+            <td>26</td>
+            <td>537</td>
+            <td><span class="badge badge-warning">95.38%</span></td>
+            <td>91357.58 ms</td>
+            <td>730.59 ms</td>
+            <td>241203.08 ms</td>
+            <td>76306.55 ms</td>
+            <td><strong>218525.04 ms</strong></td>
+        </tr>
+        
+        <tr>
+            <td><code>GET /api/polymers</code></td>
+            <td>493</td>
+            <td>17</td>
+            <td>476</td>
+            <td><span class="badge badge-warning">96.55%</span></td>
+            <td>89762.47 ms</td>
+            <td>499.47 ms</td>
+            <td>238691.2 ms</td>
+            <td>84436.55 ms</td>
+            <td><strong>186860.54 ms</strong></td>
+        </tr>
+        
+        <tr>
+            <td><code>GET /api/dashboard</code></td>
+            <td>538</td>
+            <td>7</td>
+            <td>531</td>
+            <td><span class="badge badge-warning">98.7%</span></td>
+            <td>86087.48 ms</td>
+            <td>2180.09 ms</td>
+            <td>240556.45 ms</td>
+            <td>77570.12 ms</td>
+            <td><strong>185743.24 ms</strong></td>
+        </tr>
+        
+        <tr>
+            <td><code>GET /api/reports</code></td>
+            <td>525</td>
+            <td>9</td>
+            <td>516</td>
+            <td><span class="badge badge-warning">98.29%</span></td>
+            <td>86337.49 ms</td>
+            <td>2224.16 ms</td>
+            <td>242412.25 ms</td>
+            <td>78851.51 ms</td>
+            <td><strong>186659.06 ms</strong></td>
+        </tr>
+        
+        <tr>
+            <td><code>POST /api/simulate</code></td>
+            <td>531</td>
+            <td>0</td>
+            <td>531</td>
+            <td><span class="badge badge-warning">100.0%</span></td>
+            <td>94123.43 ms</td>
+            <td>2406.55 ms</td>
+            <td>242098.35 ms</td>
+            <td>93267.77 ms</td>
+            <td><strong>186502.39 ms</strong></td>
+        </tr>
+        
+            </tbody>
+        </table>
+
+        <h2>Captured Error Logs</h2>
+        
+            <div class="error-item">
+                <span class="error-count">242x</span>
+                <code>Request Timeout (15s)</code>
+            </div>
+            
+            <div class="error-item">
+                <span class="error-count">2349x</span>
+                <code>All connection attempts failed</code>
+            </div>
+            
+    </div>
+</body>
+</html>

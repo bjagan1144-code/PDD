@@ -1,13 +1,16 @@
 import os
 import datetime
 from fastapi import APIRouter, Depends
-from app.database import db
+from app.database import db, MockFirestoreClient
 from app.routers.auth import get_current_user
 from app.ml.predictor import model, MODEL_PATH
+from app.simulation.engine import simulate_release
 
 router = APIRouter(prefix="/api/dashboard", tags=["Dashboard Summary"])
 
-@router.get("/summary")
+@router.get("", response_model=dict)
+@router.get("/", response_model=dict)
+@router.get("/summary", response_model=dict)
 def get_dashboard_summary(
     current_user: dict = Depends(get_current_user)
 ):
@@ -35,15 +38,34 @@ def get_dashboard_summary(
             avg_release = round(sum(float(s["predicted_release"]) for s in simulations) / total, 1)
             avg_score = int(round(sum(int(s["controlled_release_score"]) for s in simulations) / total))
             
-            # Take up to 4 recent simulations
+            # Take up to 4 recent simulations with full curves
             for sim in simulations[:4]:
                 created_at_str = sim.get("created_at", "")
                 try:
                     dt = datetime.datetime.fromisoformat(created_at_str)
                     date_str = dt.strftime("%Y-%m-%d %H:%M")
-                except:
-                    date_str = created_at_str
-                    
+                except Exception:
+                    date_str = sim.get("date") or created_at_str
+
+                # Ensure curve is populated for dashboard graphing
+                curve = []
+                try:
+                    params = {
+                        "drugName": sim.get("drug_id", "Ibuprofen"),
+                        "polymerName": sim.get("polymer_id", "Chitosan"),
+                        "drugLoading": float(sim.get("drug_loading", 50.0)),
+                        "polymerConcentration": float(sim.get("polymer_concentration", 3.0)),
+                        "patchThickness": float(sim.get("patch_thickness", 1.0)),
+                        "temperature": float(sim.get("temperature", 37.0)),
+                        "pH": float(sim.get("ph", 7.0)),
+                        "moisture": float(sim.get("moisture", 50.0)),
+                        "duration": float(sim.get("duration", 24.0))
+                    }
+                    sim_calc = simulate_release(params)
+                    curve = sim_calc["releaseCurve"]
+                except Exception:
+                    curve = []
+
                 recent.append({
                     "id": sim["id"],
                     "drugName": sim["drug_id"],
@@ -51,7 +73,8 @@ def get_dashboard_summary(
                     "predictedRelease": sim["predicted_release"],
                     "duration": int(sim["duration"]),
                     "riskLevel": sim["simulation_risk_indicator"],
-                    "date": date_str
+                    "date": date_str,
+                    "releaseCurve": curve
                 })
 
         latest_sim = simulations[0] if total > 0 else None
@@ -64,6 +87,7 @@ def get_dashboard_summary(
 
         # Verify model file presence
         model_loaded = model is not None and os.path.exists(MODEL_PATH)
+        is_mock_db = isinstance(db, MockFirestoreClient)
 
         return {
             "totalSimulations": total,
@@ -73,6 +97,7 @@ def get_dashboard_summary(
             "environmentalConditions": env_conditions,
             "recentSimulations": recent,
             "backendStatus": "connected",
+            "databaseStatus": "mock_firestore" if is_mock_db else "live_firestore",
             "modelStatus": "loaded" if model_loaded else "unavailable"
         }
     except Exception as e:

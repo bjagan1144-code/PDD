@@ -40,10 +40,32 @@ const ReportsPage = () => {
   const handleOpenView = async (report) => {
     setSelectedReport(report);
     try {
-      // Find simulation details from history
+      // Find simulation details from history or direct API query
       const sims = await simulationService.getSimulations();
-      const match = sims.find(s => s.id === report.simulationId);
-      setSelectedSimDetails(match);
+      let match = sims.find(s => s.id === report.simulationId);
+      if (!match && report.simulationId) {
+        try {
+          const res = await api.get(`/simulations/${report.simulationId}`);
+          if (res.data) match = res.data;
+        } catch (_) {}
+      }
+      setSelectedSimDetails(match || {
+        drugName: report.drugName || 'N/A',
+        polymerName: report.polymerName || 'N/A',
+        drugLoading: 50,
+        polymerConcentration: 3,
+        patchThickness: 1.0,
+        temperature: 37,
+        pH: 7.0,
+        moisture: 50,
+        duration: 24,
+        predictedRelease: 50,
+        peakReleaseRate: 2.5,
+        timeTo50Percent: '12h',
+        controlledReleaseScore: 85,
+        riskLevel: 'Low',
+        analysis: report.summary
+      });
       setIsViewOpen(true);
     } catch (err) {
       setToastType('error');

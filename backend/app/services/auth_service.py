@@ -1,6 +1,6 @@
 import bcrypt
 import jwt
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 import os
 
 SECRET_KEY = os.getenv("SECRET_KEY", "9478f7e27c5dbf5f40954b4d6b63390c58a5f4e19191d90c01cf26a8d8e57be7")
@@ -23,9 +23,9 @@ def create_access_token(data: dict, expires_delta: timedelta = None) -> str:
     """ Encodes user identity data into a signed JWT token """
     to_encode = data.copy()
     if expires_delta:
-        expire = datetime.utcnow() + expires_delta
+        expire = datetime.now(timezone.utc) + expires_delta
     else:
-        expire = datetime.utcnow() + timedelta(minutes=ACCESS_TOKEN_EXPIRE_MINUTES)
+        expire = datetime.now(timezone.utc) + timedelta(minutes=ACCESS_TOKEN_EXPIRE_MINUTES)
     to_encode.update({"exp": expire})
     encoded_jwt = jwt.encode(to_encode, SECRET_KEY, algorithm=ALGORITHM)
     return encoded_jwt

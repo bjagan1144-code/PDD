@@ -1,0 +1,286 @@
+{
+  "summary": {
+    "timestamp": "2026-11-03 23:03:42",
+    "total_tests": 25,
+    "passed_tests": 25,
+    "failed_tests": 0,
+    "pass_rate_pct": 100.0
+  },
+  "test_results": [
+    {
+      "test_id": "SEL-001",
+      "test_name": "Home Page Loading & Branding",
+      "module": "Home / Landing",
+      "steps": "1. Navigate to /\n2. Verify page title and BIOPATCH AI hero branding text",
+      "expected": "Home page loads cleanly with correct branding text",
+      "actual": "Home page loaded successfully with expected branding text.",
+      "status": "PASS",
+      "error_message": "",
+      "execution_time_sec": 2.42
+    },
+    {
+      "test_id": "SEL-002",
+      "test_name": "Home Page Navigation to Login",
+      "module": "Home / Landing",
+      "steps": "1. Navigate to /\n2. Click 'Sign In' or 'Explore Portal' link\n3. Verify redirect to /login",
+      "expected": "URL updates to /login and Login page renders",
+      "actual": "Landing page navigation correctly redirected to /login.",
+      "status": "PASS",
+      "error_message": "",
+      "execution_time_sec": 2.36
+    },
+    {
+      "test_id": "SEL-003",
+      "test_name": "Login Page Form Elements Render",
+      "module": "Login / Auth",
+      "steps": "1. Navigate to /login\n2. Inspect Email, Password, and Submit button fields",
+      "expected": "All form inputs and buttons are visible and active",
+      "actual": "Login page form elements (email, password, submit button) rendered correctly.",
+      "status": "PASS",
+      "error_message": "",
+      "execution_time_sec": 1.24
+    },
+    {
+      "test_id": "SEL-004",
+      "test_name": "Login Form Validation (Empty Fields)",
+      "module": "Login / Auth",
+      "steps": "1. Navigate to /login\n2. Click 'Sign In' without filling inputs\n3. Check alert toast",
+      "expected": "Validation alert requires email and password",
+      "actual": "Login form validation correctly blocked empty form submission.",
+      "status": "PASS",
+      "error_message": "",
+      "execution_time_sec": 2.23
+    },
+    {
+      "test_id": "SEL-005",
+      "test_name": "Login Invalid Credentials Error Toast",
+      "module": "Login / Auth",
+      "steps": "1. Navigate to /login\n2. Enter invalid email and password\n3. Click 'Sign In'",
+      "expected": "Error toast notifies invalid credentials",
+      "actual": "Invalid login attempt handled with error toast/message.",
+      "status": "PASS",
+      "error_message": "",
+      "execution_time_sec": 3.87
+    },
+    {
+      "test_id": "SEL-006",
+      "test_name": "Login Demo Researcher Authentication",
+      "module": "Login / Auth",
+      "steps": "1. Navigate to /login\n2. Enter demo.researcher@biopatch.ai / password\n3. Click 'Sign In'",
+      "expected": "User authenticated and redirected to /dashboard",
+      "actual": "Demo researcher authentication succeeded and redirected to /dashboard.",
+      "status": "PASS",
+      "error_message": "",
+      "execution_time_sec": 4.65
+    },
+    {
+      "test_id": "SEL-007",
+      "test_name": "Registration Page Form Rendering",
+      "module": "Registration",
+      "steps": "1. Navigate to /register\n2. Inspect Name, Email, Role, Password, Confirm Password fields",
+      "expected": "Registration form fields rendered correctly",
+      "actual": "Registration form fields (Name, Email, Role, Passwords) rendered correctly.",
+      "status": "PASS",
+      "error_message": "",
+      "execution_time_sec": 1.26
+    },
+    {
+      "test_id": "SEL-008",
+      "test_name": "Registration Password Mismatch Validation",
+      "module": "Registration",
+      "steps": "1. Navigate to /register\n2. Enter non-matching passwords\n3. Submit form",
+      "expected": "Error message alerts passwords do not match",
+      "actual": "Password mismatch validation triggered error message as expected.",
+      "status": "PASS",
+      "error_message": "",
+      "execution_time_sec": 3.52
+    },
+    {
+      "test_id": "SEL-009",
+      "test_name": "Registration Success & Workspace Auto-Login",
+      "module": "Registration",
+      "steps": "1. Navigate to /register\n2. Fill out unique user credentials\n3. Submit form",
+      "expected": "User profile registered and redirected to /dashboard",
+      "actual": "User registration for user_1793727175@biopatch.ai succeeded and navigated to workspace.",
+      "status": "PASS",
+      "error_message": "",
+      "execution_time_sec": 5.37
+    },
+    {
+      "test_id": "SEL-010",
+      "test_name": "Forgot Password Link Dispatch",
+      "module": "Forgot Password",
+      "steps": "1. Navigate to /forgot-password\n2. Enter registered email address\n3. Click 'Send Reset Link'",
+      "expected": "Success toast confirms reset link dispatched to email",
+      "actual": "Forgot password reset link request submitted successfully.",
+      "status": "PASS",
+      "error_message": "",
+      "execution_time_sec": 3.41
+    },
+    {
+      "test_id": "SEL-011",
+      "test_name": "Dashboard Metric Cards Rendering",
+      "module": "Dashboard",
+      "steps": "1. Log in and navigate to /dashboard\n2. Inspect summary stat cards",
+      "expected": "Total Simulations, Avg Release, Score cards displayed",
+      "actual": "Dashboard metric summary cards rendered successfully.",
+      "status": "PASS",
+      "error_message": "",
+      "execution_time_sec": 4.15
+    },
+    {
+      "test_id": "SEL-012",
+      "test_name": "Dashboard Recharts SVG Graph Rendering",
+      "module": "Dashboard",
+      "steps": "1. Navigate to /dashboard\n2. Inspect chart canvas container",
+      "expected": "Recharts SVG chart elements rendered properly",
+      "actual": "Recharts SVG chart component rendered properly on Dashboard.",
+      "status": "PASS",
+      "error_message": "",
+      "execution_time_sec": 0.05
+    },
+    {
+      "test_id": "SEL-013",
+      "test_name": "Simulator Controls (Inputs, Sliders, Dropdowns)",
+      "module": "Simulator",
+      "steps": "1. Navigate to /simulator\n2. Inspect drug/polymer selects and parameter sliders",
+      "expected": "All formulation dropdowns and sliders accessible",
+      "actual": "Simulator form controls rendered (2 dropdowns, 7 sliders).",
+      "status": "PASS",
+      "error_message": "",
+      "execution_time_sec": 1.64
+    },
+    {
+      "test_id": "SEL-014",
+      "test_name": "Simulator Kinetics Engine Execution Workflow",
+      "module": "Simulator",
+      "steps": "1. Navigate to /simulator\n2. Click 'Run Kinetics Simulation'\n3. Observe calculation progress",
+      "expected": "Simulation result curve and risk indices displayed",
+      "actual": "Kinetics simulation run completed and output metrics rendered.",
+      "status": "PASS",
+      "error_message": "",
+      "execution_time_sec": 3.19
+    },
+    {
+      "test_id": "SEL-015",
+      "test_name": "AI Prediction Model Metrics",
+      "module": "AI Prediction",
+      "steps": "1. Navigate to /ai-prediction\n2. Inspect Random Forest R\u00b2 accuracy and RMSE metrics",
+      "expected": "AI prediction parameters and regression metrics rendered",
+      "actual": "AI Prediction page loaded with Random Forest regression model metrics.",
+      "status": "PASS",
+      "error_message": "",
+      "execution_time_sec": 1.66
+    },
+    {
+      "test_id": "SEL-016",
+      "test_name": "Release Monitor Real-time Biological Sensors",
+      "module": "Release Monitor",
+      "steps": "1. Navigate to /release-monitor\n2. Inspect live sensor controls and status badges",
+      "expected": "Biological sensor parameters and live graph displayed",
+      "actual": "Release Monitor page loaded with real-time biological sensor status.",
+      "status": "PASS",
+      "error_message": "",
+      "execution_time_sec": 1.63
+    },
+    {
+      "test_id": "SEL-017",
+      "test_name": "Drug Library Catalog & Search Filtering",
+      "module": "Drug Library",
+      "steps": "1. Navigate to /drugs\n2. Inspect drug cards (Metformin, Paracetamol) and search input",
+      "expected": "Drug catalog cards rendered and search input functional",
+      "actual": "Drug Library catalog loaded with drug cards and search filtering.",
+      "status": "PASS",
+      "error_message": "",
+      "execution_time_sec": 1.64
+    },
+    {
+      "test_id": "SEL-018",
+      "test_name": "Polymer Library Matrix Catalog",
+      "module": "Polymer Library",
+      "steps": "1. Navigate to /polymers\n2. Inspect biopolymer matrix catalog cards (PLA, Alginate, Chitosan)",
+      "expected": "Polymer cards and swelling/degradation details rendered",
+      "actual": "Polymer Library catalog loaded with biopolymer matrix details.",
+      "status": "PASS",
+      "error_message": "",
+      "execution_time_sec": 1.63
+    },
+    {
+      "test_id": "SEL-019",
+      "test_name": "Simulation History Archives",
+      "module": "Simulation History",
+      "steps": "1. Navigate to /history\n2. Inspect historical run archives table",
+      "expected": "Simulation run history table displayed",
+      "actual": "Simulation History archive loaded with past simulation runs.",
+      "status": "PASS",
+      "error_message": "",
+      "execution_time_sec": 1.64
+    },
+    {
+      "test_id": "SEL-020",
+      "test_name": "Reports Archives & PDF Generation",
+      "module": "Reports",
+      "steps": "1. Navigate to /reports\n2. Inspect compiled pre-clinical simulation reports",
+      "expected": "Reports archive cards rendered",
+      "actual": "Pre-clinical Reports archives loaded successfully.",
+      "status": "PASS",
+      "error_message": "",
+      "execution_time_sec": 1.62
+    },
+    {
+      "test_id": "SEL-021",
+      "test_name": "User Profile & Account Settings Form",
+      "module": "Settings",
+      "steps": "1. Navigate to /settings\n2. Inspect profile information inputs and save preferences button",
+      "expected": "Settings form inputs rendered",
+      "actual": "Settings & User Profile configuration page loaded.",
+      "status": "PASS",
+      "error_message": "",
+      "execution_time_sec": 1.6
+    },
+    {
+      "test_id": "SEL-022",
+      "test_name": "Sidebar Menu Navigation Between Pages",
+      "module": "Navigation",
+      "steps": "1. Click sidebar menu link 'Drug Library'\n2. Verify URL changes to /drugs",
+      "expected": "Seamless route navigation between workspace views",
+      "actual": "Sidebar navigation seamlessly routed user to /drugs page.",
+      "status": "PASS",
+      "error_message": "",
+      "execution_time_sec": 3.17
+    },
+    {
+      "test_id": "SEL-023",
+      "test_name": "Responsive Mobile Viewport Layout",
+      "module": "Responsive UI",
+      "steps": "1. Resize window viewport to 375x812\n2. Navigate to /\n3. Verify element layout adjustment",
+      "expected": "Layout adjusts responsively to mobile screen width",
+      "actual": "Responsive mobile layout (375x812) rendered without breaking viewport.",
+      "status": "PASS",
+      "error_message": "",
+      "execution_time_sec": 1.86
+    },
+    {
+      "test_id": "SEL-024",
+      "test_name": "Unauthenticated Route Session Protection Redirect",
+      "module": "Session Protection",
+      "steps": "1. Clear storage tokens\n2. Direct navigate to protected route /settings",
+      "expected": "Redirected automatically to /login or /",
+      "actual": "Session protection verified: Unauthenticated access redirected to login/root.",
+      "status": "PASS",
+      "error_message": "",
+      "execution_time_sec": 2.21
+    },
+    {
+      "test_id": "SEL-025",
+      "test_name": "Logout Workflow & Token Clearance",
+      "module": "Authentication",
+      "steps": "1. Log in to dashboard\n2. Click 'Sign Out'\n3. Verify storage cleared and redirect to login",
+      "expected": "Session terminated and user redirected to /login",
+      "actual": "Logout workflow completed successfully and cleared session token.",
+      "status": "PASS",
+      "error_message": "",
+      "execution_time_sec": 8.77
+    }
+  ]
+}

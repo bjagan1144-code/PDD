@@ -1,0 +1,238 @@
+{
+  "test_configuration": {
+    "target_host": "http://127.0.0.1:8000",
+    "phase_duration_sec": 5,
+    "phases": [
+      "Phase 1: Pre-Spike Baseline (100 Users)",
+      "Phase 2: Immediate Spike Ramp-Up (Burst to 1000 Users)",
+      "Phase 3: Peak Spike Hold (1000 Users)",
+      "Phase 4: Immediate Traffic Drop (Reduce to 100 Users)",
+      "Phase 5: Post-Spike Recovery Hold (100 Users)",
+      "Phase 6: Cool-Down & Backend Health Recovery (0 Users)"
+    ],
+    "timestamp": "2026-10-06 13:04:31"
+  },
+  "phase_metrics": [
+    {
+      "phase_id": 1,
+      "phase_name": "Phase 1: Pre-Spike Baseline (100 Users)",
+      "virtual_users": 100,
+      "total_requests": 100,
+      "successful_requests": 59,
+      "failed_requests": 41,
+      "error_rate_pct": 41.0,
+      "requests_per_second": 2.62,
+      "avg_response_time_ms": 17555.83,
+      "min_response_time_ms": 744.13,
+      "max_response_time_ms": 36914.55,
+      "p50_ms": 17780.31,
+      "p95_ms": 28405.55,
+      "p99_ms": 35997.5,
+      "timeout_count": 41,
+      "http_status_codes": {
+        "200": 59,
+        "Timeout/Err": 41
+      }
+    },
+    {
+      "phase_id": 2,
+      "phase_name": "Phase 2: Immediate Spike Ramp-Up (Burst to 1000 Users)",
+      "virtual_users": 1000,
+      "total_requests": 1000,
+      "successful_requests": 0,
+      "failed_requests": 1000,
+      "error_rate_pct": 100.0,
+      "requests_per_second": 3.96,
+      "avg_response_time_ms": 128626.97,
+      "min_response_time_ms": 2316.78,
+      "max_response_time_ms": 251350.04,
+      "p50_ms": 126507.08,
+      "p95_ms": 241094.75,
+      "p99_ms": 249396.92,
+      "timeout_count": 202,
+      "http_status_codes": {
+        "Timeout/Err": 1000
+      }
+    },
+    {
+      "phase_id": 3,
+      "phase_name": "Phase 3: Peak Spike Hold (1000 Users)",
+      "virtual_users": 1000,
+      "total_requests": 1000,
+      "successful_requests": 0,
+      "failed_requests": 1000,
+      "error_rate_pct": 100.0,
+      "requests_per_second": 4.96,
+      "avg_response_time_ms": 93837.57,
+      "min_response_time_ms": 2383.47,
+      "max_response_time_ms": 200445.2,
+      "p50_ms": 93118.88,
+      "p95_ms": 183889.16,
+      "p99_ms": 197905.07,
+      "timeout_count": 0,
+      "http_status_codes": {
+        "Timeout/Err": 1000
+      }
+    },
+    {
+      "phase_id": 4,
+      "phase_name": "Phase 4: Immediate Traffic Drop (Reduce to 100 Users)",
+      "virtual_users": 100,
+      "total_requests": 100,
+      "successful_requests": 0,
+      "failed_requests": 100,
+      "error_rate_pct": 100.0,
+      "requests_per_second": 4.63,
+      "avg_response_time_ms": 11142.95,
+      "min_response_time_ms": 2060.62,
+      "max_response_time_ms": 20583.46,
+      "p50_ms": 11033.76,
+      "p95_ms": 19680.44,
+      "p99_ms": 20375.16,
+      "timeout_count": 0,
+      "http_status_codes": {
+        "Timeout/Err": 100
+      }
+    },
+    {
+      "phase_id": 5,
+      "phase_name": "Phase 5: Post-Spike Recovery Hold (100 Users)",
+      "virtual_users": 100,
+      "total_requests": 100,
+      "successful_requests": 0,
+      "failed_requests": 100,
+      "error_rate_pct": 100.0,
+      "requests_per_second": 4.85,
+      "avg_response_time_ms": 10838.14,
+      "min_response_time_ms": 2068.72,
+      "max_response_time_ms": 19645.03,
+      "p50_ms": 10860.88,
+      "p95_ms": 18766.96,
+      "p99_ms": 19471.11,
+      "timeout_count": 0,
+      "http_status_codes": {
+        "Timeout/Err": 100
+      }
+    },
+    {
+      "phase_id": 6,
+      "phase_name": "Phase 6: Cool-Down & Backend Health Recovery (0 Users)",
+      "virtual_users": 0,
+      "total_requests": 0,
+      "successful_requests": 0,
+      "failed_requests": 0,
+      "error_rate_pct": 0.0,
+      "requests_per_second": 0.0,
+      "avg_response_time_ms": 0.0,
+      "min_response_time_ms": 0.0,
+      "max_response_time_ms": 0.0,
+      "p50_ms": 0.0,
+      "p95_ms": 0.0,
+      "p99_ms": 0.0,
+      "timeout_count": 0,
+      "http_status_codes": {},
+      "health_recovery_time_sec": 5
+    }
+  ],
+  "spike_recovery_analysis": {
+    "baseline_avg_latency_ms": 17555.83,
+    "spike_peak_avg_latency_ms": 128626.97,
+    "response_time_increase_factor": "7.33x (632.67% increase)",
+    "error_rate_increase_pct": "59.0%",
+    "peak_rps": 4.96,
+    "performance_degradation": "7.33x slowdown during 1000 user burst",
+    "recovery_time_sec": "Not Recovered (Exceeded timeout threshold)",
+    "application_recovery_status": "FAILED RECOVERY (Persistent connection exhaustion after traffic drop)",
+    "degraded_endpoints": [
+      "GET /api/drugs (96.40449438202248% err, P95: 217823ms)",
+      "GET /api/polymers (95.43478260869566% err, P95: 215214ms)",
+      "GET /api/reports (97.18004338394793% err, P95: 231200ms)",
+      "GET /api/dashboard (98.08510638297872% err, P95: 226914ms)",
+      "POST /api/simulate (100.0% err, P95: 224705ms)"
+    ],
+    "slowest_endpoint": "/api/dashboard",
+    "highest_error_endpoint": "/api/simulate",
+    "endpoint_statistics": [
+      {
+        "endpoint": "/api/drugs",
+        "method": "GET",
+        "total_requests": 445,
+        "successful_requests": 16,
+        "failed_requests": 429,
+        "error_rate_pct": 96.4,
+        "avg_response_time_ms": 100070.03,
+        "min_response_time_ms": 744.13,
+        "max_response_time_ms": 249792.04,
+        "p50_ms": 100454.92,
+        "p95_ms": 217823.16,
+        "p99_ms": 245724.86
+      },
+      {
+        "endpoint": "/api/polymers",
+        "method": "GET",
+        "total_requests": 460,
+        "successful_requests": 21,
+        "failed_requests": 439,
+        "error_rate_pct": 95.43,
+        "avg_response_time_ms": 94143.2,
+        "min_response_time_ms": 1170.06,
+        "max_response_time_ms": 250973.84,
+        "p50_ms": 91639.17,
+        "p95_ms": 215214.45,
+        "p99_ms": 246445.71
+      },
+      {
+        "endpoint": "/api/reports",
+        "method": "GET",
+        "total_requests": 461,
+        "successful_requests": 13,
+        "failed_requests": 448,
+        "error_rate_pct": 97.18,
+        "avg_response_time_ms": 97653.61,
+        "min_response_time_ms": 2060.62,
+        "max_response_time_ms": 250776.35,
+        "p50_ms": 88605.05,
+        "p95_ms": 231199.93,
+        "p99_ms": 248675.11
+      },
+      {
+        "endpoint": "/api/dashboard",
+        "method": "GET",
+        "total_requests": 470,
+        "successful_requests": 9,
+        "failed_requests": 461,
+        "error_rate_pct": 98.09,
+        "avg_response_time_ms": 102352.88,
+        "min_response_time_ms": 2241.65,
+        "max_response_time_ms": 251350.04,
+        "p50_ms": 98311.58,
+        "p95_ms": 226914.39,
+        "p99_ms": 244266.07
+      },
+      {
+        "endpoint": "/api/simulate",
+        "method": "POST",
+        "total_requests": 464,
+        "successful_requests": 0,
+        "failed_requests": 464,
+        "error_rate_pct": 100.0,
+        "avg_response_time_ms": 97967.74,
+        "min_response_time_ms": 2246.18,
+        "max_response_time_ms": 250600.41,
+        "p50_ms": 89217.4,
+        "p95_ms": 224704.67,
+        "p99_ms": 245126.74
+      }
+    ],
+    "errors": [
+      {
+        "error_message": "Request Timeout (15s)",
+        "occurrences": 243
+      },
+      {
+        "error_message": "All connection attempts failed",
+        "occurrences": 1998
+      }
+    ]
+  }
+}

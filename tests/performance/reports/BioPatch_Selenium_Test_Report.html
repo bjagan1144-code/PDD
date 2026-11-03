@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BioPatch AI - Selenium Test Automation Report</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #0F172A;
+            --card-bg: #1E293B;
+            --accent: #38BDF8;
+            --text: #F8FAFC;
+            --text-muted: #94A3B8;
+            --border: #334155;
+            --success: #22C55E;
+            --danger: #EF4444;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            margin: 0;
+            padding: 30px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+        .title h1 {
+            margin: 0;
+            font-size: 28px;
+            color: var(--text);
+        }
+        .subtitle {
+            color: var(--text-muted);
+            font-size: 14px;
+            margin-top: 5px;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 20px;
+        }
+        .card-label {
+            font-size: 12px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 8px;
+        }
+        .card-value {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--accent);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: var(--card-bg);
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid var(--border);
+            margin-bottom: 30px;
+        }
+        th, td {
+            padding: 14px 18px;
+            text-align: left;
+            border-bottom: 1px solid var(--border);
+            font-size: 13px;
+        }
+        th {
+            background: #0F172A;
+            color: var(--text-muted);
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 11px;
+            letter-spacing: 0.05em;
+        }
+        code {
+            background: #090D16;
+            padding: 4px 8px;
+            border-radius: 4px;
+            color: #38BDF8;
+            font-family: monospace;
+        }
+        .badge {
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        .badge-pass { background: rgba(34, 197, 94, 0.15); color: var(--success); border: 1px solid var(--success); }
+        .badge-fail { background: rgba(239, 68, 68, 0.15); color: var(--danger); border: 1px solid var(--danger); }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="title">
+                <h1>BioPatch AI Selenium Web Automation Report</h1>
+                <div class="subtitle">Execution Timestamp: 2026-11-03 23:03:42</div>
+            </div>
+            <div>
+                <span class="badge badge-pass">100.0% Pass Rate</span>
+            </div>
+        </div>
+
+        <div class="grid">
+            <div class="card">
+                <div class="card-label">Total Test Cases</div>
+                <div class="card-value">25</div>
+            </div>
+            <div class="card">
+                <div class="card-label">Passed Tests</div>
+                <div class="card-value" style="color: var(--success);">25</div>
+            </div>
+            <div class="card">
+                <div class="card-label">Failed Tests</div>
+                <div class="card-value" style="color: var(--text-muted);">0</div>
+            </div>
+            <div class="card">
+                <div class="card-label">Pass Rate</div>
+                <div class="card-value">100.0%</div>
+            </div>
+        </div>
+
+        <h2>Test Case Execution Details</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Test Name</th>
+                    <th>Module</th>
+                    <th>Expected Result</th>
+                    <th>Actual Result</th>
+                    <th>Status</th>
+                    <th>Duration</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+        <tr>
+            <td><code>SEL-001</code></td>
+            <td><strong>Home Page Loading & Branding</strong></td>
+            <td>Home / Landing</td>
+            <td style="font-size: 12px; color: #94A3B8;">Home page loads cleanly with correct branding text</td>
+            <td style="font-size: 12px;">Home page loaded successfully with expected branding text.</td>
+            <td><span class="badge badge-pass">PASS</span></td>
+            <td>2.42s</td>
+        </tr>
+        
+        <tr>
+            <td><code>SEL-002</code></td>
+            <td><strong>Home Page Navigation to Login</strong></td>
+            <td>Home / Landing</td>
+            <td style="font-size: 12px; color: #94A3B8;">URL updates to /login and Login page renders</td>
+            <td style="font-size: 12px;">Landing page navigation correctly redirected to /login.</td>
+            <td><span class="badge badge-pass">PASS</span></td>
+            <td>2.36s</td>
+        </tr>
+        
+        <tr>
+            <td><code>SEL-003</code></td>
+            <td><strong>Login Page Form Elements Render</strong></td>
+            <td>Login / Auth</td>
+            <td style="font-size: 12px; color: #94A3B8;">All form inputs and buttons are visible and active</td>
+            <td style="font-size: 12px;">Login page form elements (email, password, submit button) rendered correctly.</td>
+            <td><span class="badge badge-pass">PASS</span></td>
+            <td>1.24s</td>
+        </tr>
+        
+        <tr>
+            <td><code>SEL-004</code></td>
+            <td><strong>Login Form Validation (Empty Fields)</strong></td>
+            <td>Login / Auth</td>
+            <td style="font-size: 12px; color: #94A3B8;">Validation alert requires email and password</td>
+            <td style="font-size: 12px;">Login form validation correctly blocked empty form submission.</td>
+            <td><span class="badge badge-pass">PASS</span></td>
+            <td>2.23s</td>
+        </tr>
+        
+        <tr>
+            <td><code>SEL-005</code></td>
+            <td><strong>Login Invalid Credentials Error Toast</strong></td>
+            <td>Login / Auth</td>
+            <td style="font-size: 12px; color: #94A3B8;">Error toast notifies invalid credentials</td>
+            <td style="font-size: 12px;">Invalid login attempt handled with error toast/message.</td>
+            <td><span class="badge badge-pass">PASS</span></td>
+            <td>3.87s</td>
+        </tr>
+        
+        <tr>
+            <td><code>SEL-006</code></td>
+            <td><strong>Login Demo Researcher Authentication</strong></td>
+            <td>Login / Auth</td>
+            <td style="font-size: 12px; color: #94A3B8;">User authenticated and redirected to /dashboard</td>
+            <td style="font-size: 12px;">Demo researcher authentication succeeded and redirected to /dashboard.</td>
+            <td><span class="badge badge-pass">PASS</span></td>
+            <td>4.65s</td>
+        </tr>
+        
+        <tr>
+            <td><code>SEL-007</code></td>
+            <td><strong>Registration Page Form Rendering</strong></td>
+            <td>Registration</td>
+            <td style="font-size: 12px; color: #94A3B8;">Registration form fields rendered correctly</td>
+            <td style="font-size: 12px;">Registration form fields (Name, Email, Role, Passwords) rendered correctly.</td>
+            <td><span class="badge badge-pass">PASS</span></td>
+            <td>1.26s</td>
+        </tr>
+        
+        <tr>
+            <td><code>SEL-008</code></td>
+            <td><strong>Registration Password Mismatch Validation</strong></td>
+            <td>Registration</td>
+            <td style="font-size: 12px; color: #94A3B8;">Error message alerts passwords do not match</td>
+            <td style="font-size: 12px;">Password mismatch validation triggered error message as expected.</td>
+            <td><span class="badge badge-pass">PASS</span></td>
+            <td>3.52s</td>
+        </tr>
+        
+        <tr>
+            <td><code>SEL-009</code></td>
+            <td><strong>Registration Success & Workspace Auto-Login</strong></td>
+            <td>Registration</td>
+            <td style="font-size: 12px; color: #94A3B8;">User profile registered and redirected to /dashboard</td>
+            <td style="font-size: 12px;">User registration for user_1793727175@biopatch.ai succeeded and navigated to workspace.</td>
+            <td><span class="badge badge-pass">PASS</span></td>
+            <td>5.37s</td>
+        </tr>
+        
+        <tr>
+            <td><code>SEL-010</code></td>
+            <td><strong>Forgot Password Link Dispatch</strong></td>
+            <td>Forgot Password</td>
+            <td style="font-size: 12px; color: #94A3B8;">Success toast confirms reset link dispatched to email</td>
+            <td style="font-size: 12px;">Forgot password reset link request submitted successfully.</td>
+            <td><span class="badge badge-pass">PASS</span></td>
+            <td>3.41s</td>
+        </tr>
+        
+        <tr>
+            <td><code>SEL-011</code></td>
+            <td><strong>Dashboard Metric Cards Rendering</strong></td>
+            <td>Dashboard</td>
+            <td style="font-size: 12px; color: #94A3B8;">Total Simulations, Avg Release, Score cards displayed</td>
+            <td style="font-size: 12px;">Dashboard metric summary cards rendered successfully.</td>
+            <td><span class="badge badge-pass">PASS</span></td>
+            <td>4.15s</td>
+        </tr>
+        
+        <tr>
+            <td><code>SEL-012</code></td>
+            <td><strong>Dashboard Recharts SVG Graph Rendering</strong></td>
+            <td>Dashboard</td>
+            <td style="font-size: 12px; color: #94A3B8;">Recharts SVG chart elements rendered properly</td>
+            <td style="font-size: 12px;">Recharts SVG chart component rendered properly on Dashboard.</td>
+            <td><span class="badge badge-pass">PASS</span></td>
+            <td>0.05s</td>
+        </tr>
+        
+        <tr>
+            <td><code>SEL-013</code></td>
+            <td><strong>Simulator Controls (Inputs, Sliders, Dropdowns)</strong></td>
+            <td>Simulator</td>
+            <td style="font-size: 12px; color: #94A3B8;">All formulation dropdowns and sliders accessible</td>
+            <td style="font-size: 12px;">Simulator form controls rendered (2 dropdowns, 7 sliders).</td>
+            <td><span class="badge badge-pass">PASS</span></td>
+            <td>1.64s</td>
+        </tr>
+        
+        <tr>
+            <td><code>SEL-014</code></td>
+            <td><strong>Simulator Kinetics Engine Execution Workflow</strong></td>
+            <td>Simulator</td>
+            <td style="font-size: 12px; color: #94A3B8;">Simulation result curve and risk indices displayed</td>
+            <td style="font-size: 12px;">Kinetics simulation run completed and output metrics rendered.</td>
+            <td><span class="badge badge-pass">PASS</span></td>
+            <td>3.19s</td>
+        </tr>
+        
+        <tr>
+            <td><code>SEL-015</code></td>
+            <td><strong>AI Prediction Model Metrics</strong></td>
+            <td>AI Prediction</td>
+            <td style="font-size: 12px; color: #94A3B8;">AI prediction parameters and regression metrics rendered</td>
+            <td style="font-size: 12px;">AI Prediction page loaded with Random Forest regression model metrics.</td>
+            <td><span class="badge badge-pass">PASS</span></td>
+            <td>1.66s</td>
+        </tr>
+        
+        <tr>
+            <td><code>SEL-016</code></td>
+            <td><strong>Release Monitor Real-time Biological Sensors</strong></td>
+            <td>Release Monitor</td>
+            <td style="font-size: 12px; color: #94A3B8;">Biological sensor parameters and live graph displayed</td>
+            <td style="font-size: 12px;">Release Monitor page loaded with real-time biological sensor status.</td>
+            <td><span class="badge badge-pass">PASS</span></td>
+            <td>1.63s</td>
+        </tr>
+        
+        <tr>
+            <td><code>SEL-017</code></td>
+            <td><strong>Drug Library Catalog & Search Filtering</strong></td>
+            <td>Drug Library</td>
+            <td style="font-size: 12px; color: #94A3B8;">Drug catalog cards rendered and search input functional</td>
+            <td style="font-size: 12px;">Drug Library catalog loaded with drug cards and search filtering.</td>
+            <td><span class="badge badge-pass">PASS</span></td>
+            <td>1.64s</td>
+        </tr>
+        
+        <tr>
+            <td><code>SEL-018</code></td>
+            <td><strong>Polymer Library Matrix Catalog</strong></td>
+            <td>Polymer Library</td>
+            <td style="font-size: 12px; color: #94A3B8;">Polymer cards and swelling/degradation details rendered</td>
+            <td style="font-size: 12px;">Polymer Library catalog loaded with biopolymer matrix details.</td>
+            <td><span class="badge badge-pass">PASS</span></td>
+            <td>1.63s</td>
+        </tr>
+        
+        <tr>
+            <td><code>SEL-019</code></td>
+            <td><strong>Simulation History Archives</strong></td>
+            <td>Simulation History</td>
+            <td style="font-size: 12px; color: #94A3B8;">Simulation run history table displayed</td>
+            <td style="font-size: 12px;">Simulation History archive loaded with past simulation runs.</td>
+            <td><span class="badge badge-pass">PASS</span></td>
+            <td>1.64s</td>
+        </tr>
+        
+        <tr>
+            <td><code>SEL-020</code></td>
+            <td><strong>Reports Archives & PDF Generation</strong></td>
+            <td>Reports</td>
+            <td style="font-size: 12px; color: #94A3B8;">Reports archive cards rendered</td>
+            <td style="font-size: 12px;">Pre-clinical Reports archives loaded successfully.</td>
+            <td><span class="badge badge-pass">PASS</span></td>
+            <td>1.62s</td>
+        </tr>
+        
+        <tr>
+            <td><code>SEL-021</code></td>
+            <td><strong>User Profile & Account Settings Form</strong></td>
+            <td>Settings</td>
+            <td style="font-size: 12px; color: #94A3B8;">Settings form inputs rendered</td>
+            <td style="font-size: 12px;">Settings & User Profile configuration page loaded.</td>
+            <td><span class="badge badge-pass">PASS</span></td>
+            <td>1.6s</td>
+        </tr>
+        
+        <tr>
+            <td><code>SEL-022</code></td>
+            <td><strong>Sidebar Menu Navigation Between Pages</strong></td>
+            <td>Navigation</td>
+            <td style="font-size: 12px; color: #94A3B8;">Seamless route navigation between workspace views</td>
+            <td style="font-size: 12px;">Sidebar navigation seamlessly routed user to /drugs page.</td>
+            <td><span class="badge badge-pass">PASS</span></td>
+            <td>3.17s</td>
+        </tr>
+        
+        <tr>
+            <td><code>SEL-023</code></td>
+            <td><strong>Responsive Mobile Viewport Layout</strong></td>
+            <td>Responsive UI</td>
+            <td style="font-size: 12px; color: #94A3B8;">Layout adjusts responsively to mobile screen width</td>
+            <td style="font-size: 12px;">Responsive mobile layout (375x812) rendered without breaking viewport.</td>
+            <td><span class="badge badge-pass">PASS</span></td>
+            <td>1.86s</td>
+        </tr>
+        
+        <tr>
+            <td><code>SEL-024</code></td>
+            <td><strong>Unauthenticated Route Session Protection Redirect</strong></td>
+            <td>Session Protection</td>
+            <td style="font-size: 12px; color: #94A3B8;">Redirected automatically to /login or /</td>
+            <td style="font-size: 12px;">Session protection verified: Unauthenticated access redirected to login/root.</td>
+            <td><span class="badge badge-pass">PASS</span></td>
+            <td>2.21s</td>
+        </tr>
+        
+        <tr>
+            <td><code>SEL-025</code></td>
+            <td><strong>Logout Workflow & Token Clearance</strong></td>
+            <td>Authentication</td>
+            <td style="font-size: 12px; color: #94A3B8;">Session terminated and user redirected to /login</td>
+            <td style="font-size: 12px;">Logout workflow completed successfully and cleared session token.</td>
+            <td><span class="badge badge-pass">PASS</span></td>
+            <td>8.77s</td>
+        </tr>
+        
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

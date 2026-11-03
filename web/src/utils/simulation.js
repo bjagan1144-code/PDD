@@ -24,8 +24,8 @@ export const simulateRelease = (params) => {
     duration: rawDuration
   } = params;
 
-  // Validate inputs
-  if (!isValidNum(rawDrugLoading, 0.001) ||
+  // Validate inputs (drug loading >= 0 allowed)
+  if (!isValidNum(rawDrugLoading, 0.0) ||
       !isValidNum(rawPolymerConcentration, 0.001) ||
       !isValidNum(rawPatchThickness, 0.001) ||
       !isValidNum(rawTemperature, 10, 60) ||
@@ -42,6 +42,44 @@ export const simulateRelease = (params) => {
   const pH = parseFloat(rawpH);
   const moisture = parseFloat(rawMoisture);
   const duration = parseFloat(rawDuration);
+
+  // Special Boundary Case: Zero drug loading produces exactly zero release
+  if (drugLoading === 0.0) {
+    const steps = [];
+    const hoursStep = Math.max(1, Math.round(duration / 10));
+    for (let t = 0; t <= duration; t += hoursStep) {
+      const target = duration > 0 ? (t / duration) * 100 : 0;
+      steps.push({
+        time: t,
+        predicted: 0.0,
+        target: parseFloat(target.toFixed(1)),
+        releasedMg: 0.0,
+        remainingMg: 0.0
+      });
+    }
+    if (steps[steps.length - 1].time !== duration) {
+      steps.push({
+        time: duration,
+        predicted: 0.0,
+        target: 100.0,
+        releasedMg: 0.0,
+        remainingMg: 0.0
+      });
+    }
+    return {
+      predictedRelease: 0.0,
+      peakReleaseRate: 0.0,
+      timeTo50Percent: "N/A",
+      estimatedDuration: `${duration} hours`,
+      controlledReleaseScore: 100,
+      riskLevel: "Low",
+      analysis: "Zero drug loading specified (blank vehicle patch). Formulation contains polymer matrix only; cumulative drug release is 0.0 mg (0.0%).",
+      releasedAmountMg: 0.0,
+      remainingDrugMg: 0.0,
+      drugLoading: 0.0,
+      releaseCurve: steps
+    };
+  }
 
 
   // 1. Establish baseline drug diffusion constant (D_drug)
@@ -163,14 +201,21 @@ export const simulateRelease = (params) => {
     
     // Cap at 100%
     if (predicted > 100) predicted = 100;
+    // Strict monotonicity: cumulative release never decreases
+    if (predicted < lastVal) predicted = lastVal;
     
     // Target release profile is assumed to be linear for zero-order controlled release
     const target = (t / duration) * 100;
+    const predRounded = parseFloat(predicted.toFixed(1));
+    const relMg = parseFloat(((predRounded / 100) * drugLoading).toFixed(2));
+    const remMg = parseFloat(Math.max(0, drugLoading - relMg).toFixed(2));
 
     steps.push({
       time: t,
-      predicted: parseFloat(predicted.toFixed(1)),
-      target: parseFloat(target.toFixed(1))
+      predicted: predRounded,
+      target: parseFloat(target.toFixed(1)),
+      releasedMg: relMg,
+      remainingMg: remMg
     });
 
     if (t > 0) {
@@ -189,15 +234,23 @@ export const simulateRelease = (params) => {
 
   // Ensure last element matches exactly the final duration if not hit by steps
   if (steps[steps.length - 1].time !== duration) {
-    const finalPredicted = 100 * (1 - Math.exp(-releaseRateConstant * Math.pow(duration, n)));
+    let finalPredicted = 100 * (1 - Math.exp(-releaseRateConstant * Math.pow(duration, n)));
+    finalPredicted = Math.min(100, Math.max(lastVal, finalPredicted));
+    const predRounded = parseFloat(finalPredicted.toFixed(1));
+    const relMg = parseFloat(((predRounded / 100) * drugLoading).toFixed(2));
+    const remMg = parseFloat(Math.max(0, drugLoading - relMg).toFixed(2));
     steps.push({
       time: duration,
-      predicted: parseFloat(Math.min(100, finalPredicted).toFixed(1)),
-      target: 100
+      predicted: predRounded,
+      target: 100,
+      releasedMg: relMg,
+      remainingMg: remMg
     });
   }
 
   const finalRelease = steps[steps.length - 1].predicted;
+  const releasedAmountMg = parseFloat(((finalRelease / 100) * drugLoading).toFixed(2));
+  const remainingDrugMg = parseFloat(Math.max(0, drugLoading - releasedAmountMg).toFixed(2));
 
   // Determine timeTo50 if not found in steps (by interpolation)
   if (timeTo50 === -1) {
@@ -284,6 +337,9 @@ export const simulateRelease = (params) => {
     controlledReleaseScore: score,
     riskLevel,
     analysis,
+    releasedAmountMg,
+    remainingDrugMg,
+    drugLoading,
     releaseCurve: steps
   };
 };

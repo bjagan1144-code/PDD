@@ -17,35 +17,44 @@ import StatCard from '../components/StatCard';
 import Badge from '../components/Badge';
 import api, { isMockMode } from '../services/api';
 
-const featureImportanceData = [
-  { name: 'Polymer Conc.', value: 28, color: '#0ea5e9' },
-  { name: 'pH Index', value: 24, color: '#10b981' },
-  { name: 'Temperature', value: 18, color: '#f59e0b' },
-  { name: 'Drug Loading', value: 15, color: '#6366f1' },
-  { name: 'Thickness', value: 10, color: '#ec4899' },
-  { name: 'Moisture', value: 5, color: '#14b8a6' }
+const defaultFeatureImportance = [
+  { name: 'Patch Thickness', value: 33.1, color: '#ec4899' },
+  { name: 'Temperature', value: 14.7, color: '#f59e0b' },
+  { name: 'Metformin Drug', value: 12.5, color: '#6366f1' },
+  { name: 'PLA Polymer', value: 8.9, color: '#0ea5e9' },
+  { name: 'Gelatin Polymer', value: 6.4, color: '#10b981' },
+  { name: 'Moisture', value: 5.7, color: '#14b8a6' },
+  { name: 'Polymer Conc.', value: 5.2, color: '#8b5cf6' },
+  { name: 'Duration', value: 3.5, color: '#f43f5e' }
 ];
 
-const performanceCurveData = [
-  { sample: 1, actual: 12, predicted: 11.5 },
-  { sample: 2, actual: 24, predicted: 25.2 },
-  { sample: 3, actual: 38, predicted: 37.1 },
-  { sample: 4, actual: 50, predicted: 50.8 },
-  { sample: 5, actual: 64, predicted: 62.9 },
-  { sample: 6, actual: 75, predicted: 76.4 },
-  { sample: 7, actual: 88, predicted: 86.8 },
-  { sample: 8, actual: 98, predicted: 97.5 }
+const defaultValidationCurve = [
+  { sample: 1, actual: 7.5, predicted: 9.5 },
+  { sample: 2, actual: 7.8, predicted: 9.5 },
+  { sample: 3, actual: 6.1, predicted: 9.3 },
+  { sample: 4, actual: 1.0, predicted: 3.4 },
+  { sample: 5, actual: 0.6, predicted: 1.4 },
+  { sample: 6, actual: 10.0, predicted: 22.8 },
+  { sample: 7, actual: 3.1, predicted: 10.2 },
+  { sample: 8, actual: 0.7, predicted: 1.8 },
+  { sample: 9, actual: 16.3, predicted: 26.1 },
+  { sample: 10, actual: 15.6, predicted: 34.8 }
 ];
+
+const featureColorPalette = ['#ec4899', '#f59e0b', '#6366f1', '#0ea5e9', '#10b981', '#14b8a6', '#8b5cf6', '#f43f5e'];
 
 const AIPredictionPage = () => {
   const [metrics, setMetrics] = useState({
-    r2: '0.948',
-    mae: '1.84%',
-    rmse: '2.45%',
-    samples: '4,500',
-    modelName: 'Random Forest Regression v1.0',
-    dataset: 'Synthetic Research Dataset - For Academic Demonstration'
+    r2: '0.7638',
+    mae: '6.59%',
+    rmse: '11.51%',
+    samples: '1,200',
+    modelName: 'Random Forest Regressor v2.0-verified',
+    dataset: 'Synthetic In-Silico Dataset (1,200 runs)',
+    experimentalStatus: 'In-silico mathematical Weibull formulations (non-wet-lab benchmark).'
   });
+  const [featureImportance, setFeatureImportance] = useState(defaultFeatureImportance);
+  const [performanceCurve, setPerformanceCurve] = useState(defaultValidationCurve);
 
   useEffect(() => {
     const fetchMetrics = async () => {
@@ -54,13 +63,38 @@ const AIPredictionPage = () => {
           const res = await api.get('/predictions/metrics');
           const data = res.data;
           setMetrics({
-            r2: data.r2.toString(),
-            mae: data.mae,
-            rmse: data.rmse,
-            samples: data.samples.toLocaleString(),
-            modelName: `${data.model_name} v${data.version}`,
-            dataset: data.dataset
+            r2: data.r2 !== undefined ? data.r2.toString() : '0.7638',
+            mae: data.mae || '6.59%',
+            rmse: data.rmse || '11.51%',
+            samples: data.samples ? data.samples.toLocaleString() : '1,200',
+            modelName: `${data.model_name || 'Random Forest'} ${data.version || 'v2.0'}`,
+            dataset: data.dataset || 'Synthetic In-Silico Dataset',
+            experimentalStatus: data.experimental_data_status || 'In-silico benchmark'
           });
+
+          if (Array.isArray(data.feature_importances) && data.feature_importances.length > 0) {
+            const mapped = data.feature_importances.slice(0, 8).map((f, i) => {
+              let label = f.name
+                .replace('drug_', 'Drug: ')
+                .replace('polymer_', 'Polymer: ')
+                .replace('patchThickness', 'Patch Thickness')
+                .replace('polymerConcentration', 'Polymer Conc.')
+                .replace('drugLoading', 'Drug Loading')
+                .replace('temperature', 'Temperature')
+                .replace('moisture', 'Moisture')
+                .replace('duration', 'Duration');
+              return {
+                name: label,
+                value: f.importance,
+                color: featureColorPalette[i % featureColorPalette.length]
+              };
+            });
+            setFeatureImportance(mapped);
+          }
+
+          if (Array.isArray(data.validation_samples) && data.validation_samples.length > 0) {
+            setPerformanceCurve(data.validation_samples);
+          }
         } catch (err) {
           console.warn("Failed to fetch ML metrics from backend:", err);
         }
@@ -142,16 +176,16 @@ const AIPredictionPage = () => {
 
           <div className="h-72 w-full">
             <ResponsiveContainer width="100%" height="100%">
-              <BarChart data={featureImportanceData} layout="vertical" margin={{ left: 10, right: 10 }}>
+              <BarChart data={featureImportance} layout="vertical" margin={{ left: 10, right: 10 }}>
                 <CartesianGrid stroke="#1e293b" strokeDasharray="3 3" horizontal={false} />
                 <XAxis type="number" stroke="#475569" style={{ fontSize: 10 }} unit="%" />
-                <YAxis dataKey="name" type="category" stroke="#475569" style={{ fontSize: 10 }} width={85} />
+                <YAxis dataKey="name" type="category" stroke="#475569" style={{ fontSize: 10 }} width={110} />
                 <Tooltip 
                   contentStyle={{ backgroundColor: '#0f172a', borderColor: '#334155', borderRadius: 8, fontSize: 11 }}
                   formatter={(val) => [`${val}%`, 'Importance']}
                 />
                 <Bar dataKey="value" radius={[0, 4, 4, 0]}>
-                  {featureImportanceData.map((entry, index) => (
+                  {featureImportance.map((entry, index) => (
                     <Cell key={`cell-${index}`} fill={entry.color} />
                   ))}
                 </Bar>
@@ -185,7 +219,7 @@ const AIPredictionPage = () => {
 
           <div className="h-72 w-full">
             <ResponsiveContainer width="100%" height="100%">
-              <LineChart data={performanceCurveData}>
+              <LineChart data={performanceCurve}>
                 <CartesianGrid stroke="#1e293b" strokeDasharray="3 3" />
                 <XAxis dataKey="sample" stroke="#475569" style={{ fontSize: 10 }} label={{ value: 'Test Batches', position: 'insideBottom', offset: -5 }} />
                 <YAxis stroke="#475569" style={{ fontSize: 10 }} label={{ value: 'Release (%)', angle: -90, position: 'insideLeft' }} />
@@ -205,15 +239,15 @@ const AIPredictionPage = () => {
         <div className="space-y-1.5 text-xs leading-normal">
           <h4 className="font-bold text-slate-200 uppercase tracking-widest">Model Calibration & Limitations</h4>
           <p className="text-slate-400 font-medium">
-            The AI regression engine uses a <strong>Random Forest Regression</strong> ensemble framework (v1.0) to model matrix diffusion velocities. Polymer concentration indexes represent the highest weighting factor (28%), as matrix densities directly impact Fickian boundaries. pH weighting (24%) captures electrostatic repulsions in pH-swelling hydrogels (e.g. chitosan/pectin). These statistics represent validation metrics computed on synthetically augmented benchmark records.
+            The AI regression engine uses a <strong>Random Forest Regression</strong> ensemble framework (v2.0-verified) trained on 1,200 multi-factorial formulation configurations with an 80/20 train/test split. <strong>Patch Thickness</strong> represents the primary physical diffusion resistance barrier (33.1% weighting), followed by <strong>Temperature</strong> (14.7%) and drug molecular solubility characteristics. Metrics are computed on an independent held-out validation subset ({metrics.r2} R², {metrics.mae} MAE).
           </p>
           <p className="text-slate-400 font-medium">
-            <strong>Model Transparency & Limitations:</strong>
+            <strong>Model Transparency & Scientific Limitations:</strong>
           </p>
           <ul className="list-disc pl-5 text-slate-400 space-y-1 font-medium">
-            <li><strong>Dataset:</strong> Synthetic Research Dataset — For Academic Demonstration. This data is synthetically generated for software demonstration purposes and does not represent laboratory measurements, clinical measurements, or human study results.</li>
-            <li><strong>Model performance</strong> depends on the quality and representativeness of the training data.</li>
-            <li><strong>The machine-learning model</strong> is an academic prototype trained on the available dataset. Predictions may not generalize to real-world formulations or experimental conditions. Computational model outputs should be interpreted strictly as computational estimates.</li>
+            <li><strong>Dataset:</strong> {metrics.dataset}. This data is generated systematically from Weibull and Korsmeyer-Peppas kinetic equations for computational formulation screening and does not replace in-vitro Franz cell diffusion or in-vivo transdermal pharmacokinetic assays.</li>
+            <li><strong>Experimental Status:</strong> {metrics.experimentalStatus}</li>
+            <li><strong>Decision Boundary:</strong> Predictions provide computational pre-clinical screening guidance. Laboratory verification remains essential for clinical validation.</li>
           </ul>
         </div>
       </div>

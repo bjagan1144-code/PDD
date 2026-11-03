@@ -96,7 +96,7 @@ def generate_report(
             }
 
         rep_id = f"REP-{uuid.uuid4().hex[:6].upper()}"
-        now_str = datetime.datetime.utcnow().isoformat()
+        now_str = datetime.datetime.now(datetime.timezone.utc).isoformat()
         new_report = {
             "id": rep_id,
             "user_id": current_user["id"],
