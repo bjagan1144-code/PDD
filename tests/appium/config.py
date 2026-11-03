@@ -36,6 +36,9 @@ def get_connected_device() -> str:
 def get_apk_path() -> str:
     """ Returns absolute path to built BioPatch AI Android APK """
     repo_root = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
+    expo_apk = os.path.join(repo_root, "mobile", "android", "app", "build", "outputs", "apk", "debug", "app-debug.apk")
+    if os.path.exists(expo_apk):
+        return expo_apk
     apk_path = os.path.join(repo_root, "mobile", "build", "app", "outputs", "flutter-apk", "app-debug.apk")
     return apk_path
 

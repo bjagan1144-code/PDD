@@ -65,3 +65,4 @@ Four specialized GitHub Actions workflows have been created in `.github/workflow
 
 - **Protected Assets:** All Firebase Admin SDK service account files (`backend/secrets/*`) and `.env` files are explicitly excluded via `.gitignore`.
 - **No Paid Billing Alteration:** Workflows operate completely within the existing free Spark plan parameters.
+

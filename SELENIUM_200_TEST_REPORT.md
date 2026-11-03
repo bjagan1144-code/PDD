@@ -68,3 +68,4 @@
 
 - **Defect SEL-006 Race Condition:** Fixed sleep timer in `SEL-006` caused intermittent false failures during network latency. Replaced with explicit `WebDriverWait` for `/dashboard` route transition, resulting in reliable 100% pass rate.
 - **Defect Catalog Throttling:** Added in-memory TTL caching in backend `/api/drugs` and `/api/polymers` so library tests do not exhaust Google Cloud Spark plan daily quotas.
+

@@ -44,3 +44,4 @@ Virtual Users | System State          | Error Rate | Bottleneck Origin
 1. **Server Resiliency:** The FastAPI backend process (PID 1608) never crashed, segfaulted, or leaked memory during stress tests. Host CPU stayed between 27% and 35.5%, and host RAM hovered stably at 90.2%.
 2. **Post-Stress Recovery:** When traffic was reduced from 200 to 25 users, median response latency dropped immediately from 2,900 ms back down to **290.33 ms**.
 3. **Data Integrity:** Historical simulation records and user bcrypt hashes remained 100% intact and uncorrupted following the tests.
+

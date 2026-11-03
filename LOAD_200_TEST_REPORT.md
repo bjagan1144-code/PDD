@@ -48,3 +48,4 @@ Before caching, every single request to `/api/drugs` and `/api/polymers` streame
 - `/api/drugs` response time reduced from **153 ms to 0.12 ms** (cache hit).
 - Catalog bandwidth and Google Cloud quota consumption eliminated by **> 90%** during catalog browsing.
 - System operates with **0% error rate up to 100 concurrent users**.
+

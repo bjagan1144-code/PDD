@@ -42,3 +42,4 @@ A rigorous mathematical, kinetic, and algorithmic audit of the BioPatch AI simul
 > **Experimental Data Disclaimer:**  
 > The Higuchi and Korsmeyer-Peppas models implemented in BioPatch AI are **mathematical in-silico simulations**. While mathematically consistent, monotonic, and mass-conserved, **they have not been cross-validated against in-vivo human clinical trials or a specific peer-reviewed wet-lab transdermal release dataset**.  
 > The predicted values represent **pre-clinical computational approximations** and must **not** be interpreted as clinically certified drug-release predictions for medical diagnosis or patient treatment.
+

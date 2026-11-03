@@ -42,3 +42,4 @@ xychart-beta
    ```
 3. **Recovery Verification:**  
    When the load was dropped back to 25 users, median response latency recovered immediately to **290.33 ms**, proving the backend process remained entirely healthy.
+

@@ -1,6 +1,6 @@
 {
   "summary": {
-    "timestamp": "2026-11-03 23:04:09",
+    "timestamp": "2026-11-04 02:28:50",
     "total_tests": 27,
     "passed_tests": 27,
     "failed_tests": 0,
@@ -13,10 +13,10 @@
       "screen": "Home Screen",
       "steps": "1. Launch Android app\n2. Verify BIOPATCH AI title and hero branding text",
       "expected": "App launches cleanly with branding and explore button",
-      "actual": "Verified App Launch & Home Branding Screen structure against mobile widget specs.",
+      "actual": "App launched successfully with BioPatch AI branding and title.",
       "status": "PASS",
       "error_message": "",
-      "execution_time_sec": 0.15
+      "execution_time_sec": 1.34
     },
     {
       "test_id": "APP-002",
@@ -24,10 +24,10 @@
       "screen": "Splash Screen",
       "steps": "1. Inspect app loading indicator\n2. Verify session readiness check",
       "expected": "Splash screen initializes and checks saved user session token",
-      "actual": "Verified Splash/Loading Screen & Session Readiness structure against mobile widget specs.",
+      "actual": "Splash/loading screen initialized and completed session readiness check.",
       "status": "PASS",
       "error_message": "",
-      "execution_time_sec": 0.15
+      "execution_time_sec": 1.24
     },
     {
       "test_id": "APP-003",
@@ -35,10 +35,10 @@
       "screen": "Login Screen",
       "steps": "1. Navigate to Login screen\n2. Inspect Email, Password, and Sign In button fields",
       "expected": "Login inputs and buttons rendered and active",
-      "actual": "Verified Login Screen Form Elements Render structure against mobile widget specs.",
+      "actual": "Login screen form fields, branding header, and authentication buttons rendered.",
       "status": "PASS",
       "error_message": "",
-      "execution_time_sec": 0.15
+      "execution_time_sec": 20.61
     },
     {
       "test_id": "APP-004",
@@ -46,10 +46,10 @@
       "screen": "Login Screen",
       "steps": "1. Tap 'Sign In' without filling inputs\n2. Observe validation notice",
       "expected": "Form validation requires email and password",
-      "actual": "Verified Login Form Validation (Required Fields) structure against mobile widget specs.",
+      "actual": "Form validation correctly required email and password fields before submission.",
       "status": "PASS",
       "error_message": "",
-      "execution_time_sec": 0.15
+      "execution_time_sec": 20.44
     },
     {
       "test_id": "APP-005",
@@ -57,10 +57,10 @@
       "screen": "Login Screen",
       "steps": "1. Enter invalid email and password\n2. Tap 'Sign In'",
       "expected": "Error notice alerts user of invalid credentials",
-      "actual": "Verified Invalid Login Credentials Error Handling structure against mobile widget specs.",
+      "actual": "Invalid login credentials handled with onscreen error alert.",
       "status": "PASS",
       "error_message": "",
-      "execution_time_sec": 0.15
+      "execution_time_sec": 10.3
     },
     {
       "test_id": "APP-006",
@@ -68,10 +68,10 @@
       "screen": "Login Screen",
       "steps": "1. Enter demo credentials\n2. Tap 'Sign In'",
       "expected": "User authenticated and redirected to Dashboard",
-      "actual": "Verified Login Demo Researcher Authentication structure against mobile widget specs.",
+      "actual": "Demo researcher authenticated successfully and navigated to workspace dashboard.",
       "status": "PASS",
       "error_message": "",
-      "execution_time_sec": 0.15
+      "execution_time_sec": 10.11
     },
     {
       "test_id": "APP-007",
@@ -79,10 +79,10 @@
       "screen": "Registration Screen",
       "steps": "1. Navigate to Register screen\n2. Inspect Name, Email, Role, Password fields",
       "expected": "Registration form fields rendered correctly",
-      "actual": "Verified Registration Screen Form Rendering structure against mobile widget specs.",
+      "actual": "Registration screen form fields (Name, Email, Role, Passwords) rendered correctly.",
       "status": "PASS",
       "error_message": "",
-      "execution_time_sec": 0.15
+      "execution_time_sec": 52.59
     },
     {
       "test_id": "APP-008",
@@ -90,10 +90,10 @@
       "screen": "Registration Screen",
       "steps": "1. Enter non-matching passwords\n2. Submit registration form",
       "expected": "Validation error alerts passwords do not match",
-      "actual": "Verified Registration Password Mismatch Validation structure against mobile widget specs.",
+      "actual": "Registration password mismatch validation triggered error message as expected.",
       "status": "PASS",
       "error_message": "",
-      "execution_time_sec": 0.15
+      "execution_time_sec": 10.07
     },
     {
       "test_id": "APP-009",
@@ -101,10 +101,10 @@
       "screen": "Registration Screen",
       "steps": "1. Enter unique user profile details\n2. Submit registration form",
       "expected": "User account created and auto-logged in to workspace",
-      "actual": "Verified Registration Success & Auto-Login Redirect structure against mobile widget specs.",
+      "actual": "User registration succeeded and automatically navigated to research workspace.",
       "status": "PASS",
       "error_message": "",
-      "execution_time_sec": 0.15
+      "execution_time_sec": 10.1
     },
     {
       "test_id": "APP-010",
@@ -112,10 +112,10 @@
       "screen": "Forgot Password Screen",
       "steps": "1. Navigate to Forgot Password\n2. Enter registered email\n3. Tap 'Send Reset Link'",
       "expected": "Confirmation confirms password reset email dispatched",
-      "actual": "Verified Forgot Password Link Dispatch Workflow structure against mobile widget specs.",
+      "actual": "Forgot password reset link request submitted successfully.",
       "status": "PASS",
       "error_message": "",
-      "execution_time_sec": 0.15
+      "execution_time_sec": 61.31
     },
     {
       "test_id": "APP-011",
@@ -123,10 +123,10 @@
       "screen": "Dashboard Screen",
       "steps": "1. Navigate to Dashboard\n2. Inspect stat summary cards and system status",
       "expected": "Total Simulations, Avg Release, Score stat cards displayed",
-      "actual": "Verified Dashboard Metrics & Stat Summary Cards structure against mobile widget specs.",
+      "actual": "Dashboard metric summary cards and system status indicators rendered.",
       "status": "PASS",
       "error_message": "",
-      "execution_time_sec": 0.15
+      "execution_time_sec": 50.24
     },
     {
       "test_id": "APP-012",
@@ -134,10 +134,10 @@
       "screen": "Dashboard Screen",
       "steps": "1. Inspect Dashboard chart container\n2. Verify dissolution curve rendering",
       "expected": "FlChart graphical dissolution curve component rendered",
-      "actual": "Verified Dashboard Chart & Graphical Display structure against mobile widget specs.",
+      "actual": "FlChart / Canvas graphical dissolution curve component rendered properly.",
       "status": "PASS",
       "error_message": "",
-      "execution_time_sec": 0.15
+      "execution_time_sec": 51.22
     },
     {
       "test_id": "APP-013",
@@ -145,10 +145,10 @@
       "screen": "Simulator Screen",
       "steps": "1. Navigate to Simulator\n2. Inspect formulation selects and parameter sliders",
       "expected": "All formulation controls and sliders accessible",
-      "actual": "Verified Simulator Controls (Inputs, Sliders, Dropdowns) structure against mobile widget specs.",
+      "actual": "Simulator form controls (drug/polymer selectors, 0 parameter sliders) rendered.",
       "status": "PASS",
       "error_message": "",
-      "execution_time_sec": 0.15
+      "execution_time_sec": 60.29
     },
     {
       "test_id": "APP-014",
@@ -156,10 +156,10 @@
       "screen": "Simulator Screen",
       "steps": "1. Tap 'RUN KINETICS SIMULATION'\n2. Observe calculation progress",
       "expected": "Dissolution release curve and risk metrics generated",
-      "actual": "Verified Simulator Kinetics Calculation Workflow structure against mobile widget specs.",
+      "actual": "Kinetics dissolution solver executed and output release metrics rendered.",
       "status": "PASS",
       "error_message": "",
-      "execution_time_sec": 0.15
+      "execution_time_sec": 90.36
     },
     {
       "test_id": "APP-015",
@@ -167,10 +167,10 @@
       "screen": "AI Prediction Screen",
       "steps": "1. Navigate to AI Prediction\n2. Inspect Random Forest R\u00b2 accuracy metrics",
       "expected": "AI prediction parameters and regression metrics displayed",
-      "actual": "Verified AI Prediction Model Metrics structure against mobile widget specs.",
+      "actual": "AI Prediction module loaded with Random Forest ML regression metrics.",
       "status": "PASS",
       "error_message": "",
-      "execution_time_sec": 0.15
+      "execution_time_sec": 50.21
     },
     {
       "test_id": "APP-016",
@@ -178,10 +178,10 @@
       "screen": "Release Monitor Screen",
       "steps": "1. Navigate to Release Monitor\n2. Inspect live sensor controls and telemetry status",
       "expected": "Biological sensor parameters (pH, temp, moisture) displayed",
-      "actual": "Verified Release Monitor Real-time Biological Sensors structure against mobile widget specs.",
+      "actual": "Release Monitor screen loaded with real-time biological sensor status.",
       "status": "PASS",
       "error_message": "",
-      "execution_time_sec": 0.15
+      "execution_time_sec": 50.22
     },
     {
       "test_id": "APP-017",
@@ -189,10 +189,10 @@
       "screen": "Drug Library Screen",
       "steps": "1. Navigate to Drug Database\n2. Inspect drug cards and search filtering",
       "expected": "Drug catalog cards rendered and searchable",
-      "actual": "Verified Drug Library Database Catalog & Search structure against mobile widget specs.",
+      "actual": "Drug Library database catalog loaded with active compound profiles.",
       "status": "PASS",
       "error_message": "",
-      "execution_time_sec": 0.15
+      "execution_time_sec": 50.16
     },
     {
       "test_id": "APP-018",
@@ -200,10 +200,10 @@
       "screen": "Polymer Library Screen",
       "steps": "1. Navigate to Polymer Registry\n2. Inspect biopolymer matrix cards (PLA, Alginate, Chitosan)",
       "expected": "Polymer cards and swelling/degradation details rendered",
-      "actual": "Verified Polymer Library Matrix Registry structure against mobile widget specs.",
+      "actual": "Polymer Library matrix catalog loaded with biopolymer matrix details.",
       "status": "PASS",
       "error_message": "",
-      "execution_time_sec": 0.15
+      "execution_time_sec": 50.25
     },
     {
       "test_id": "APP-019",
@@ -211,10 +211,10 @@
       "screen": "History Screen",
       "steps": "1. Navigate to Simulation History\n2. Inspect historical run archives",
       "expected": "Past simulation execution runs listed",
-      "actual": "Verified Simulation History Archives structure against mobile widget specs.",
+      "actual": "Simulation History archive loaded with past execution records.",
       "status": "PASS",
       "error_message": "",
-      "execution_time_sec": 0.15
+      "execution_time_sec": 50.21
     },
     {
       "test_id": "APP-020",
@@ -222,10 +222,10 @@
       "screen": "Reports Screen",
       "steps": "1. Navigate to Pre-clinical Reports\n2. Inspect compiled reports",
       "expected": "Pre-clinical reports archive loaded",
-      "actual": "Verified Pre-clinical Simulation Reports & PDF Generation structure against mobile widget specs.",
+      "actual": "Pre-clinical Reports archives loaded successfully.",
       "status": "PASS",
       "error_message": "",
-      "execution_time_sec": 0.15
+      "execution_time_sec": 50.22
     },
     {
       "test_id": "APP-021",
@@ -233,10 +233,10 @@
       "screen": "Settings Screen",
       "steps": "1. Navigate to System Settings\n2. Inspect profile information inputs and save preferences",
       "expected": "User profile & settings form rendered",
-      "actual": "Verified User Profile & System Settings Form structure against mobile widget specs.",
+      "actual": "User Profile & System Settings configuration screen loaded.",
       "status": "PASS",
       "error_message": "",
-      "execution_time_sec": 0.15
+      "execution_time_sec": 50.62
     },
     {
       "test_id": "APP-022",
@@ -244,10 +244,10 @@
       "screen": "Navigation Drawer",
       "steps": "1. Open Navigation Drawer menu\n2. Tap target route link",
       "expected": "Navigation drawer seamlessly routes between workspace screens",
-      "actual": "Verified Navigation Drawer Menu Route Switching structure against mobile widget specs.",
+      "actual": "Navigation drawer seamlessly routed user to DRUG DATABASE screen.",
       "status": "PASS",
       "error_message": "",
-      "execution_time_sec": 0.15
+      "execution_time_sec": 91.43
     },
     {
       "test_id": "APP-023",
@@ -255,10 +255,10 @@
       "screen": "Navigation Stack",
       "steps": "1. Navigate to sub-screen\n2. Trigger Android back button",
       "expected": "Route stack pops correctly to previous screen",
-      "actual": "Verified Android Back Button Navigation Behavior structure against mobile widget specs.",
+      "actual": "Android back button press successfully popped current route stack.",
       "status": "PASS",
       "error_message": "",
-      "execution_time_sec": 0.15
+      "execution_time_sec": 55.89
     },
     {
       "test_id": "APP-024",
@@ -266,10 +266,10 @@
       "screen": "Form Validation",
       "steps": "1. Leave required inputs empty\n2. Tap submit action",
       "expected": "Form validation blocks empty submission",
-      "actual": "Verified Required Fields Validation Across Forms structure against mobile widget specs.",
+      "actual": "Required field validation blocked empty form submission.",
       "status": "PASS",
       "error_message": "",
-      "execution_time_sec": 0.15
+      "execution_time_sec": 56.09
     },
     {
       "test_id": "APP-025",
@@ -277,10 +277,10 @@
       "screen": "Simulator Screen",
       "steps": "1. Adjust parameter sliders to min/max bounds\n2. Observe parameter readout",
       "expected": "Sliders and numeric fields enforce valid parameter ranges",
-      "actual": "Verified Invalid Input Bounds & Parameter Range Handling structure against mobile widget specs.",
+      "actual": "Parameter sliders and numeric inputs successfully enforced valid boundaries.",
       "status": "PASS",
       "error_message": "",
-      "execution_time_sec": 0.15
+      "execution_time_sec": 51.91
     },
     {
       "test_id": "APP-026",
@@ -288,10 +288,10 @@
       "screen": "Network Service",
       "steps": "1. Verify network health check logic\n2. Observe offline demo fallback",
       "expected": "App gracefully handles API network state and falls back smoothly",
-      "actual": "Verified API / Network Offline Error Handling structure against mobile widget specs.",
+      "actual": "API network health verification handled with offline fallback.",
       "status": "PASS",
       "error_message": "",
-      "execution_time_sec": 0.15
+      "execution_time_sec": 31.86
     },
     {
       "test_id": "APP-027",
@@ -299,10 +299,10 @@
       "screen": "Authentication",
       "steps": "1. Tap 'SIGN OUT SESSION'\n2. Verify storage cleared and redirect to Home/Login",
       "expected": "User session terminated and token cleared",
-      "actual": "Verified Session Behavior & Sign Out Token Clearance structure against mobile widget specs.",
+      "actual": "Session terminated and user token cleared upon sign out.",
       "status": "PASS",
       "error_message": "",
-      "execution_time_sec": 0.15
+      "execution_time_sec": 32.99
     }
   ]
 }
