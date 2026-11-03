@@ -7,8 +7,8 @@ from appium import webdriver
 # Default Test Settings
 DEFAULT_BACKEND_URL = "http://127.0.0.1:8000"
 DEFAULT_APPIUM_URL = "http://127.0.0.1:4723"
-APP_PACKAGE = "com.biopatch.ai.biopatch_mobile"
-APP_ACTIVITY = "com.biopatch.ai.biopatch_mobile.MainActivity"
+APP_PACKAGE = "com.biopatch.ai"
+APP_ACTIVITY = "com.biopatch.ai.MainActivity"
 IMPLICIT_WAIT_SEC = 10
 EXPLICIT_WAIT_SEC = 15
 

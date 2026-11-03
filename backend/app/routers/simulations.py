@@ -144,8 +144,9 @@ def get_simulations_history(
         for doc in docs:
             simulations.append(doc.to_dict())
             
-        # Sort in memory by created_at descending to avoid composite index requirements
+        # Sort in memory by created_at descending and cap to latest 25 records
         simulations.sort(key=lambda s: s.get("created_at", ""), reverse=True)
+        simulations = simulations[:25]
         
         response_list = []
         for sim in simulations:

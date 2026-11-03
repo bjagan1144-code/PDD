@@ -1,5 +1,10 @@
 # BioPatch AI
 
+[![Backend Tests & Scientific Validation](https://github.com/bjagan1144-code/PDD/actions/workflows/backend-tests.yml/badge.svg)](https://github.com/bjagan1144-code/PDD/actions/workflows/backend-tests.yml)
+[![Web Automation (Selenium)](https://github.com/bjagan1144-code/PDD/actions/workflows/web-tests.yml/badge.svg)](https://github.com/bjagan1144-code/PDD/actions/workflows/web-tests.yml)
+[![Mobile Automation (Appium)](https://github.com/bjagan1144-code/PDD/actions/workflows/mobile-tests.yml/badge.svg)](https://github.com/bjagan1144-code/PDD/actions/workflows/mobile-tests.yml)
+[![Controlled Load & Stress Testing](https://github.com/bjagan1144-code/PDD/actions/workflows/load-stress-manual.yml/badge.svg)](https://github.com/bjagan1144-code/PDD/actions/workflows/load-stress-manual.yml)
+
 ### Intelligent Drug Delivery. Predictive Release. Personalized Medicine.
 > **Final-Year B.Tech CSE Project Showcase**
 > **Title:** Development of an Intelligent Biopolymer Drug-Delivery Patch with Real-Time Release Modeling

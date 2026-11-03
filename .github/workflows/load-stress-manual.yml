@@ -1,0 +1,63 @@
+name: BioPatch AI - Controlled Load & Stress Testing (Manual)
+
+on:
+  workflow_dispatch:
+    inputs:
+      target_env_url:
+        description: 'Target API Host URL (Must be a dedicated staging/test instance)'
+        required: true
+        default: 'http://127.0.0.1:8000'
+      max_concurrency:
+        description: 'Maximum Virtual Users (10 - 200)'
+        required: true
+        default: '100'
+      test_type:
+        description: 'Test Type'
+        required: true
+        type: choice
+        options:
+          - 'LOAD_TESTING'
+          - 'STRESS_TESTING'
+      confirm_staging:
+        description: 'Type "I CONFIRM STAGING" to proceed safely'
+        required: true
+        default: 'I CONFIRM STAGING'
+
+jobs:
+  performance-execution:
+    name: Controlled High-Concurrency Benchmark
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Safety Gate Verification
+        run: |
+          if [ "${{ github.event.inputs.confirm_staging }}" != "I CONFIRM STAGING" ]; then
+            echo "ERROR: Manual confirmation string missing. Halting uncontrolled test."
+            exit 1
+          fi
+          echo "Target Host: ${{ github.event.inputs.target_env_url }}"
+          echo "Max Concurrency: ${{ github.event.inputs.max_concurrency }}"
+          echo "Test Type: ${{ github.event.inputs.test_type }}"
+
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install Load Testing Packages
+        run: |
+          pip install locust httpx psutil numpy pandas openpyxl
+
+      - name: Execute Controlled Load / Stress Engine
+        run: |
+          python tests/performance/run_comprehensive_load_test.py
+
+      - name: Upload Performance Reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: performance-test-reports
+          path: tests/performance/reports/

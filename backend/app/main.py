@@ -124,21 +124,33 @@ def health_check():
     """ Health verification endpoint checking Cloud Firestore & RandomForest ML model status """
     # Verify Firestore connectivity
     db_connected = False
+    quota_exhausted = False
+    error_msg = None
     try:
         # Check if we can stream the drugs collection (minimal read)
         db.collection("drugs").limit(1).get()
         db_connected = True
     except Exception as e:
+        error_str = str(e)
+        if "ResourceExhausted" in error_str or "429" in error_str or "Quota exceeded" in error_str:
+            quota_exhausted = True
+            error_msg = "Firestore daily quota exceeded (Google Cloud Spark Plan limit)"
+        else:
+            error_msg = error_str
         print(f"Health Firestore check failure: {e}")
 
     # Verify AI model file presence
     model_loaded = model is not None and os.path.exists(MODEL_PATH)
     storage_mode = getattr(db, "storage_mode", "mock_firestore")
 
-    return {
-        "status": "ok" if db_connected else "error",
+    response = {
+        "status": "ok" if db_connected else ("quota_exhausted" if quota_exhausted else "error"),
         "database": "connected" if db_connected else "disconnected",
         "storage_mode": storage_mode,
         "is_mock_storage": (storage_mode == "mock_firestore"),
         "model": "loaded" if model_loaded else "unavailable"
     }
+    if quota_exhausted:
+        response["quota_exhausted"] = True
+        response["detail"] = error_msg
+    return response

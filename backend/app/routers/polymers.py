@@ -1,3 +1,4 @@
+import time
 import uuid
 from fastapi import APIRouter, Depends, HTTPException
 from typing import List
@@ -5,6 +6,20 @@ from app.database import db
 from app.schemas.api_schemas import PolymerResponse
 
 router = APIRouter(prefix="/api/polymers", tags=["Polymer Library"])
+
+# In-memory TTL Cache
+_POLYMERS_CACHE = None
+_POLYMERS_CACHE_TIME = 0.0
+CACHE_TTL_SEC = 300.0  # 5 minutes
+
+DEFAULT_POLYMERS_FALLBACK = [
+    {"id": "PLA", "name": "PLA", "type": "Erodible", "biodegradable": True, "ph_response": "Low", "concentrationRange": "2.0% - 15.0%", "releaseBehavior": "Hydrophobic bulk erosion (slow diffusion)", "swellingRatio": "< 10%", "degradationRate": "1-2 years", "description": "Polylactic acid (PLA) is a biodegradable, hydrophobic thermoplastic aliphatic polyester."},
+    {"id": "Alginate", "name": "Alginate", "type": "Hydrogel", "biodegradable": True, "ph_response": "Medium", "concentrationRange": "1.0% - 4.0%", "releaseBehavior": "Swellable cross-linked hydrogel matrix", "swellingRatio": "350%", "degradationRate": "30-60 days", "description": "Alginate is a natural anionic polysaccharide hydrogel widely used for cell encapsulation and drug delivery."},
+    {"id": "Gelatin", "name": "Gelatin", "type": "Swellable Matrix", "biodegradable": True, "ph_response": "High", "concentrationRange": "2.0% - 10.0%", "releaseBehavior": "Thermal-sensitive rapid dissolution matrix", "swellingRatio": "400%", "degradationRate": "7-14 days", "description": "Gelatin is a swellable protein matrix obtained from collagen hydrolysate, highly temperature sensitive."},
+    {"id": "Pectin", "name": "Pectin", "type": "Swellable Matrix", "biodegradable": True, "ph_response": "Medium", "concentrationRange": "1.5% - 5.0%", "releaseBehavior": "pH-responsive matrix swelling & erosion", "swellingRatio": "250%", "degradationRate": "21-45 days", "description": "Pectin is a structural heteropolysaccharide polymer, moderately swellable and slightly pH responsive."},
+    {"id": "Cellulose", "name": "Cellulose", "type": "Inert Matrix", "biodegradable": True, "ph_response": "Low", "concentrationRange": "1.0% - 5.0%", "releaseBehavior": "Inert biocompatible non-swelling barrier", "swellingRatio": "15%", "degradationRate": "6-12 months", "description": "Cellulose is an inert structural polysaccharide, biocompatible with low swelling indexes."},
+    {"id": "Chitosan", "name": "Chitosan", "type": "Hydrogel", "biodegradable": True, "ph_response": "High", "concentrationRange": "1.0% - 5.0%", "releaseBehavior": "Cationic acid-swelling sustained diffusion", "swellingRatio": "300%", "degradationRate": "14-30 days", "description": "Chitosan is a cationic biopolymer matrix swellable in acidic pH media."}
+]
 
 POLYMER_METADATA_DEFAULTS = {
     "PLA": {
@@ -61,16 +76,30 @@ def _enrich_polymer(poly: dict) -> dict:
 
 @router.get("", response_model=List[PolymerResponse])
 def get_polymers():
-    """ Returns the list of standard biopolymer carriers in the database """
-    polymers_ref = db.collection("polymers")
+    """ Returns the list of standard biopolymer carriers in the database with in-memory caching """
+    global _POLYMERS_CACHE, _POLYMERS_CACHE_TIME
+    now = time.time()
+    if _POLYMERS_CACHE is not None and (now - _POLYMERS_CACHE_TIME) < CACHE_TTL_SEC:
+        return _POLYMERS_CACHE
+
     try:
+        polymers_ref = db.collection("polymers")
         docs = polymers_ref.stream()
         polymers_list = []
         for doc in docs:
             polymers_list.append(_enrich_polymer(doc.to_dict()))
-        return polymers_list
+        
+        if polymers_list:
+            _POLYMERS_CACHE = polymers_list
+            _POLYMERS_CACHE_TIME = now
+            return _POLYMERS_CACHE
     except Exception as e:
-        raise HTTPException(status_code=500, detail=f"Database query failure: {e}")
+        print(f"Warning: Firestore polymers query encountered: {e}")
+        if _POLYMERS_CACHE is not None:
+            return _POLYMERS_CACHE
+        return [_enrich_polymer(p) for p in DEFAULT_POLYMERS_FALLBACK]
+
+    return [_enrich_polymer(p) for p in DEFAULT_POLYMERS_FALLBACK]
 
 @router.get("/{id}")
 def get_polymer(id: str):

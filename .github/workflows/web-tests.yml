@@ -1,0 +1,63 @@
+name: BioPatch AI - Web Automation Suite (Selenium)
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'web/**'
+      - 'tests/selenium/**'
+      - '.github/workflows/web-tests.yml'
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  selenium-web-tests:
+    name: Selenium Chrome Headless Automation
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: Install Python Dependencies
+        run: |
+          pip install -r backend/requirements.txt
+          pip install selenium httpx openpyxl webdriver-manager
+
+      - name: Set up Node.js 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+          cache-dependency-path: web/package-lock.json
+
+      - name: Install Web Dependencies & Build React App
+        run: |
+          cd web
+          npm ci
+          npm run build
+
+      - name: Start Mock Backend & Web Server
+        run: |
+          cd backend
+          python -m uvicorn app.main:app --host 127.0.0.1 --port 8000 &
+          cd ../web
+          npm run preview -- --port 5173 &
+          sleep 5
+
+      - name: Execute 25 Core Selenium Web Workflows
+        run: |
+          python tests/selenium/run_selenium_tests.py --web-url http://localhost:5173 --backend-url http://127.0.0.1:8000
+
+      - name: Upload Selenium HTML & Excel Reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: selenium-reports
+          path: tests/performance/reports/BioPatch_Selenium_*

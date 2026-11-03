@@ -92,7 +92,10 @@ class BioPatchSeleniumTests:
         password_input.send_keys("password")
         submit_btn = self.wait_for_visible(By.XPATH, "//button[@type='submit']")
         submit_btn.click()
-        time.sleep(3)
+        try:
+            WebDriverWait(self.driver, 10).until(EC.url_contains("/dashboard"))
+        except Exception:
+            time.sleep(3)
         assert "/dashboard" in self.driver.current_url
         return "Demo researcher authentication succeeded and redirected to /dashboard."
 

@@ -1,6 +1,6 @@
 {
   "summary": {
-    "timestamp": "2026-11-03 23:03:42",
+    "timestamp": "2026-11-04 00:06:48",
     "total_tests": 25,
     "passed_tests": 25,
     "failed_tests": 0,
@@ -16,7 +16,7 @@
       "actual": "Home page loaded successfully with expected branding text.",
       "status": "PASS",
       "error_message": "",
-      "execution_time_sec": 2.42
+      "execution_time_sec": 4.03
     },
     {
       "test_id": "SEL-002",
@@ -27,7 +27,7 @@
       "actual": "Landing page navigation correctly redirected to /login.",
       "status": "PASS",
       "error_message": "",
-      "execution_time_sec": 2.36
+      "execution_time_sec": 3.19
     },
     {
       "test_id": "SEL-003",
@@ -38,7 +38,7 @@
       "actual": "Login page form elements (email, password, submit button) rendered correctly.",
       "status": "PASS",
       "error_message": "",
-      "execution_time_sec": 1.24
+      "execution_time_sec": 1.32
     },
     {
       "test_id": "SEL-004",
@@ -49,7 +49,7 @@
       "actual": "Login form validation correctly blocked empty form submission.",
       "status": "PASS",
       "error_message": "",
-      "execution_time_sec": 2.23
+      "execution_time_sec": 2.67
     },
     {
       "test_id": "SEL-005",
@@ -60,7 +60,7 @@
       "actual": "Invalid login attempt handled with error toast/message.",
       "status": "PASS",
       "error_message": "",
-      "execution_time_sec": 3.87
+      "execution_time_sec": 4.62
     },
     {
       "test_id": "SEL-006",
@@ -71,7 +71,7 @@
       "actual": "Demo researcher authentication succeeded and redirected to /dashboard.",
       "status": "PASS",
       "error_message": "",
-      "execution_time_sec": 4.65
+      "execution_time_sec": 5.78
     },
     {
       "test_id": "SEL-007",
@@ -82,7 +82,7 @@
       "actual": "Registration form fields (Name, Email, Role, Passwords) rendered correctly.",
       "status": "PASS",
       "error_message": "",
-      "execution_time_sec": 1.26
+      "execution_time_sec": 1.32
     },
     {
       "test_id": "SEL-008",
@@ -93,7 +93,7 @@
       "actual": "Password mismatch validation triggered error message as expected.",
       "status": "PASS",
       "error_message": "",
-      "execution_time_sec": 3.52
+      "execution_time_sec": 4.61
     },
     {
       "test_id": "SEL-009",
@@ -101,10 +101,10 @@
       "module": "Registration",
       "steps": "1. Navigate to /register\n2. Fill out unique user credentials\n3. Submit form",
       "expected": "User profile registered and redirected to /dashboard",
-      "actual": "User registration for user_1793727175@biopatch.ai succeeded and navigated to workspace.",
+      "actual": "User registration for user_1793730962@biopatch.ai succeeded and navigated to workspace.",
       "status": "PASS",
       "error_message": "",
-      "execution_time_sec": 5.37
+      "execution_time_sec": 3.66
     },
     {
       "test_id": "SEL-010",
@@ -115,7 +115,7 @@
       "actual": "Forgot password reset link request submitted successfully.",
       "status": "PASS",
       "error_message": "",
-      "execution_time_sec": 3.41
+      "execution_time_sec": 3.71
     },
     {
       "test_id": "SEL-011",
@@ -126,7 +126,7 @@
       "actual": "Dashboard metric summary cards rendered successfully.",
       "status": "PASS",
       "error_message": "",
-      "execution_time_sec": 4.15
+      "execution_time_sec": 4.66
     },
     {
       "test_id": "SEL-012",
@@ -137,7 +137,7 @@
       "actual": "Recharts SVG chart component rendered properly on Dashboard.",
       "status": "PASS",
       "error_message": "",
-      "execution_time_sec": 0.05
+      "execution_time_sec": 0.11
     },
     {
       "test_id": "SEL-013",
@@ -148,7 +148,7 @@
       "actual": "Simulator form controls rendered (2 dropdowns, 7 sliders).",
       "status": "PASS",
       "error_message": "",
-      "execution_time_sec": 1.64
+      "execution_time_sec": 1.78
     },
     {
       "test_id": "SEL-014",
@@ -159,7 +159,7 @@
       "actual": "Kinetics simulation run completed and output metrics rendered.",
       "status": "PASS",
       "error_message": "",
-      "execution_time_sec": 3.19
+      "execution_time_sec": 3.66
     },
     {
       "test_id": "SEL-015",
@@ -170,7 +170,7 @@
       "actual": "AI Prediction page loaded with Random Forest regression model metrics.",
       "status": "PASS",
       "error_message": "",
-      "execution_time_sec": 1.66
+      "execution_time_sec": 1.78
     },
     {
       "test_id": "SEL-016",
@@ -181,7 +181,7 @@
       "actual": "Release Monitor page loaded with real-time biological sensor status.",
       "status": "PASS",
       "error_message": "",
-      "execution_time_sec": 1.63
+      "execution_time_sec": 1.7
     },
     {
       "test_id": "SEL-017",
@@ -192,7 +192,7 @@
       "actual": "Drug Library catalog loaded with drug cards and search filtering.",
       "status": "PASS",
       "error_message": "",
-      "execution_time_sec": 1.64
+      "execution_time_sec": 1.75
     },
     {
       "test_id": "SEL-018",
@@ -203,7 +203,7 @@
       "actual": "Polymer Library catalog loaded with biopolymer matrix details.",
       "status": "PASS",
       "error_message": "",
-      "execution_time_sec": 1.63
+      "execution_time_sec": 1.71
     },
     {
       "test_id": "SEL-019",
@@ -214,7 +214,7 @@
       "actual": "Simulation History archive loaded with past simulation runs.",
       "status": "PASS",
       "error_message": "",
-      "execution_time_sec": 1.64
+      "execution_time_sec": 1.7
     },
     {
       "test_id": "SEL-020",
@@ -225,7 +225,7 @@
       "actual": "Pre-clinical Reports archives loaded successfully.",
       "status": "PASS",
       "error_message": "",
-      "execution_time_sec": 1.62
+      "execution_time_sec": 1.85
     },
     {
       "test_id": "SEL-021",
@@ -236,7 +236,7 @@
       "actual": "Settings & User Profile configuration page loaded.",
       "status": "PASS",
       "error_message": "",
-      "execution_time_sec": 1.6
+      "execution_time_sec": 1.8
     },
     {
       "test_id": "SEL-022",
@@ -247,7 +247,7 @@
       "actual": "Sidebar navigation seamlessly routed user to /drugs page.",
       "status": "PASS",
       "error_message": "",
-      "execution_time_sec": 3.17
+      "execution_time_sec": 3.2
     },
     {
       "test_id": "SEL-023",
@@ -258,7 +258,7 @@
       "actual": "Responsive mobile layout (375x812) rendered without breaking viewport.",
       "status": "PASS",
       "error_message": "",
-      "execution_time_sec": 1.86
+      "execution_time_sec": 1.93
     },
     {
       "test_id": "SEL-024",
@@ -269,7 +269,7 @@
       "actual": "Session protection verified: Unauthenticated access redirected to login/root.",
       "status": "PASS",
       "error_message": "",
-      "execution_time_sec": 2.21
+      "execution_time_sec": 2.33
     },
     {
       "test_id": "SEL-025",
@@ -280,7 +280,7 @@
       "actual": "Logout workflow completed successfully and cleared session token.",
       "status": "PASS",
       "error_message": "",
-      "execution_time_sec": 8.77
+      "execution_time_sec": 6.3
     }
   ]
 }

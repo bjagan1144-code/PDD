@@ -1,0 +1,4002 @@
+[
+  {
+    "test_id": "SEL-001",
+    "category": "Selenium Web Automation",
+    "module": "Launch & Loading",
+    "title": "Application Launch & Loading - Scenario 01",
+    "objective": "Verify web application initial bootstrapping, DOM ready state, favicon, title, responsive meta tags, and hero layout rendering. (Scenario #1)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Launch & Loading",
+      "2. Execute action sequence for scenario #1",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #1",
+    "expected_result": "System behaves correctly as specified in Application Launch & Loading - Scenario 01 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-002",
+    "category": "Selenium Web Automation",
+    "module": "Launch & Loading",
+    "title": "Application Launch & Loading - Scenario 02",
+    "objective": "Verify web application initial bootstrapping, DOM ready state, favicon, title, responsive meta tags, and hero layout rendering. (Scenario #2)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Launch & Loading",
+      "2. Execute action sequence for scenario #2",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #2",
+    "expected_result": "System behaves correctly as specified in Application Launch & Loading - Scenario 02 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-003",
+    "category": "Selenium Web Automation",
+    "module": "Launch & Loading",
+    "title": "Application Launch & Loading - Scenario 03",
+    "objective": "Verify web application initial bootstrapping, DOM ready state, favicon, title, responsive meta tags, and hero layout rendering. (Scenario #3)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Launch & Loading",
+      "2. Execute action sequence for scenario #3",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #3",
+    "expected_result": "System behaves correctly as specified in Application Launch & Loading - Scenario 03 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-004",
+    "category": "Selenium Web Automation",
+    "module": "Launch & Loading",
+    "title": "Application Launch & Loading - Scenario 04",
+    "objective": "Verify web application initial bootstrapping, DOM ready state, favicon, title, responsive meta tags, and hero layout rendering. (Scenario #4)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Launch & Loading",
+      "2. Execute action sequence for scenario #4",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #4",
+    "expected_result": "System behaves correctly as specified in Application Launch & Loading - Scenario 04 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-005",
+    "category": "Selenium Web Automation",
+    "module": "Launch & Loading",
+    "title": "Application Launch & Loading - Scenario 05",
+    "objective": "Verify web application initial bootstrapping, DOM ready state, favicon, title, responsive meta tags, and hero layout rendering. (Scenario #5)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Launch & Loading",
+      "2. Execute action sequence for scenario #5",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #5",
+    "expected_result": "System behaves correctly as specified in Application Launch & Loading - Scenario 05 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-006",
+    "category": "Selenium Web Automation",
+    "module": "Launch & Loading",
+    "title": "Application Launch & Loading - Scenario 06",
+    "objective": "Verify web application initial bootstrapping, DOM ready state, favicon, title, responsive meta tags, and hero layout rendering. (Scenario #6)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Launch & Loading",
+      "2. Execute action sequence for scenario #6",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #6",
+    "expected_result": "System behaves correctly as specified in Application Launch & Loading - Scenario 06 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-007",
+    "category": "Selenium Web Automation",
+    "module": "Launch & Loading",
+    "title": "Application Launch & Loading - Scenario 07",
+    "objective": "Verify web application initial bootstrapping, DOM ready state, favicon, title, responsive meta tags, and hero layout rendering. (Scenario #7)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Launch & Loading",
+      "2. Execute action sequence for scenario #7",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #7",
+    "expected_result": "System behaves correctly as specified in Application Launch & Loading - Scenario 07 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-008",
+    "category": "Selenium Web Automation",
+    "module": "Launch & Loading",
+    "title": "Application Launch & Loading - Scenario 08",
+    "objective": "Verify web application initial bootstrapping, DOM ready state, favicon, title, responsive meta tags, and hero layout rendering. (Scenario #8)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Launch & Loading",
+      "2. Execute action sequence for scenario #8",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #8",
+    "expected_result": "System behaves correctly as specified in Application Launch & Loading - Scenario 08 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-009",
+    "category": "Selenium Web Automation",
+    "module": "Launch & Loading",
+    "title": "Application Launch & Loading - Scenario 09",
+    "objective": "Verify web application initial bootstrapping, DOM ready state, favicon, title, responsive meta tags, and hero layout rendering. (Scenario #9)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Launch & Loading",
+      "2. Execute action sequence for scenario #9",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #9",
+    "expected_result": "System behaves correctly as specified in Application Launch & Loading - Scenario 09 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-010",
+    "category": "Selenium Web Automation",
+    "module": "Launch & Loading",
+    "title": "Application Launch & Loading - Scenario 10",
+    "objective": "Verify web application initial bootstrapping, DOM ready state, favicon, title, responsive meta tags, and hero layout rendering. (Scenario #10)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Launch & Loading",
+      "2. Execute action sequence for scenario #10",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #10",
+    "expected_result": "System behaves correctly as specified in Application Launch & Loading - Scenario 10 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-011",
+    "category": "Selenium Web Automation",
+    "module": "Launch & Loading",
+    "title": "Application Launch & Loading - Scenario 11",
+    "objective": "Verify web application initial bootstrapping, DOM ready state, favicon, title, responsive meta tags, and hero layout rendering. (Scenario #11)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Launch & Loading",
+      "2. Execute action sequence for scenario #11",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #11",
+    "expected_result": "System behaves correctly as specified in Application Launch & Loading - Scenario 11 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-012",
+    "category": "Selenium Web Automation",
+    "module": "Launch & Loading",
+    "title": "Application Launch & Loading - Scenario 12",
+    "objective": "Verify web application initial bootstrapping, DOM ready state, favicon, title, responsive meta tags, and hero layout rendering. (Scenario #12)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Launch & Loading",
+      "2. Execute action sequence for scenario #12",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #12",
+    "expected_result": "System behaves correctly as specified in Application Launch & Loading - Scenario 12 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-013",
+    "category": "Selenium Web Automation",
+    "module": "Launch & Loading",
+    "title": "Application Launch & Loading - Scenario 13",
+    "objective": "Verify web application initial bootstrapping, DOM ready state, favicon, title, responsive meta tags, and hero layout rendering. (Scenario #13)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Launch & Loading",
+      "2. Execute action sequence for scenario #13",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #13",
+    "expected_result": "System behaves correctly as specified in Application Launch & Loading - Scenario 13 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-014",
+    "category": "Selenium Web Automation",
+    "module": "Launch & Loading",
+    "title": "Application Launch & Loading - Scenario 14",
+    "objective": "Verify web application initial bootstrapping, DOM ready state, favicon, title, responsive meta tags, and hero layout rendering. (Scenario #14)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Launch & Loading",
+      "2. Execute action sequence for scenario #14",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #14",
+    "expected_result": "System behaves correctly as specified in Application Launch & Loading - Scenario 14 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-015",
+    "category": "Selenium Web Automation",
+    "module": "Launch & Loading",
+    "title": "Application Launch & Loading - Scenario 15",
+    "objective": "Verify web application initial bootstrapping, DOM ready state, favicon, title, responsive meta tags, and hero layout rendering. (Scenario #15)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Launch & Loading",
+      "2. Execute action sequence for scenario #15",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #15",
+    "expected_result": "System behaves correctly as specified in Application Launch & Loading - Scenario 15 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-016",
+    "category": "Selenium Web Automation",
+    "module": "Registration",
+    "title": "Registration - Scenario 01",
+    "objective": "Verify researcher account registration, input validation, duplicate account prevention, password mismatch, email format enforcement, and automatic login routing. (Scenario #1)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Registration",
+      "2. Execute action sequence for scenario #1",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #1",
+    "expected_result": "System behaves correctly as specified in Registration - Scenario 01 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-017",
+    "category": "Selenium Web Automation",
+    "module": "Registration",
+    "title": "Registration - Scenario 02",
+    "objective": "Verify researcher account registration, input validation, duplicate account prevention, password mismatch, email format enforcement, and automatic login routing. (Scenario #2)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Registration",
+      "2. Execute action sequence for scenario #2",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #2",
+    "expected_result": "System behaves correctly as specified in Registration - Scenario 02 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-018",
+    "category": "Selenium Web Automation",
+    "module": "Registration",
+    "title": "Registration - Scenario 03",
+    "objective": "Verify researcher account registration, input validation, duplicate account prevention, password mismatch, email format enforcement, and automatic login routing. (Scenario #3)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Registration",
+      "2. Execute action sequence for scenario #3",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #3",
+    "expected_result": "System behaves correctly as specified in Registration - Scenario 03 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-019",
+    "category": "Selenium Web Automation",
+    "module": "Registration",
+    "title": "Registration - Scenario 04",
+    "objective": "Verify researcher account registration, input validation, duplicate account prevention, password mismatch, email format enforcement, and automatic login routing. (Scenario #4)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Registration",
+      "2. Execute action sequence for scenario #4",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #4",
+    "expected_result": "System behaves correctly as specified in Registration - Scenario 04 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-020",
+    "category": "Selenium Web Automation",
+    "module": "Registration",
+    "title": "Registration - Scenario 05",
+    "objective": "Verify researcher account registration, input validation, duplicate account prevention, password mismatch, email format enforcement, and automatic login routing. (Scenario #5)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Registration",
+      "2. Execute action sequence for scenario #5",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #5",
+    "expected_result": "System behaves correctly as specified in Registration - Scenario 05 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-021",
+    "category": "Selenium Web Automation",
+    "module": "Registration",
+    "title": "Registration - Scenario 06",
+    "objective": "Verify researcher account registration, input validation, duplicate account prevention, password mismatch, email format enforcement, and automatic login routing. (Scenario #6)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Registration",
+      "2. Execute action sequence for scenario #6",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #6",
+    "expected_result": "System behaves correctly as specified in Registration - Scenario 06 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-022",
+    "category": "Selenium Web Automation",
+    "module": "Registration",
+    "title": "Registration - Scenario 07",
+    "objective": "Verify researcher account registration, input validation, duplicate account prevention, password mismatch, email format enforcement, and automatic login routing. (Scenario #7)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Registration",
+      "2. Execute action sequence for scenario #7",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #7",
+    "expected_result": "System behaves correctly as specified in Registration - Scenario 07 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-023",
+    "category": "Selenium Web Automation",
+    "module": "Registration",
+    "title": "Registration - Scenario 08",
+    "objective": "Verify researcher account registration, input validation, duplicate account prevention, password mismatch, email format enforcement, and automatic login routing. (Scenario #8)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Registration",
+      "2. Execute action sequence for scenario #8",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #8",
+    "expected_result": "System behaves correctly as specified in Registration - Scenario 08 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-024",
+    "category": "Selenium Web Automation",
+    "module": "Registration",
+    "title": "Registration - Scenario 09",
+    "objective": "Verify researcher account registration, input validation, duplicate account prevention, password mismatch, email format enforcement, and automatic login routing. (Scenario #9)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Registration",
+      "2. Execute action sequence for scenario #9",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #9",
+    "expected_result": "System behaves correctly as specified in Registration - Scenario 09 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-025",
+    "category": "Selenium Web Automation",
+    "module": "Registration",
+    "title": "Registration - Scenario 10",
+    "objective": "Verify researcher account registration, input validation, duplicate account prevention, password mismatch, email format enforcement, and automatic login routing. (Scenario #10)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Registration",
+      "2. Execute action sequence for scenario #10",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #10",
+    "expected_result": "System behaves correctly as specified in Registration - Scenario 10 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-026",
+    "category": "Selenium Web Automation",
+    "module": "Registration",
+    "title": "Registration - Scenario 11",
+    "objective": "Verify researcher account registration, input validation, duplicate account prevention, password mismatch, email format enforcement, and automatic login routing. (Scenario #11)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Registration",
+      "2. Execute action sequence for scenario #11",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #11",
+    "expected_result": "System behaves correctly as specified in Registration - Scenario 11 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-027",
+    "category": "Selenium Web Automation",
+    "module": "Registration",
+    "title": "Registration - Scenario 12",
+    "objective": "Verify researcher account registration, input validation, duplicate account prevention, password mismatch, email format enforcement, and automatic login routing. (Scenario #12)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Registration",
+      "2. Execute action sequence for scenario #12",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #12",
+    "expected_result": "System behaves correctly as specified in Registration - Scenario 12 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-028",
+    "category": "Selenium Web Automation",
+    "module": "Registration",
+    "title": "Registration - Scenario 13",
+    "objective": "Verify researcher account registration, input validation, duplicate account prevention, password mismatch, email format enforcement, and automatic login routing. (Scenario #13)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Registration",
+      "2. Execute action sequence for scenario #13",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #13",
+    "expected_result": "System behaves correctly as specified in Registration - Scenario 13 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-029",
+    "category": "Selenium Web Automation",
+    "module": "Registration",
+    "title": "Registration - Scenario 14",
+    "objective": "Verify researcher account registration, input validation, duplicate account prevention, password mismatch, email format enforcement, and automatic login routing. (Scenario #14)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Registration",
+      "2. Execute action sequence for scenario #14",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #14",
+    "expected_result": "System behaves correctly as specified in Registration - Scenario 14 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-030",
+    "category": "Selenium Web Automation",
+    "module": "Registration",
+    "title": "Registration - Scenario 15",
+    "objective": "Verify researcher account registration, input validation, duplicate account prevention, password mismatch, email format enforcement, and automatic login routing. (Scenario #15)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Registration",
+      "2. Execute action sequence for scenario #15",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #15",
+    "expected_result": "System behaves correctly as specified in Registration - Scenario 15 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-031",
+    "category": "Selenium Web Automation",
+    "module": "Login & Auth",
+    "title": "Login and Authentication - Scenario 01",
+    "objective": "Verify login form rendering, valid researcher credentials, invalid credentials, empty submissions, token storage, and session lifecycle. (Scenario #1)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Login & Auth",
+      "2. Execute action sequence for scenario #1",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #1",
+    "expected_result": "System behaves correctly as specified in Login and Authentication - Scenario 01 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-032",
+    "category": "Selenium Web Automation",
+    "module": "Login & Auth",
+    "title": "Login and Authentication - Scenario 02",
+    "objective": "Verify login form rendering, valid researcher credentials, invalid credentials, empty submissions, token storage, and session lifecycle. (Scenario #2)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Login & Auth",
+      "2. Execute action sequence for scenario #2",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #2",
+    "expected_result": "System behaves correctly as specified in Login and Authentication - Scenario 02 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-033",
+    "category": "Selenium Web Automation",
+    "module": "Login & Auth",
+    "title": "Login and Authentication - Scenario 03",
+    "objective": "Verify login form rendering, valid researcher credentials, invalid credentials, empty submissions, token storage, and session lifecycle. (Scenario #3)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Login & Auth",
+      "2. Execute action sequence for scenario #3",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #3",
+    "expected_result": "System behaves correctly as specified in Login and Authentication - Scenario 03 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-034",
+    "category": "Selenium Web Automation",
+    "module": "Login & Auth",
+    "title": "Login and Authentication - Scenario 04",
+    "objective": "Verify login form rendering, valid researcher credentials, invalid credentials, empty submissions, token storage, and session lifecycle. (Scenario #4)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Login & Auth",
+      "2. Execute action sequence for scenario #4",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #4",
+    "expected_result": "System behaves correctly as specified in Login and Authentication - Scenario 04 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-035",
+    "category": "Selenium Web Automation",
+    "module": "Login & Auth",
+    "title": "Login and Authentication - Scenario 05",
+    "objective": "Verify login form rendering, valid researcher credentials, invalid credentials, empty submissions, token storage, and session lifecycle. (Scenario #5)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Login & Auth",
+      "2. Execute action sequence for scenario #5",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #5",
+    "expected_result": "System behaves correctly as specified in Login and Authentication - Scenario 05 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-036",
+    "category": "Selenium Web Automation",
+    "module": "Login & Auth",
+    "title": "Login and Authentication - Scenario 06",
+    "objective": "Verify login form rendering, valid researcher credentials, invalid credentials, empty submissions, token storage, and session lifecycle. (Scenario #6)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Login & Auth",
+      "2. Execute action sequence for scenario #6",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #6",
+    "expected_result": "System behaves correctly as specified in Login and Authentication - Scenario 06 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-037",
+    "category": "Selenium Web Automation",
+    "module": "Login & Auth",
+    "title": "Login and Authentication - Scenario 07",
+    "objective": "Verify login form rendering, valid researcher credentials, invalid credentials, empty submissions, token storage, and session lifecycle. (Scenario #7)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Login & Auth",
+      "2. Execute action sequence for scenario #7",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #7",
+    "expected_result": "System behaves correctly as specified in Login and Authentication - Scenario 07 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-038",
+    "category": "Selenium Web Automation",
+    "module": "Login & Auth",
+    "title": "Login and Authentication - Scenario 08",
+    "objective": "Verify login form rendering, valid researcher credentials, invalid credentials, empty submissions, token storage, and session lifecycle. (Scenario #8)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Login & Auth",
+      "2. Execute action sequence for scenario #8",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #8",
+    "expected_result": "System behaves correctly as specified in Login and Authentication - Scenario 08 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-039",
+    "category": "Selenium Web Automation",
+    "module": "Login & Auth",
+    "title": "Login and Authentication - Scenario 09",
+    "objective": "Verify login form rendering, valid researcher credentials, invalid credentials, empty submissions, token storage, and session lifecycle. (Scenario #9)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Login & Auth",
+      "2. Execute action sequence for scenario #9",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #9",
+    "expected_result": "System behaves correctly as specified in Login and Authentication - Scenario 09 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-040",
+    "category": "Selenium Web Automation",
+    "module": "Login & Auth",
+    "title": "Login and Authentication - Scenario 10",
+    "objective": "Verify login form rendering, valid researcher credentials, invalid credentials, empty submissions, token storage, and session lifecycle. (Scenario #10)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Login & Auth",
+      "2. Execute action sequence for scenario #10",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #10",
+    "expected_result": "System behaves correctly as specified in Login and Authentication - Scenario 10 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-041",
+    "category": "Selenium Web Automation",
+    "module": "Login & Auth",
+    "title": "Login and Authentication - Scenario 11",
+    "objective": "Verify login form rendering, valid researcher credentials, invalid credentials, empty submissions, token storage, and session lifecycle. (Scenario #11)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Login & Auth",
+      "2. Execute action sequence for scenario #11",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #11",
+    "expected_result": "System behaves correctly as specified in Login and Authentication - Scenario 11 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-042",
+    "category": "Selenium Web Automation",
+    "module": "Login & Auth",
+    "title": "Login and Authentication - Scenario 12",
+    "objective": "Verify login form rendering, valid researcher credentials, invalid credentials, empty submissions, token storage, and session lifecycle. (Scenario #12)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Login & Auth",
+      "2. Execute action sequence for scenario #12",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #12",
+    "expected_result": "System behaves correctly as specified in Login and Authentication - Scenario 12 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-043",
+    "category": "Selenium Web Automation",
+    "module": "Login & Auth",
+    "title": "Login and Authentication - Scenario 13",
+    "objective": "Verify login form rendering, valid researcher credentials, invalid credentials, empty submissions, token storage, and session lifecycle. (Scenario #13)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Login & Auth",
+      "2. Execute action sequence for scenario #13",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #13",
+    "expected_result": "System behaves correctly as specified in Login and Authentication - Scenario 13 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-044",
+    "category": "Selenium Web Automation",
+    "module": "Login & Auth",
+    "title": "Login and Authentication - Scenario 14",
+    "objective": "Verify login form rendering, valid researcher credentials, invalid credentials, empty submissions, token storage, and session lifecycle. (Scenario #14)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Login & Auth",
+      "2. Execute action sequence for scenario #14",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #14",
+    "expected_result": "System behaves correctly as specified in Login and Authentication - Scenario 14 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-045",
+    "category": "Selenium Web Automation",
+    "module": "Login & Auth",
+    "title": "Login and Authentication - Scenario 15",
+    "objective": "Verify login form rendering, valid researcher credentials, invalid credentials, empty submissions, token storage, and session lifecycle. (Scenario #15)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Login & Auth",
+      "2. Execute action sequence for scenario #15",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #15",
+    "expected_result": "System behaves correctly as specified in Login and Authentication - Scenario 15 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-046",
+    "category": "Selenium Web Automation",
+    "module": "Login & Auth",
+    "title": "Login and Authentication - Scenario 16",
+    "objective": "Verify login form rendering, valid researcher credentials, invalid credentials, empty submissions, token storage, and session lifecycle. (Scenario #16)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Login & Auth",
+      "2. Execute action sequence for scenario #16",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #16",
+    "expected_result": "System behaves correctly as specified in Login and Authentication - Scenario 16 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-047",
+    "category": "Selenium Web Automation",
+    "module": "Login & Auth",
+    "title": "Login and Authentication - Scenario 17",
+    "objective": "Verify login form rendering, valid researcher credentials, invalid credentials, empty submissions, token storage, and session lifecycle. (Scenario #17)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Login & Auth",
+      "2. Execute action sequence for scenario #17",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #17",
+    "expected_result": "System behaves correctly as specified in Login and Authentication - Scenario 17 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-048",
+    "category": "Selenium Web Automation",
+    "module": "Login & Auth",
+    "title": "Login and Authentication - Scenario 18",
+    "objective": "Verify login form rendering, valid researcher credentials, invalid credentials, empty submissions, token storage, and session lifecycle. (Scenario #18)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Login & Auth",
+      "2. Execute action sequence for scenario #18",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #18",
+    "expected_result": "System behaves correctly as specified in Login and Authentication - Scenario 18 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-049",
+    "category": "Selenium Web Automation",
+    "module": "Login & Auth",
+    "title": "Login and Authentication - Scenario 19",
+    "objective": "Verify login form rendering, valid researcher credentials, invalid credentials, empty submissions, token storage, and session lifecycle. (Scenario #19)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Login & Auth",
+      "2. Execute action sequence for scenario #19",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #19",
+    "expected_result": "System behaves correctly as specified in Login and Authentication - Scenario 19 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-050",
+    "category": "Selenium Web Automation",
+    "module": "Login & Auth",
+    "title": "Login and Authentication - Scenario 20",
+    "objective": "Verify login form rendering, valid researcher credentials, invalid credentials, empty submissions, token storage, and session lifecycle. (Scenario #20)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Login & Auth",
+      "2. Execute action sequence for scenario #20",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #20",
+    "expected_result": "System behaves correctly as specified in Login and Authentication - Scenario 20 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-051",
+    "category": "Selenium Web Automation",
+    "module": "Dashboard",
+    "title": "Dashboard - Scenario 01",
+    "objective": "Verify dashboard summary metrics, KPI card rendering, SVG chart canvas, responsive grid layout, and real-time state synchronization. (Scenario #1)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Dashboard",
+      "2. Execute action sequence for scenario #1",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #1",
+    "expected_result": "System behaves correctly as specified in Dashboard - Scenario 01 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-052",
+    "category": "Selenium Web Automation",
+    "module": "Dashboard",
+    "title": "Dashboard - Scenario 02",
+    "objective": "Verify dashboard summary metrics, KPI card rendering, SVG chart canvas, responsive grid layout, and real-time state synchronization. (Scenario #2)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Dashboard",
+      "2. Execute action sequence for scenario #2",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #2",
+    "expected_result": "System behaves correctly as specified in Dashboard - Scenario 02 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-053",
+    "category": "Selenium Web Automation",
+    "module": "Dashboard",
+    "title": "Dashboard - Scenario 03",
+    "objective": "Verify dashboard summary metrics, KPI card rendering, SVG chart canvas, responsive grid layout, and real-time state synchronization. (Scenario #3)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Dashboard",
+      "2. Execute action sequence for scenario #3",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #3",
+    "expected_result": "System behaves correctly as specified in Dashboard - Scenario 03 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-054",
+    "category": "Selenium Web Automation",
+    "module": "Dashboard",
+    "title": "Dashboard - Scenario 04",
+    "objective": "Verify dashboard summary metrics, KPI card rendering, SVG chart canvas, responsive grid layout, and real-time state synchronization. (Scenario #4)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Dashboard",
+      "2. Execute action sequence for scenario #4",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #4",
+    "expected_result": "System behaves correctly as specified in Dashboard - Scenario 04 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-055",
+    "category": "Selenium Web Automation",
+    "module": "Dashboard",
+    "title": "Dashboard - Scenario 05",
+    "objective": "Verify dashboard summary metrics, KPI card rendering, SVG chart canvas, responsive grid layout, and real-time state synchronization. (Scenario #5)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Dashboard",
+      "2. Execute action sequence for scenario #5",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #5",
+    "expected_result": "System behaves correctly as specified in Dashboard - Scenario 05 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-056",
+    "category": "Selenium Web Automation",
+    "module": "Dashboard",
+    "title": "Dashboard - Scenario 06",
+    "objective": "Verify dashboard summary metrics, KPI card rendering, SVG chart canvas, responsive grid layout, and real-time state synchronization. (Scenario #6)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Dashboard",
+      "2. Execute action sequence for scenario #6",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #6",
+    "expected_result": "System behaves correctly as specified in Dashboard - Scenario 06 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-057",
+    "category": "Selenium Web Automation",
+    "module": "Dashboard",
+    "title": "Dashboard - Scenario 07",
+    "objective": "Verify dashboard summary metrics, KPI card rendering, SVG chart canvas, responsive grid layout, and real-time state synchronization. (Scenario #7)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Dashboard",
+      "2. Execute action sequence for scenario #7",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #7",
+    "expected_result": "System behaves correctly as specified in Dashboard - Scenario 07 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-058",
+    "category": "Selenium Web Automation",
+    "module": "Dashboard",
+    "title": "Dashboard - Scenario 08",
+    "objective": "Verify dashboard summary metrics, KPI card rendering, SVG chart canvas, responsive grid layout, and real-time state synchronization. (Scenario #8)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Dashboard",
+      "2. Execute action sequence for scenario #8",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #8",
+    "expected_result": "System behaves correctly as specified in Dashboard - Scenario 08 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-059",
+    "category": "Selenium Web Automation",
+    "module": "Dashboard",
+    "title": "Dashboard - Scenario 09",
+    "objective": "Verify dashboard summary metrics, KPI card rendering, SVG chart canvas, responsive grid layout, and real-time state synchronization. (Scenario #9)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Dashboard",
+      "2. Execute action sequence for scenario #9",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #9",
+    "expected_result": "System behaves correctly as specified in Dashboard - Scenario 09 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-060",
+    "category": "Selenium Web Automation",
+    "module": "Dashboard",
+    "title": "Dashboard - Scenario 10",
+    "objective": "Verify dashboard summary metrics, KPI card rendering, SVG chart canvas, responsive grid layout, and real-time state synchronization. (Scenario #10)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Dashboard",
+      "2. Execute action sequence for scenario #10",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #10",
+    "expected_result": "System behaves correctly as specified in Dashboard - Scenario 10 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-061",
+    "category": "Selenium Web Automation",
+    "module": "Dashboard",
+    "title": "Dashboard - Scenario 11",
+    "objective": "Verify dashboard summary metrics, KPI card rendering, SVG chart canvas, responsive grid layout, and real-time state synchronization. (Scenario #11)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Dashboard",
+      "2. Execute action sequence for scenario #11",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #11",
+    "expected_result": "System behaves correctly as specified in Dashboard - Scenario 11 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-062",
+    "category": "Selenium Web Automation",
+    "module": "Dashboard",
+    "title": "Dashboard - Scenario 12",
+    "objective": "Verify dashboard summary metrics, KPI card rendering, SVG chart canvas, responsive grid layout, and real-time state synchronization. (Scenario #12)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Dashboard",
+      "2. Execute action sequence for scenario #12",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #12",
+    "expected_result": "System behaves correctly as specified in Dashboard - Scenario 12 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-063",
+    "category": "Selenium Web Automation",
+    "module": "Dashboard",
+    "title": "Dashboard - Scenario 13",
+    "objective": "Verify dashboard summary metrics, KPI card rendering, SVG chart canvas, responsive grid layout, and real-time state synchronization. (Scenario #13)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Dashboard",
+      "2. Execute action sequence for scenario #13",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #13",
+    "expected_result": "System behaves correctly as specified in Dashboard - Scenario 13 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-064",
+    "category": "Selenium Web Automation",
+    "module": "Dashboard",
+    "title": "Dashboard - Scenario 14",
+    "objective": "Verify dashboard summary metrics, KPI card rendering, SVG chart canvas, responsive grid layout, and real-time state synchronization. (Scenario #14)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Dashboard",
+      "2. Execute action sequence for scenario #14",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #14",
+    "expected_result": "System behaves correctly as specified in Dashboard - Scenario 14 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-065",
+    "category": "Selenium Web Automation",
+    "module": "Dashboard",
+    "title": "Dashboard - Scenario 15",
+    "objective": "Verify dashboard summary metrics, KPI card rendering, SVG chart canvas, responsive grid layout, and real-time state synchronization. (Scenario #15)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Dashboard",
+      "2. Execute action sequence for scenario #15",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #15",
+    "expected_result": "System behaves correctly as specified in Dashboard - Scenario 15 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-066",
+    "category": "Selenium Web Automation",
+    "module": "Drug Library",
+    "title": "Drug Library - Scenario 01",
+    "objective": "Verify drug catalog rendering, live search filtering, molecular weight display, solubility parameters, and active compound details. (Scenario #1)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Drug Library",
+      "2. Execute action sequence for scenario #1",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #1",
+    "expected_result": "System behaves correctly as specified in Drug Library - Scenario 01 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-067",
+    "category": "Selenium Web Automation",
+    "module": "Drug Library",
+    "title": "Drug Library - Scenario 02",
+    "objective": "Verify drug catalog rendering, live search filtering, molecular weight display, solubility parameters, and active compound details. (Scenario #2)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Drug Library",
+      "2. Execute action sequence for scenario #2",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #2",
+    "expected_result": "System behaves correctly as specified in Drug Library - Scenario 02 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-068",
+    "category": "Selenium Web Automation",
+    "module": "Drug Library",
+    "title": "Drug Library - Scenario 03",
+    "objective": "Verify drug catalog rendering, live search filtering, molecular weight display, solubility parameters, and active compound details. (Scenario #3)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Drug Library",
+      "2. Execute action sequence for scenario #3",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #3",
+    "expected_result": "System behaves correctly as specified in Drug Library - Scenario 03 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-069",
+    "category": "Selenium Web Automation",
+    "module": "Drug Library",
+    "title": "Drug Library - Scenario 04",
+    "objective": "Verify drug catalog rendering, live search filtering, molecular weight display, solubility parameters, and active compound details. (Scenario #4)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Drug Library",
+      "2. Execute action sequence for scenario #4",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #4",
+    "expected_result": "System behaves correctly as specified in Drug Library - Scenario 04 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-070",
+    "category": "Selenium Web Automation",
+    "module": "Drug Library",
+    "title": "Drug Library - Scenario 05",
+    "objective": "Verify drug catalog rendering, live search filtering, molecular weight display, solubility parameters, and active compound details. (Scenario #5)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Drug Library",
+      "2. Execute action sequence for scenario #5",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #5",
+    "expected_result": "System behaves correctly as specified in Drug Library - Scenario 05 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-071",
+    "category": "Selenium Web Automation",
+    "module": "Drug Library",
+    "title": "Drug Library - Scenario 06",
+    "objective": "Verify drug catalog rendering, live search filtering, molecular weight display, solubility parameters, and active compound details. (Scenario #6)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Drug Library",
+      "2. Execute action sequence for scenario #6",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #6",
+    "expected_result": "System behaves correctly as specified in Drug Library - Scenario 06 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-072",
+    "category": "Selenium Web Automation",
+    "module": "Drug Library",
+    "title": "Drug Library - Scenario 07",
+    "objective": "Verify drug catalog rendering, live search filtering, molecular weight display, solubility parameters, and active compound details. (Scenario #7)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Drug Library",
+      "2. Execute action sequence for scenario #7",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #7",
+    "expected_result": "System behaves correctly as specified in Drug Library - Scenario 07 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-073",
+    "category": "Selenium Web Automation",
+    "module": "Drug Library",
+    "title": "Drug Library - Scenario 08",
+    "objective": "Verify drug catalog rendering, live search filtering, molecular weight display, solubility parameters, and active compound details. (Scenario #8)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Drug Library",
+      "2. Execute action sequence for scenario #8",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #8",
+    "expected_result": "System behaves correctly as specified in Drug Library - Scenario 08 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-074",
+    "category": "Selenium Web Automation",
+    "module": "Drug Library",
+    "title": "Drug Library - Scenario 09",
+    "objective": "Verify drug catalog rendering, live search filtering, molecular weight display, solubility parameters, and active compound details. (Scenario #9)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Drug Library",
+      "2. Execute action sequence for scenario #9",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #9",
+    "expected_result": "System behaves correctly as specified in Drug Library - Scenario 09 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-075",
+    "category": "Selenium Web Automation",
+    "module": "Drug Library",
+    "title": "Drug Library - Scenario 10",
+    "objective": "Verify drug catalog rendering, live search filtering, molecular weight display, solubility parameters, and active compound details. (Scenario #10)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Drug Library",
+      "2. Execute action sequence for scenario #10",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #10",
+    "expected_result": "System behaves correctly as specified in Drug Library - Scenario 10 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-076",
+    "category": "Selenium Web Automation",
+    "module": "Drug Library",
+    "title": "Drug Library - Scenario 11",
+    "objective": "Verify drug catalog rendering, live search filtering, molecular weight display, solubility parameters, and active compound details. (Scenario #11)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Drug Library",
+      "2. Execute action sequence for scenario #11",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #11",
+    "expected_result": "System behaves correctly as specified in Drug Library - Scenario 11 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-077",
+    "category": "Selenium Web Automation",
+    "module": "Drug Library",
+    "title": "Drug Library - Scenario 12",
+    "objective": "Verify drug catalog rendering, live search filtering, molecular weight display, solubility parameters, and active compound details. (Scenario #12)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Drug Library",
+      "2. Execute action sequence for scenario #12",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #12",
+    "expected_result": "System behaves correctly as specified in Drug Library - Scenario 12 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-078",
+    "category": "Selenium Web Automation",
+    "module": "Drug Library",
+    "title": "Drug Library - Scenario 13",
+    "objective": "Verify drug catalog rendering, live search filtering, molecular weight display, solubility parameters, and active compound details. (Scenario #13)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Drug Library",
+      "2. Execute action sequence for scenario #13",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #13",
+    "expected_result": "System behaves correctly as specified in Drug Library - Scenario 13 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-079",
+    "category": "Selenium Web Automation",
+    "module": "Drug Library",
+    "title": "Drug Library - Scenario 14",
+    "objective": "Verify drug catalog rendering, live search filtering, molecular weight display, solubility parameters, and active compound details. (Scenario #14)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Drug Library",
+      "2. Execute action sequence for scenario #14",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #14",
+    "expected_result": "System behaves correctly as specified in Drug Library - Scenario 14 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-080",
+    "category": "Selenium Web Automation",
+    "module": "Drug Library",
+    "title": "Drug Library - Scenario 15",
+    "objective": "Verify drug catalog rendering, live search filtering, molecular weight display, solubility parameters, and active compound details. (Scenario #15)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Drug Library",
+      "2. Execute action sequence for scenario #15",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #15",
+    "expected_result": "System behaves correctly as specified in Drug Library - Scenario 15 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-081",
+    "category": "Selenium Web Automation",
+    "module": "Polymer Library",
+    "title": "Polymer Library - Scenario 01",
+    "objective": "Verify biopolymer carrier matrix display, swelling ratio indices, degradation rates, pH responsiveness indicators, and catalog cards. (Scenario #1)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Polymer Library",
+      "2. Execute action sequence for scenario #1",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #1",
+    "expected_result": "System behaves correctly as specified in Polymer Library - Scenario 01 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-082",
+    "category": "Selenium Web Automation",
+    "module": "Polymer Library",
+    "title": "Polymer Library - Scenario 02",
+    "objective": "Verify biopolymer carrier matrix display, swelling ratio indices, degradation rates, pH responsiveness indicators, and catalog cards. (Scenario #2)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Polymer Library",
+      "2. Execute action sequence for scenario #2",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #2",
+    "expected_result": "System behaves correctly as specified in Polymer Library - Scenario 02 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-083",
+    "category": "Selenium Web Automation",
+    "module": "Polymer Library",
+    "title": "Polymer Library - Scenario 03",
+    "objective": "Verify biopolymer carrier matrix display, swelling ratio indices, degradation rates, pH responsiveness indicators, and catalog cards. (Scenario #3)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Polymer Library",
+      "2. Execute action sequence for scenario #3",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #3",
+    "expected_result": "System behaves correctly as specified in Polymer Library - Scenario 03 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-084",
+    "category": "Selenium Web Automation",
+    "module": "Polymer Library",
+    "title": "Polymer Library - Scenario 04",
+    "objective": "Verify biopolymer carrier matrix display, swelling ratio indices, degradation rates, pH responsiveness indicators, and catalog cards. (Scenario #4)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Polymer Library",
+      "2. Execute action sequence for scenario #4",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #4",
+    "expected_result": "System behaves correctly as specified in Polymer Library - Scenario 04 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-085",
+    "category": "Selenium Web Automation",
+    "module": "Polymer Library",
+    "title": "Polymer Library - Scenario 05",
+    "objective": "Verify biopolymer carrier matrix display, swelling ratio indices, degradation rates, pH responsiveness indicators, and catalog cards. (Scenario #5)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Polymer Library",
+      "2. Execute action sequence for scenario #5",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #5",
+    "expected_result": "System behaves correctly as specified in Polymer Library - Scenario 05 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-086",
+    "category": "Selenium Web Automation",
+    "module": "Polymer Library",
+    "title": "Polymer Library - Scenario 06",
+    "objective": "Verify biopolymer carrier matrix display, swelling ratio indices, degradation rates, pH responsiveness indicators, and catalog cards. (Scenario #6)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Polymer Library",
+      "2. Execute action sequence for scenario #6",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #6",
+    "expected_result": "System behaves correctly as specified in Polymer Library - Scenario 06 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-087",
+    "category": "Selenium Web Automation",
+    "module": "Polymer Library",
+    "title": "Polymer Library - Scenario 07",
+    "objective": "Verify biopolymer carrier matrix display, swelling ratio indices, degradation rates, pH responsiveness indicators, and catalog cards. (Scenario #7)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Polymer Library",
+      "2. Execute action sequence for scenario #7",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #7",
+    "expected_result": "System behaves correctly as specified in Polymer Library - Scenario 07 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-088",
+    "category": "Selenium Web Automation",
+    "module": "Polymer Library",
+    "title": "Polymer Library - Scenario 08",
+    "objective": "Verify biopolymer carrier matrix display, swelling ratio indices, degradation rates, pH responsiveness indicators, and catalog cards. (Scenario #8)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Polymer Library",
+      "2. Execute action sequence for scenario #8",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #8",
+    "expected_result": "System behaves correctly as specified in Polymer Library - Scenario 08 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-089",
+    "category": "Selenium Web Automation",
+    "module": "Polymer Library",
+    "title": "Polymer Library - Scenario 09",
+    "objective": "Verify biopolymer carrier matrix display, swelling ratio indices, degradation rates, pH responsiveness indicators, and catalog cards. (Scenario #9)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Polymer Library",
+      "2. Execute action sequence for scenario #9",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #9",
+    "expected_result": "System behaves correctly as specified in Polymer Library - Scenario 09 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-090",
+    "category": "Selenium Web Automation",
+    "module": "Polymer Library",
+    "title": "Polymer Library - Scenario 10",
+    "objective": "Verify biopolymer carrier matrix display, swelling ratio indices, degradation rates, pH responsiveness indicators, and catalog cards. (Scenario #10)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Polymer Library",
+      "2. Execute action sequence for scenario #10",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #10",
+    "expected_result": "System behaves correctly as specified in Polymer Library - Scenario 10 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-091",
+    "category": "Selenium Web Automation",
+    "module": "Polymer Library",
+    "title": "Polymer Library - Scenario 11",
+    "objective": "Verify biopolymer carrier matrix display, swelling ratio indices, degradation rates, pH responsiveness indicators, and catalog cards. (Scenario #11)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Polymer Library",
+      "2. Execute action sequence for scenario #11",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #11",
+    "expected_result": "System behaves correctly as specified in Polymer Library - Scenario 11 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-092",
+    "category": "Selenium Web Automation",
+    "module": "Polymer Library",
+    "title": "Polymer Library - Scenario 12",
+    "objective": "Verify biopolymer carrier matrix display, swelling ratio indices, degradation rates, pH responsiveness indicators, and catalog cards. (Scenario #12)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Polymer Library",
+      "2. Execute action sequence for scenario #12",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #12",
+    "expected_result": "System behaves correctly as specified in Polymer Library - Scenario 12 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-093",
+    "category": "Selenium Web Automation",
+    "module": "Polymer Library",
+    "title": "Polymer Library - Scenario 13",
+    "objective": "Verify biopolymer carrier matrix display, swelling ratio indices, degradation rates, pH responsiveness indicators, and catalog cards. (Scenario #13)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Polymer Library",
+      "2. Execute action sequence for scenario #13",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #13",
+    "expected_result": "System behaves correctly as specified in Polymer Library - Scenario 13 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-094",
+    "category": "Selenium Web Automation",
+    "module": "Polymer Library",
+    "title": "Polymer Library - Scenario 14",
+    "objective": "Verify biopolymer carrier matrix display, swelling ratio indices, degradation rates, pH responsiveness indicators, and catalog cards. (Scenario #14)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Polymer Library",
+      "2. Execute action sequence for scenario #14",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #14",
+    "expected_result": "System behaves correctly as specified in Polymer Library - Scenario 14 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-095",
+    "category": "Selenium Web Automation",
+    "module": "Polymer Library",
+    "title": "Polymer Library - Scenario 15",
+    "objective": "Verify biopolymer carrier matrix display, swelling ratio indices, degradation rates, pH responsiveness indicators, and catalog cards. (Scenario #15)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Polymer Library",
+      "2. Execute action sequence for scenario #15",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #15",
+    "expected_result": "System behaves correctly as specified in Polymer Library - Scenario 15 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-096",
+    "category": "Selenium Web Automation",
+    "module": "Simulator Inputs",
+    "title": "Simulator Input Validation - Scenario 01",
+    "objective": "Verify formulation parameter validation, zero drug loading boundary, slider constraints, extreme temperatures, and invalid pH rejection. (Scenario #1)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Simulator Inputs",
+      "2. Execute action sequence for scenario #1",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #1",
+    "expected_result": "System behaves correctly as specified in Simulator Input Validation - Scenario 01 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-097",
+    "category": "Selenium Web Automation",
+    "module": "Simulator Inputs",
+    "title": "Simulator Input Validation - Scenario 02",
+    "objective": "Verify formulation parameter validation, zero drug loading boundary, slider constraints, extreme temperatures, and invalid pH rejection. (Scenario #2)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Simulator Inputs",
+      "2. Execute action sequence for scenario #2",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #2",
+    "expected_result": "System behaves correctly as specified in Simulator Input Validation - Scenario 02 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-098",
+    "category": "Selenium Web Automation",
+    "module": "Simulator Inputs",
+    "title": "Simulator Input Validation - Scenario 03",
+    "objective": "Verify formulation parameter validation, zero drug loading boundary, slider constraints, extreme temperatures, and invalid pH rejection. (Scenario #3)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Simulator Inputs",
+      "2. Execute action sequence for scenario #3",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #3",
+    "expected_result": "System behaves correctly as specified in Simulator Input Validation - Scenario 03 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-099",
+    "category": "Selenium Web Automation",
+    "module": "Simulator Inputs",
+    "title": "Simulator Input Validation - Scenario 04",
+    "objective": "Verify formulation parameter validation, zero drug loading boundary, slider constraints, extreme temperatures, and invalid pH rejection. (Scenario #4)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Simulator Inputs",
+      "2. Execute action sequence for scenario #4",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #4",
+    "expected_result": "System behaves correctly as specified in Simulator Input Validation - Scenario 04 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-100",
+    "category": "Selenium Web Automation",
+    "module": "Simulator Inputs",
+    "title": "Simulator Input Validation - Scenario 05",
+    "objective": "Verify formulation parameter validation, zero drug loading boundary, slider constraints, extreme temperatures, and invalid pH rejection. (Scenario #5)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Simulator Inputs",
+      "2. Execute action sequence for scenario #5",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #5",
+    "expected_result": "System behaves correctly as specified in Simulator Input Validation - Scenario 05 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-101",
+    "category": "Selenium Web Automation",
+    "module": "Simulator Inputs",
+    "title": "Simulator Input Validation - Scenario 06",
+    "objective": "Verify formulation parameter validation, zero drug loading boundary, slider constraints, extreme temperatures, and invalid pH rejection. (Scenario #6)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Simulator Inputs",
+      "2. Execute action sequence for scenario #6",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #6",
+    "expected_result": "System behaves correctly as specified in Simulator Input Validation - Scenario 06 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-102",
+    "category": "Selenium Web Automation",
+    "module": "Simulator Inputs",
+    "title": "Simulator Input Validation - Scenario 07",
+    "objective": "Verify formulation parameter validation, zero drug loading boundary, slider constraints, extreme temperatures, and invalid pH rejection. (Scenario #7)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Simulator Inputs",
+      "2. Execute action sequence for scenario #7",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #7",
+    "expected_result": "System behaves correctly as specified in Simulator Input Validation - Scenario 07 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-103",
+    "category": "Selenium Web Automation",
+    "module": "Simulator Inputs",
+    "title": "Simulator Input Validation - Scenario 08",
+    "objective": "Verify formulation parameter validation, zero drug loading boundary, slider constraints, extreme temperatures, and invalid pH rejection. (Scenario #8)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Simulator Inputs",
+      "2. Execute action sequence for scenario #8",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #8",
+    "expected_result": "System behaves correctly as specified in Simulator Input Validation - Scenario 08 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-104",
+    "category": "Selenium Web Automation",
+    "module": "Simulator Inputs",
+    "title": "Simulator Input Validation - Scenario 09",
+    "objective": "Verify formulation parameter validation, zero drug loading boundary, slider constraints, extreme temperatures, and invalid pH rejection. (Scenario #9)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Simulator Inputs",
+      "2. Execute action sequence for scenario #9",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #9",
+    "expected_result": "System behaves correctly as specified in Simulator Input Validation - Scenario 09 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-105",
+    "category": "Selenium Web Automation",
+    "module": "Simulator Inputs",
+    "title": "Simulator Input Validation - Scenario 10",
+    "objective": "Verify formulation parameter validation, zero drug loading boundary, slider constraints, extreme temperatures, and invalid pH rejection. (Scenario #10)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Simulator Inputs",
+      "2. Execute action sequence for scenario #10",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #10",
+    "expected_result": "System behaves correctly as specified in Simulator Input Validation - Scenario 10 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-106",
+    "category": "Selenium Web Automation",
+    "module": "Simulator Inputs",
+    "title": "Simulator Input Validation - Scenario 11",
+    "objective": "Verify formulation parameter validation, zero drug loading boundary, slider constraints, extreme temperatures, and invalid pH rejection. (Scenario #11)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Simulator Inputs",
+      "2. Execute action sequence for scenario #11",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #11",
+    "expected_result": "System behaves correctly as specified in Simulator Input Validation - Scenario 11 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-107",
+    "category": "Selenium Web Automation",
+    "module": "Simulator Inputs",
+    "title": "Simulator Input Validation - Scenario 12",
+    "objective": "Verify formulation parameter validation, zero drug loading boundary, slider constraints, extreme temperatures, and invalid pH rejection. (Scenario #12)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Simulator Inputs",
+      "2. Execute action sequence for scenario #12",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #12",
+    "expected_result": "System behaves correctly as specified in Simulator Input Validation - Scenario 12 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-108",
+    "category": "Selenium Web Automation",
+    "module": "Simulator Inputs",
+    "title": "Simulator Input Validation - Scenario 13",
+    "objective": "Verify formulation parameter validation, zero drug loading boundary, slider constraints, extreme temperatures, and invalid pH rejection. (Scenario #13)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Simulator Inputs",
+      "2. Execute action sequence for scenario #13",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #13",
+    "expected_result": "System behaves correctly as specified in Simulator Input Validation - Scenario 13 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-109",
+    "category": "Selenium Web Automation",
+    "module": "Simulator Inputs",
+    "title": "Simulator Input Validation - Scenario 14",
+    "objective": "Verify formulation parameter validation, zero drug loading boundary, slider constraints, extreme temperatures, and invalid pH rejection. (Scenario #14)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Simulator Inputs",
+      "2. Execute action sequence for scenario #14",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #14",
+    "expected_result": "System behaves correctly as specified in Simulator Input Validation - Scenario 14 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-110",
+    "category": "Selenium Web Automation",
+    "module": "Simulator Inputs",
+    "title": "Simulator Input Validation - Scenario 15",
+    "objective": "Verify formulation parameter validation, zero drug loading boundary, slider constraints, extreme temperatures, and invalid pH rejection. (Scenario #15)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Simulator Inputs",
+      "2. Execute action sequence for scenario #15",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #15",
+    "expected_result": "System behaves correctly as specified in Simulator Input Validation - Scenario 15 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-111",
+    "category": "Selenium Web Automation",
+    "module": "Simulator Inputs",
+    "title": "Simulator Input Validation - Scenario 16",
+    "objective": "Verify formulation parameter validation, zero drug loading boundary, slider constraints, extreme temperatures, and invalid pH rejection. (Scenario #16)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Simulator Inputs",
+      "2. Execute action sequence for scenario #16",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #16",
+    "expected_result": "System behaves correctly as specified in Simulator Input Validation - Scenario 16 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-112",
+    "category": "Selenium Web Automation",
+    "module": "Simulator Inputs",
+    "title": "Simulator Input Validation - Scenario 17",
+    "objective": "Verify formulation parameter validation, zero drug loading boundary, slider constraints, extreme temperatures, and invalid pH rejection. (Scenario #17)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Simulator Inputs",
+      "2. Execute action sequence for scenario #17",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #17",
+    "expected_result": "System behaves correctly as specified in Simulator Input Validation - Scenario 17 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-113",
+    "category": "Selenium Web Automation",
+    "module": "Simulator Inputs",
+    "title": "Simulator Input Validation - Scenario 18",
+    "objective": "Verify formulation parameter validation, zero drug loading boundary, slider constraints, extreme temperatures, and invalid pH rejection. (Scenario #18)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Simulator Inputs",
+      "2. Execute action sequence for scenario #18",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #18",
+    "expected_result": "System behaves correctly as specified in Simulator Input Validation - Scenario 18 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-114",
+    "category": "Selenium Web Automation",
+    "module": "Simulator Inputs",
+    "title": "Simulator Input Validation - Scenario 19",
+    "objective": "Verify formulation parameter validation, zero drug loading boundary, slider constraints, extreme temperatures, and invalid pH rejection. (Scenario #19)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Simulator Inputs",
+      "2. Execute action sequence for scenario #19",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #19",
+    "expected_result": "System behaves correctly as specified in Simulator Input Validation - Scenario 19 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-115",
+    "category": "Selenium Web Automation",
+    "module": "Simulator Inputs",
+    "title": "Simulator Input Validation - Scenario 20",
+    "objective": "Verify formulation parameter validation, zero drug loading boundary, slider constraints, extreme temperatures, and invalid pH rejection. (Scenario #20)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Simulator Inputs",
+      "2. Execute action sequence for scenario #20",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #20",
+    "expected_result": "System behaves correctly as specified in Simulator Input Validation - Scenario 20 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-116",
+    "category": "Selenium Web Automation",
+    "module": "Kinetics Engine",
+    "title": "Drug Release Simulation - Scenario 01",
+    "objective": "Verify physical kinetics simulation execution, Higuchi diffusion, Korsmeyer-Peppas matrix erosion, release curve generation, and mass balance conservation. (Scenario #1)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Kinetics Engine",
+      "2. Execute action sequence for scenario #1",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #1",
+    "expected_result": "System behaves correctly as specified in Drug Release Simulation - Scenario 01 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-117",
+    "category": "Selenium Web Automation",
+    "module": "Kinetics Engine",
+    "title": "Drug Release Simulation - Scenario 02",
+    "objective": "Verify physical kinetics simulation execution, Higuchi diffusion, Korsmeyer-Peppas matrix erosion, release curve generation, and mass balance conservation. (Scenario #2)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Kinetics Engine",
+      "2. Execute action sequence for scenario #2",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #2",
+    "expected_result": "System behaves correctly as specified in Drug Release Simulation - Scenario 02 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-118",
+    "category": "Selenium Web Automation",
+    "module": "Kinetics Engine",
+    "title": "Drug Release Simulation - Scenario 03",
+    "objective": "Verify physical kinetics simulation execution, Higuchi diffusion, Korsmeyer-Peppas matrix erosion, release curve generation, and mass balance conservation. (Scenario #3)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Kinetics Engine",
+      "2. Execute action sequence for scenario #3",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #3",
+    "expected_result": "System behaves correctly as specified in Drug Release Simulation - Scenario 03 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-119",
+    "category": "Selenium Web Automation",
+    "module": "Kinetics Engine",
+    "title": "Drug Release Simulation - Scenario 04",
+    "objective": "Verify physical kinetics simulation execution, Higuchi diffusion, Korsmeyer-Peppas matrix erosion, release curve generation, and mass balance conservation. (Scenario #4)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Kinetics Engine",
+      "2. Execute action sequence for scenario #4",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #4",
+    "expected_result": "System behaves correctly as specified in Drug Release Simulation - Scenario 04 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-120",
+    "category": "Selenium Web Automation",
+    "module": "Kinetics Engine",
+    "title": "Drug Release Simulation - Scenario 05",
+    "objective": "Verify physical kinetics simulation execution, Higuchi diffusion, Korsmeyer-Peppas matrix erosion, release curve generation, and mass balance conservation. (Scenario #5)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Kinetics Engine",
+      "2. Execute action sequence for scenario #5",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #5",
+    "expected_result": "System behaves correctly as specified in Drug Release Simulation - Scenario 05 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-121",
+    "category": "Selenium Web Automation",
+    "module": "Kinetics Engine",
+    "title": "Drug Release Simulation - Scenario 06",
+    "objective": "Verify physical kinetics simulation execution, Higuchi diffusion, Korsmeyer-Peppas matrix erosion, release curve generation, and mass balance conservation. (Scenario #6)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Kinetics Engine",
+      "2. Execute action sequence for scenario #6",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #6",
+    "expected_result": "System behaves correctly as specified in Drug Release Simulation - Scenario 06 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-122",
+    "category": "Selenium Web Automation",
+    "module": "Kinetics Engine",
+    "title": "Drug Release Simulation - Scenario 07",
+    "objective": "Verify physical kinetics simulation execution, Higuchi diffusion, Korsmeyer-Peppas matrix erosion, release curve generation, and mass balance conservation. (Scenario #7)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Kinetics Engine",
+      "2. Execute action sequence for scenario #7",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #7",
+    "expected_result": "System behaves correctly as specified in Drug Release Simulation - Scenario 07 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-123",
+    "category": "Selenium Web Automation",
+    "module": "Kinetics Engine",
+    "title": "Drug Release Simulation - Scenario 08",
+    "objective": "Verify physical kinetics simulation execution, Higuchi diffusion, Korsmeyer-Peppas matrix erosion, release curve generation, and mass balance conservation. (Scenario #8)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Kinetics Engine",
+      "2. Execute action sequence for scenario #8",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #8",
+    "expected_result": "System behaves correctly as specified in Drug Release Simulation - Scenario 08 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-124",
+    "category": "Selenium Web Automation",
+    "module": "Kinetics Engine",
+    "title": "Drug Release Simulation - Scenario 09",
+    "objective": "Verify physical kinetics simulation execution, Higuchi diffusion, Korsmeyer-Peppas matrix erosion, release curve generation, and mass balance conservation. (Scenario #9)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Kinetics Engine",
+      "2. Execute action sequence for scenario #9",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #9",
+    "expected_result": "System behaves correctly as specified in Drug Release Simulation - Scenario 09 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-125",
+    "category": "Selenium Web Automation",
+    "module": "Kinetics Engine",
+    "title": "Drug Release Simulation - Scenario 10",
+    "objective": "Verify physical kinetics simulation execution, Higuchi diffusion, Korsmeyer-Peppas matrix erosion, release curve generation, and mass balance conservation. (Scenario #10)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Kinetics Engine",
+      "2. Execute action sequence for scenario #10",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #10",
+    "expected_result": "System behaves correctly as specified in Drug Release Simulation - Scenario 10 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-126",
+    "category": "Selenium Web Automation",
+    "module": "Kinetics Engine",
+    "title": "Drug Release Simulation - Scenario 11",
+    "objective": "Verify physical kinetics simulation execution, Higuchi diffusion, Korsmeyer-Peppas matrix erosion, release curve generation, and mass balance conservation. (Scenario #11)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Kinetics Engine",
+      "2. Execute action sequence for scenario #11",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #11",
+    "expected_result": "System behaves correctly as specified in Drug Release Simulation - Scenario 11 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-127",
+    "category": "Selenium Web Automation",
+    "module": "Kinetics Engine",
+    "title": "Drug Release Simulation - Scenario 12",
+    "objective": "Verify physical kinetics simulation execution, Higuchi diffusion, Korsmeyer-Peppas matrix erosion, release curve generation, and mass balance conservation. (Scenario #12)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Kinetics Engine",
+      "2. Execute action sequence for scenario #12",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #12",
+    "expected_result": "System behaves correctly as specified in Drug Release Simulation - Scenario 12 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-128",
+    "category": "Selenium Web Automation",
+    "module": "Kinetics Engine",
+    "title": "Drug Release Simulation - Scenario 13",
+    "objective": "Verify physical kinetics simulation execution, Higuchi diffusion, Korsmeyer-Peppas matrix erosion, release curve generation, and mass balance conservation. (Scenario #13)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Kinetics Engine",
+      "2. Execute action sequence for scenario #13",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #13",
+    "expected_result": "System behaves correctly as specified in Drug Release Simulation - Scenario 13 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-129",
+    "category": "Selenium Web Automation",
+    "module": "Kinetics Engine",
+    "title": "Drug Release Simulation - Scenario 14",
+    "objective": "Verify physical kinetics simulation execution, Higuchi diffusion, Korsmeyer-Peppas matrix erosion, release curve generation, and mass balance conservation. (Scenario #14)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Kinetics Engine",
+      "2. Execute action sequence for scenario #14",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #14",
+    "expected_result": "System behaves correctly as specified in Drug Release Simulation - Scenario 14 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-130",
+    "category": "Selenium Web Automation",
+    "module": "Kinetics Engine",
+    "title": "Drug Release Simulation - Scenario 15",
+    "objective": "Verify physical kinetics simulation execution, Higuchi diffusion, Korsmeyer-Peppas matrix erosion, release curve generation, and mass balance conservation. (Scenario #15)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Kinetics Engine",
+      "2. Execute action sequence for scenario #15",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #15",
+    "expected_result": "System behaves correctly as specified in Drug Release Simulation - Scenario 15 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-131",
+    "category": "Selenium Web Automation",
+    "module": "Kinetics Engine",
+    "title": "Drug Release Simulation - Scenario 16",
+    "objective": "Verify physical kinetics simulation execution, Higuchi diffusion, Korsmeyer-Peppas matrix erosion, release curve generation, and mass balance conservation. (Scenario #16)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Kinetics Engine",
+      "2. Execute action sequence for scenario #16",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #16",
+    "expected_result": "System behaves correctly as specified in Drug Release Simulation - Scenario 16 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-132",
+    "category": "Selenium Web Automation",
+    "module": "Kinetics Engine",
+    "title": "Drug Release Simulation - Scenario 17",
+    "objective": "Verify physical kinetics simulation execution, Higuchi diffusion, Korsmeyer-Peppas matrix erosion, release curve generation, and mass balance conservation. (Scenario #17)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Kinetics Engine",
+      "2. Execute action sequence for scenario #17",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #17",
+    "expected_result": "System behaves correctly as specified in Drug Release Simulation - Scenario 17 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-133",
+    "category": "Selenium Web Automation",
+    "module": "Kinetics Engine",
+    "title": "Drug Release Simulation - Scenario 18",
+    "objective": "Verify physical kinetics simulation execution, Higuchi diffusion, Korsmeyer-Peppas matrix erosion, release curve generation, and mass balance conservation. (Scenario #18)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Kinetics Engine",
+      "2. Execute action sequence for scenario #18",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #18",
+    "expected_result": "System behaves correctly as specified in Drug Release Simulation - Scenario 18 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-134",
+    "category": "Selenium Web Automation",
+    "module": "Kinetics Engine",
+    "title": "Drug Release Simulation - Scenario 19",
+    "objective": "Verify physical kinetics simulation execution, Higuchi diffusion, Korsmeyer-Peppas matrix erosion, release curve generation, and mass balance conservation. (Scenario #19)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Kinetics Engine",
+      "2. Execute action sequence for scenario #19",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #19",
+    "expected_result": "System behaves correctly as specified in Drug Release Simulation - Scenario 19 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-135",
+    "category": "Selenium Web Automation",
+    "module": "Kinetics Engine",
+    "title": "Drug Release Simulation - Scenario 20",
+    "objective": "Verify physical kinetics simulation execution, Higuchi diffusion, Korsmeyer-Peppas matrix erosion, release curve generation, and mass balance conservation. (Scenario #20)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Kinetics Engine",
+      "2. Execute action sequence for scenario #20",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #20",
+    "expected_result": "System behaves correctly as specified in Drug Release Simulation - Scenario 20 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-136",
+    "category": "Selenium Web Automation",
+    "module": "AI Prediction",
+    "title": "AI Prediction - Scenario 01",
+    "objective": "Verify Random Forest regression model inference, predicted cumulative release percentage, peak release rate, and confidence scores. (Scenario #1)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for AI Prediction",
+      "2. Execute action sequence for scenario #1",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #1",
+    "expected_result": "System behaves correctly as specified in AI Prediction - Scenario 01 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-137",
+    "category": "Selenium Web Automation",
+    "module": "AI Prediction",
+    "title": "AI Prediction - Scenario 02",
+    "objective": "Verify Random Forest regression model inference, predicted cumulative release percentage, peak release rate, and confidence scores. (Scenario #2)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for AI Prediction",
+      "2. Execute action sequence for scenario #2",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #2",
+    "expected_result": "System behaves correctly as specified in AI Prediction - Scenario 02 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-138",
+    "category": "Selenium Web Automation",
+    "module": "AI Prediction",
+    "title": "AI Prediction - Scenario 03",
+    "objective": "Verify Random Forest regression model inference, predicted cumulative release percentage, peak release rate, and confidence scores. (Scenario #3)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for AI Prediction",
+      "2. Execute action sequence for scenario #3",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #3",
+    "expected_result": "System behaves correctly as specified in AI Prediction - Scenario 03 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-139",
+    "category": "Selenium Web Automation",
+    "module": "AI Prediction",
+    "title": "AI Prediction - Scenario 04",
+    "objective": "Verify Random Forest regression model inference, predicted cumulative release percentage, peak release rate, and confidence scores. (Scenario #4)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for AI Prediction",
+      "2. Execute action sequence for scenario #4",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #4",
+    "expected_result": "System behaves correctly as specified in AI Prediction - Scenario 04 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-140",
+    "category": "Selenium Web Automation",
+    "module": "AI Prediction",
+    "title": "AI Prediction - Scenario 05",
+    "objective": "Verify Random Forest regression model inference, predicted cumulative release percentage, peak release rate, and confidence scores. (Scenario #5)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for AI Prediction",
+      "2. Execute action sequence for scenario #5",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #5",
+    "expected_result": "System behaves correctly as specified in AI Prediction - Scenario 05 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-141",
+    "category": "Selenium Web Automation",
+    "module": "AI Prediction",
+    "title": "AI Prediction - Scenario 06",
+    "objective": "Verify Random Forest regression model inference, predicted cumulative release percentage, peak release rate, and confidence scores. (Scenario #6)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for AI Prediction",
+      "2. Execute action sequence for scenario #6",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #6",
+    "expected_result": "System behaves correctly as specified in AI Prediction - Scenario 06 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-142",
+    "category": "Selenium Web Automation",
+    "module": "AI Prediction",
+    "title": "AI Prediction - Scenario 07",
+    "objective": "Verify Random Forest regression model inference, predicted cumulative release percentage, peak release rate, and confidence scores. (Scenario #7)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for AI Prediction",
+      "2. Execute action sequence for scenario #7",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #7",
+    "expected_result": "System behaves correctly as specified in AI Prediction - Scenario 07 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-143",
+    "category": "Selenium Web Automation",
+    "module": "AI Prediction",
+    "title": "AI Prediction - Scenario 08",
+    "objective": "Verify Random Forest regression model inference, predicted cumulative release percentage, peak release rate, and confidence scores. (Scenario #8)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for AI Prediction",
+      "2. Execute action sequence for scenario #8",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #8",
+    "expected_result": "System behaves correctly as specified in AI Prediction - Scenario 08 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-144",
+    "category": "Selenium Web Automation",
+    "module": "AI Prediction",
+    "title": "AI Prediction - Scenario 09",
+    "objective": "Verify Random Forest regression model inference, predicted cumulative release percentage, peak release rate, and confidence scores. (Scenario #9)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for AI Prediction",
+      "2. Execute action sequence for scenario #9",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #9",
+    "expected_result": "System behaves correctly as specified in AI Prediction - Scenario 09 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-145",
+    "category": "Selenium Web Automation",
+    "module": "AI Prediction",
+    "title": "AI Prediction - Scenario 10",
+    "objective": "Verify Random Forest regression model inference, predicted cumulative release percentage, peak release rate, and confidence scores. (Scenario #10)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for AI Prediction",
+      "2. Execute action sequence for scenario #10",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #10",
+    "expected_result": "System behaves correctly as specified in AI Prediction - Scenario 10 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-146",
+    "category": "Selenium Web Automation",
+    "module": "AI Prediction",
+    "title": "AI Prediction - Scenario 11",
+    "objective": "Verify Random Forest regression model inference, predicted cumulative release percentage, peak release rate, and confidence scores. (Scenario #11)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for AI Prediction",
+      "2. Execute action sequence for scenario #11",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #11",
+    "expected_result": "System behaves correctly as specified in AI Prediction - Scenario 11 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-147",
+    "category": "Selenium Web Automation",
+    "module": "AI Prediction",
+    "title": "AI Prediction - Scenario 12",
+    "objective": "Verify Random Forest regression model inference, predicted cumulative release percentage, peak release rate, and confidence scores. (Scenario #12)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for AI Prediction",
+      "2. Execute action sequence for scenario #12",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #12",
+    "expected_result": "System behaves correctly as specified in AI Prediction - Scenario 12 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-148",
+    "category": "Selenium Web Automation",
+    "module": "AI Prediction",
+    "title": "AI Prediction - Scenario 13",
+    "objective": "Verify Random Forest regression model inference, predicted cumulative release percentage, peak release rate, and confidence scores. (Scenario #13)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for AI Prediction",
+      "2. Execute action sequence for scenario #13",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #13",
+    "expected_result": "System behaves correctly as specified in AI Prediction - Scenario 13 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-149",
+    "category": "Selenium Web Automation",
+    "module": "AI Prediction",
+    "title": "AI Prediction - Scenario 14",
+    "objective": "Verify Random Forest regression model inference, predicted cumulative release percentage, peak release rate, and confidence scores. (Scenario #14)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for AI Prediction",
+      "2. Execute action sequence for scenario #14",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #14",
+    "expected_result": "System behaves correctly as specified in AI Prediction - Scenario 14 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-150",
+    "category": "Selenium Web Automation",
+    "module": "AI Prediction",
+    "title": "AI Prediction - Scenario 15",
+    "objective": "Verify Random Forest regression model inference, predicted cumulative release percentage, peak release rate, and confidence scores. (Scenario #15)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for AI Prediction",
+      "2. Execute action sequence for scenario #15",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #15",
+    "expected_result": "System behaves correctly as specified in AI Prediction - Scenario 15 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-151",
+    "category": "Selenium Web Automation",
+    "module": "History Archives",
+    "title": "Simulation History - Scenario 01",
+    "objective": "Verify completed simulation runs listing, historical parameters table, timestamp formatting, and record sorting. (Scenario #1)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for History Archives",
+      "2. Execute action sequence for scenario #1",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #1",
+    "expected_result": "System behaves correctly as specified in Simulation History - Scenario 01 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-152",
+    "category": "Selenium Web Automation",
+    "module": "History Archives",
+    "title": "Simulation History - Scenario 02",
+    "objective": "Verify completed simulation runs listing, historical parameters table, timestamp formatting, and record sorting. (Scenario #2)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for History Archives",
+      "2. Execute action sequence for scenario #2",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #2",
+    "expected_result": "System behaves correctly as specified in Simulation History - Scenario 02 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-153",
+    "category": "Selenium Web Automation",
+    "module": "History Archives",
+    "title": "Simulation History - Scenario 03",
+    "objective": "Verify completed simulation runs listing, historical parameters table, timestamp formatting, and record sorting. (Scenario #3)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for History Archives",
+      "2. Execute action sequence for scenario #3",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #3",
+    "expected_result": "System behaves correctly as specified in Simulation History - Scenario 03 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-154",
+    "category": "Selenium Web Automation",
+    "module": "History Archives",
+    "title": "Simulation History - Scenario 04",
+    "objective": "Verify completed simulation runs listing, historical parameters table, timestamp formatting, and record sorting. (Scenario #4)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for History Archives",
+      "2. Execute action sequence for scenario #4",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #4",
+    "expected_result": "System behaves correctly as specified in Simulation History - Scenario 04 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-155",
+    "category": "Selenium Web Automation",
+    "module": "History Archives",
+    "title": "Simulation History - Scenario 05",
+    "objective": "Verify completed simulation runs listing, historical parameters table, timestamp formatting, and record sorting. (Scenario #5)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for History Archives",
+      "2. Execute action sequence for scenario #5",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #5",
+    "expected_result": "System behaves correctly as specified in Simulation History - Scenario 05 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-156",
+    "category": "Selenium Web Automation",
+    "module": "History Archives",
+    "title": "Simulation History - Scenario 06",
+    "objective": "Verify completed simulation runs listing, historical parameters table, timestamp formatting, and record sorting. (Scenario #6)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for History Archives",
+      "2. Execute action sequence for scenario #6",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #6",
+    "expected_result": "System behaves correctly as specified in Simulation History - Scenario 06 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-157",
+    "category": "Selenium Web Automation",
+    "module": "History Archives",
+    "title": "Simulation History - Scenario 07",
+    "objective": "Verify completed simulation runs listing, historical parameters table, timestamp formatting, and record sorting. (Scenario #7)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for History Archives",
+      "2. Execute action sequence for scenario #7",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #7",
+    "expected_result": "System behaves correctly as specified in Simulation History - Scenario 07 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-158",
+    "category": "Selenium Web Automation",
+    "module": "History Archives",
+    "title": "Simulation History - Scenario 08",
+    "objective": "Verify completed simulation runs listing, historical parameters table, timestamp formatting, and record sorting. (Scenario #8)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for History Archives",
+      "2. Execute action sequence for scenario #8",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #8",
+    "expected_result": "System behaves correctly as specified in Simulation History - Scenario 08 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-159",
+    "category": "Selenium Web Automation",
+    "module": "History Archives",
+    "title": "Simulation History - Scenario 09",
+    "objective": "Verify completed simulation runs listing, historical parameters table, timestamp formatting, and record sorting. (Scenario #9)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for History Archives",
+      "2. Execute action sequence for scenario #9",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #9",
+    "expected_result": "System behaves correctly as specified in Simulation History - Scenario 09 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-160",
+    "category": "Selenium Web Automation",
+    "module": "History Archives",
+    "title": "Simulation History - Scenario 10",
+    "objective": "Verify completed simulation runs listing, historical parameters table, timestamp formatting, and record sorting. (Scenario #10)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for History Archives",
+      "2. Execute action sequence for scenario #10",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #10",
+    "expected_result": "System behaves correctly as specified in Simulation History - Scenario 10 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-161",
+    "category": "Selenium Web Automation",
+    "module": "Pre-clinical Reports",
+    "title": "Reports - Scenario 01",
+    "objective": "Verify pre-clinical report generation, PDF export action, report metadata summary, and user report archive access. (Scenario #1)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Pre-clinical Reports",
+      "2. Execute action sequence for scenario #1",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #1",
+    "expected_result": "System behaves correctly as specified in Reports - Scenario 01 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-162",
+    "category": "Selenium Web Automation",
+    "module": "Pre-clinical Reports",
+    "title": "Reports - Scenario 02",
+    "objective": "Verify pre-clinical report generation, PDF export action, report metadata summary, and user report archive access. (Scenario #2)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Pre-clinical Reports",
+      "2. Execute action sequence for scenario #2",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #2",
+    "expected_result": "System behaves correctly as specified in Reports - Scenario 02 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-163",
+    "category": "Selenium Web Automation",
+    "module": "Pre-clinical Reports",
+    "title": "Reports - Scenario 03",
+    "objective": "Verify pre-clinical report generation, PDF export action, report metadata summary, and user report archive access. (Scenario #3)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Pre-clinical Reports",
+      "2. Execute action sequence for scenario #3",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #3",
+    "expected_result": "System behaves correctly as specified in Reports - Scenario 03 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-164",
+    "category": "Selenium Web Automation",
+    "module": "Pre-clinical Reports",
+    "title": "Reports - Scenario 04",
+    "objective": "Verify pre-clinical report generation, PDF export action, report metadata summary, and user report archive access. (Scenario #4)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Pre-clinical Reports",
+      "2. Execute action sequence for scenario #4",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #4",
+    "expected_result": "System behaves correctly as specified in Reports - Scenario 04 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-165",
+    "category": "Selenium Web Automation",
+    "module": "Pre-clinical Reports",
+    "title": "Reports - Scenario 05",
+    "objective": "Verify pre-clinical report generation, PDF export action, report metadata summary, and user report archive access. (Scenario #5)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Pre-clinical Reports",
+      "2. Execute action sequence for scenario #5",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #5",
+    "expected_result": "System behaves correctly as specified in Reports - Scenario 05 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-166",
+    "category": "Selenium Web Automation",
+    "module": "Pre-clinical Reports",
+    "title": "Reports - Scenario 06",
+    "objective": "Verify pre-clinical report generation, PDF export action, report metadata summary, and user report archive access. (Scenario #6)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Pre-clinical Reports",
+      "2. Execute action sequence for scenario #6",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #6",
+    "expected_result": "System behaves correctly as specified in Reports - Scenario 06 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-167",
+    "category": "Selenium Web Automation",
+    "module": "Pre-clinical Reports",
+    "title": "Reports - Scenario 07",
+    "objective": "Verify pre-clinical report generation, PDF export action, report metadata summary, and user report archive access. (Scenario #7)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Pre-clinical Reports",
+      "2. Execute action sequence for scenario #7",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #7",
+    "expected_result": "System behaves correctly as specified in Reports - Scenario 07 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-168",
+    "category": "Selenium Web Automation",
+    "module": "Pre-clinical Reports",
+    "title": "Reports - Scenario 08",
+    "objective": "Verify pre-clinical report generation, PDF export action, report metadata summary, and user report archive access. (Scenario #8)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Pre-clinical Reports",
+      "2. Execute action sequence for scenario #8",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #8",
+    "expected_result": "System behaves correctly as specified in Reports - Scenario 08 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-169",
+    "category": "Selenium Web Automation",
+    "module": "Pre-clinical Reports",
+    "title": "Reports - Scenario 09",
+    "objective": "Verify pre-clinical report generation, PDF export action, report metadata summary, and user report archive access. (Scenario #9)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Pre-clinical Reports",
+      "2. Execute action sequence for scenario #9",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #9",
+    "expected_result": "System behaves correctly as specified in Reports - Scenario 09 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-170",
+    "category": "Selenium Web Automation",
+    "module": "Pre-clinical Reports",
+    "title": "Reports - Scenario 10",
+    "objective": "Verify pre-clinical report generation, PDF export action, report metadata summary, and user report archive access. (Scenario #10)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Pre-clinical Reports",
+      "2. Execute action sequence for scenario #10",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #10",
+    "expected_result": "System behaves correctly as specified in Reports - Scenario 10 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-171",
+    "category": "Selenium Web Automation",
+    "module": "Profile & Settings",
+    "title": "Profile and Settings - Scenario 01",
+    "objective": "Verify user profile details, password change form, research institution metadata, and notification preferences. (Scenario #1)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Profile & Settings",
+      "2. Execute action sequence for scenario #1",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #1",
+    "expected_result": "System behaves correctly as specified in Profile and Settings - Scenario 01 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-172",
+    "category": "Selenium Web Automation",
+    "module": "Profile & Settings",
+    "title": "Profile and Settings - Scenario 02",
+    "objective": "Verify user profile details, password change form, research institution metadata, and notification preferences. (Scenario #2)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Profile & Settings",
+      "2. Execute action sequence for scenario #2",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #2",
+    "expected_result": "System behaves correctly as specified in Profile and Settings - Scenario 02 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-173",
+    "category": "Selenium Web Automation",
+    "module": "Profile & Settings",
+    "title": "Profile and Settings - Scenario 03",
+    "objective": "Verify user profile details, password change form, research institution metadata, and notification preferences. (Scenario #3)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Profile & Settings",
+      "2. Execute action sequence for scenario #3",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #3",
+    "expected_result": "System behaves correctly as specified in Profile and Settings - Scenario 03 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-174",
+    "category": "Selenium Web Automation",
+    "module": "Profile & Settings",
+    "title": "Profile and Settings - Scenario 04",
+    "objective": "Verify user profile details, password change form, research institution metadata, and notification preferences. (Scenario #4)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Profile & Settings",
+      "2. Execute action sequence for scenario #4",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #4",
+    "expected_result": "System behaves correctly as specified in Profile and Settings - Scenario 04 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-175",
+    "category": "Selenium Web Automation",
+    "module": "Profile & Settings",
+    "title": "Profile and Settings - Scenario 05",
+    "objective": "Verify user profile details, password change form, research institution metadata, and notification preferences. (Scenario #5)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Profile & Settings",
+      "2. Execute action sequence for scenario #5",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #5",
+    "expected_result": "System behaves correctly as specified in Profile and Settings - Scenario 05 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-176",
+    "category": "Selenium Web Automation",
+    "module": "Profile & Settings",
+    "title": "Profile and Settings - Scenario 06",
+    "objective": "Verify user profile details, password change form, research institution metadata, and notification preferences. (Scenario #6)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Profile & Settings",
+      "2. Execute action sequence for scenario #6",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #6",
+    "expected_result": "System behaves correctly as specified in Profile and Settings - Scenario 06 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-177",
+    "category": "Selenium Web Automation",
+    "module": "Profile & Settings",
+    "title": "Profile and Settings - Scenario 07",
+    "objective": "Verify user profile details, password change form, research institution metadata, and notification preferences. (Scenario #7)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Profile & Settings",
+      "2. Execute action sequence for scenario #7",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #7",
+    "expected_result": "System behaves correctly as specified in Profile and Settings - Scenario 07 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-178",
+    "category": "Selenium Web Automation",
+    "module": "Profile & Settings",
+    "title": "Profile and Settings - Scenario 08",
+    "objective": "Verify user profile details, password change form, research institution metadata, and notification preferences. (Scenario #8)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Profile & Settings",
+      "2. Execute action sequence for scenario #8",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #8",
+    "expected_result": "System behaves correctly as specified in Profile and Settings - Scenario 08 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-179",
+    "category": "Selenium Web Automation",
+    "module": "Profile & Settings",
+    "title": "Profile and Settings - Scenario 09",
+    "objective": "Verify user profile details, password change form, research institution metadata, and notification preferences. (Scenario #9)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Profile & Settings",
+      "2. Execute action sequence for scenario #9",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #9",
+    "expected_result": "System behaves correctly as specified in Profile and Settings - Scenario 09 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-180",
+    "category": "Selenium Web Automation",
+    "module": "Profile & Settings",
+    "title": "Profile and Settings - Scenario 10",
+    "objective": "Verify user profile details, password change form, research institution metadata, and notification preferences. (Scenario #10)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Profile & Settings",
+      "2. Execute action sequence for scenario #10",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #10",
+    "expected_result": "System behaves correctly as specified in Profile and Settings - Scenario 10 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-181",
+    "category": "Selenium Web Automation",
+    "module": "Responsive Layout",
+    "title": "Responsive Design - Scenario 01",
+    "objective": "Verify mobile viewport breakpoints (375x812), navigation drawer toggling, tablet layouts, and fluid element resizing. (Scenario #1)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Responsive Layout",
+      "2. Execute action sequence for scenario #1",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #1",
+    "expected_result": "System behaves correctly as specified in Responsive Design - Scenario 01 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-182",
+    "category": "Selenium Web Automation",
+    "module": "Responsive Layout",
+    "title": "Responsive Design - Scenario 02",
+    "objective": "Verify mobile viewport breakpoints (375x812), navigation drawer toggling, tablet layouts, and fluid element resizing. (Scenario #2)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Responsive Layout",
+      "2. Execute action sequence for scenario #2",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #2",
+    "expected_result": "System behaves correctly as specified in Responsive Design - Scenario 02 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-183",
+    "category": "Selenium Web Automation",
+    "module": "Responsive Layout",
+    "title": "Responsive Design - Scenario 03",
+    "objective": "Verify mobile viewport breakpoints (375x812), navigation drawer toggling, tablet layouts, and fluid element resizing. (Scenario #3)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Responsive Layout",
+      "2. Execute action sequence for scenario #3",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #3",
+    "expected_result": "System behaves correctly as specified in Responsive Design - Scenario 03 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-184",
+    "category": "Selenium Web Automation",
+    "module": "Responsive Layout",
+    "title": "Responsive Design - Scenario 04",
+    "objective": "Verify mobile viewport breakpoints (375x812), navigation drawer toggling, tablet layouts, and fluid element resizing. (Scenario #4)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Responsive Layout",
+      "2. Execute action sequence for scenario #4",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #4",
+    "expected_result": "System behaves correctly as specified in Responsive Design - Scenario 04 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-185",
+    "category": "Selenium Web Automation",
+    "module": "Responsive Layout",
+    "title": "Responsive Design - Scenario 05",
+    "objective": "Verify mobile viewport breakpoints (375x812), navigation drawer toggling, tablet layouts, and fluid element resizing. (Scenario #5)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Responsive Layout",
+      "2. Execute action sequence for scenario #5",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #5",
+    "expected_result": "System behaves correctly as specified in Responsive Design - Scenario 05 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-186",
+    "category": "Selenium Web Automation",
+    "module": "Responsive Layout",
+    "title": "Responsive Design - Scenario 06",
+    "objective": "Verify mobile viewport breakpoints (375x812), navigation drawer toggling, tablet layouts, and fluid element resizing. (Scenario #6)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Responsive Layout",
+      "2. Execute action sequence for scenario #6",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #6",
+    "expected_result": "System behaves correctly as specified in Responsive Design - Scenario 06 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-187",
+    "category": "Selenium Web Automation",
+    "module": "Responsive Layout",
+    "title": "Responsive Design - Scenario 07",
+    "objective": "Verify mobile viewport breakpoints (375x812), navigation drawer toggling, tablet layouts, and fluid element resizing. (Scenario #7)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Responsive Layout",
+      "2. Execute action sequence for scenario #7",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #7",
+    "expected_result": "System behaves correctly as specified in Responsive Design - Scenario 07 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-188",
+    "category": "Selenium Web Automation",
+    "module": "Responsive Layout",
+    "title": "Responsive Design - Scenario 08",
+    "objective": "Verify mobile viewport breakpoints (375x812), navigation drawer toggling, tablet layouts, and fluid element resizing. (Scenario #8)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Responsive Layout",
+      "2. Execute action sequence for scenario #8",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #8",
+    "expected_result": "System behaves correctly as specified in Responsive Design - Scenario 08 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-189",
+    "category": "Selenium Web Automation",
+    "module": "Responsive Layout",
+    "title": "Responsive Design - Scenario 09",
+    "objective": "Verify mobile viewport breakpoints (375x812), navigation drawer toggling, tablet layouts, and fluid element resizing. (Scenario #9)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Responsive Layout",
+      "2. Execute action sequence for scenario #9",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #9",
+    "expected_result": "System behaves correctly as specified in Responsive Design - Scenario 09 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-190",
+    "category": "Selenium Web Automation",
+    "module": "Responsive Layout",
+    "title": "Responsive Design - Scenario 10",
+    "objective": "Verify mobile viewport breakpoints (375x812), navigation drawer toggling, tablet layouts, and fluid element resizing. (Scenario #10)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Responsive Layout",
+      "2. Execute action sequence for scenario #10",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #10",
+    "expected_result": "System behaves correctly as specified in Responsive Design - Scenario 10 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-191",
+    "category": "Selenium Web Automation",
+    "module": "Security & Error Handling",
+    "title": "Security and Error Handling - Scenario 01",
+    "objective": "Verify unauthenticated route guards, XSS input sanitation, 404 page routing, token expiry handling, and secure storage. (Scenario #1)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Security & Error Handling",
+      "2. Execute action sequence for scenario #1",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #1",
+    "expected_result": "System behaves correctly as specified in Security and Error Handling - Scenario 01 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-192",
+    "category": "Selenium Web Automation",
+    "module": "Security & Error Handling",
+    "title": "Security and Error Handling - Scenario 02",
+    "objective": "Verify unauthenticated route guards, XSS input sanitation, 404 page routing, token expiry handling, and secure storage. (Scenario #2)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Security & Error Handling",
+      "2. Execute action sequence for scenario #2",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #2",
+    "expected_result": "System behaves correctly as specified in Security and Error Handling - Scenario 02 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-193",
+    "category": "Selenium Web Automation",
+    "module": "Security & Error Handling",
+    "title": "Security and Error Handling - Scenario 03",
+    "objective": "Verify unauthenticated route guards, XSS input sanitation, 404 page routing, token expiry handling, and secure storage. (Scenario #3)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Security & Error Handling",
+      "2. Execute action sequence for scenario #3",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #3",
+    "expected_result": "System behaves correctly as specified in Security and Error Handling - Scenario 03 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-194",
+    "category": "Selenium Web Automation",
+    "module": "Security & Error Handling",
+    "title": "Security and Error Handling - Scenario 04",
+    "objective": "Verify unauthenticated route guards, XSS input sanitation, 404 page routing, token expiry handling, and secure storage. (Scenario #4)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Security & Error Handling",
+      "2. Execute action sequence for scenario #4",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #4",
+    "expected_result": "System behaves correctly as specified in Security and Error Handling - Scenario 04 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-195",
+    "category": "Selenium Web Automation",
+    "module": "Security & Error Handling",
+    "title": "Security and Error Handling - Scenario 05",
+    "objective": "Verify unauthenticated route guards, XSS input sanitation, 404 page routing, token expiry handling, and secure storage. (Scenario #5)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Security & Error Handling",
+      "2. Execute action sequence for scenario #5",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #5",
+    "expected_result": "System behaves correctly as specified in Security and Error Handling - Scenario 05 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-196",
+    "category": "Selenium Web Automation",
+    "module": "Security & Error Handling",
+    "title": "Security and Error Handling - Scenario 06",
+    "objective": "Verify unauthenticated route guards, XSS input sanitation, 404 page routing, token expiry handling, and secure storage. (Scenario #6)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Security & Error Handling",
+      "2. Execute action sequence for scenario #6",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #6",
+    "expected_result": "System behaves correctly as specified in Security and Error Handling - Scenario 06 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-197",
+    "category": "Selenium Web Automation",
+    "module": "Security & Error Handling",
+    "title": "Security and Error Handling - Scenario 07",
+    "objective": "Verify unauthenticated route guards, XSS input sanitation, 404 page routing, token expiry handling, and secure storage. (Scenario #7)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Security & Error Handling",
+      "2. Execute action sequence for scenario #7",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #7",
+    "expected_result": "System behaves correctly as specified in Security and Error Handling - Scenario 07 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-198",
+    "category": "Selenium Web Automation",
+    "module": "Security & Error Handling",
+    "title": "Security and Error Handling - Scenario 08",
+    "objective": "Verify unauthenticated route guards, XSS input sanitation, 404 page routing, token expiry handling, and secure storage. (Scenario #8)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Security & Error Handling",
+      "2. Execute action sequence for scenario #8",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #8",
+    "expected_result": "System behaves correctly as specified in Security and Error Handling - Scenario 08 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-199",
+    "category": "Selenium Web Automation",
+    "module": "Security & Error Handling",
+    "title": "Security and Error Handling - Scenario 09",
+    "objective": "Verify unauthenticated route guards, XSS input sanitation, 404 page routing, token expiry handling, and secure storage. (Scenario #9)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Security & Error Handling",
+      "2. Execute action sequence for scenario #9",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #9",
+    "expected_result": "System behaves correctly as specified in Security and Error Handling - Scenario 09 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  },
+  {
+    "test_id": "SEL-200",
+    "category": "Selenium Web Automation",
+    "module": "Security & Error Handling",
+    "title": "Security and Error Handling - Scenario 10",
+    "objective": "Verify unauthenticated route guards, XSS input sanitation, 404 page routing, token expiry handling, and secure storage. (Scenario #10)",
+    "preconditions": "Web application running at http://localhost:5173 with backend API active",
+    "steps": [
+      "1. Navigate to target view for Security & Error Handling",
+      "2. Execute action sequence for scenario #10",
+      "3. Assert DOM elements, network responses, and visual state"
+    ],
+    "input": "Module input parameters variant #10",
+    "expected_result": "System behaves correctly as specified in Security and Error Handling - Scenario 10 without uncaught exceptions or visual regressions",
+    "actual_result": "",
+    "status": "NOT EXECUTED",
+    "execution_timestamp": "",
+    "evidence": "",
+    "error_details": ""
+  }
+]

@@ -21,8 +21,9 @@ def get_reports(
         for doc in docs:
             reports_list.append(doc.to_dict())
             
-        # Sort in memory by created_at descending
+        # Sort in memory by created_at descending and cap to latest 20 reports
         reports_list.sort(key=lambda r: r.get("created_at", ""), reverse=True)
+        reports_list = reports_list[:20]
         
         response_list = []
         for r in reports_list:
