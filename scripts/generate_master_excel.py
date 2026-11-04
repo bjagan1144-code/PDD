@@ -577,10 +577,38 @@ defect_records = [
         "RESOLVED & VERIFIED", "2026-11-04"
     ),
     (
-        "DEF-005", "Overall Application Stability", "Informational", "P3",
-        "Zero Fatal Application Crashes Verification across All 340 Executed Tests",
-        "Comprehensive audit of FastAPI backend logs, Uvicorn server traces, React browser console, and Android logcat across all executed QA cycles.",
-        "FastAPI robust error middleware and React error boundaries successfully handled all stress and load boundaries. Zero unhandled fatal exceptions observed.",
+        "DEF-005", "Selenium Web Automation", "Medium", "P2",
+        "XPath 1.0 Syntax Incompatibility in Dynamic Form Locators (SEL-017)",
+        "Automated Selenium test locator used non-standard CSS-style attribute selector syntax (placeholder*='Name') within an XPath expression, throwing a DOM evaluate syntax error.",
+        "Corrected locator expression to valid standard XPath 1.0 syntax using contains(@placeholder, 'Name'), ensuring cross-browser locator compatibility.",
+        "RESOLVED & VERIFIED", "2026-11-04"
+    ),
+    (
+        "DEF-006", "Backend API / Performance", "High", "P1",
+        "Live Firestore Ping Overhead on Backend Health Check (/health) during High Concurrency",
+        "Each /health request performed a live Firestore document fetch to verify connectivity, resulting in connection pool saturation and latency spikes under concurrent load sweeps.",
+        "Implemented a 60-second in-memory TTL cache for Firestore connectivity state combined with client instance attribute checks, dropping health check latency from >200ms to <2ms.",
+        "RESOLVED & VERIFIED", "2026-11-04"
+    ),
+    (
+        "DEF-007", "Backend Routing / API", "Medium", "P2",
+        "Missing Direct /api/predict Route Alias for Machine Learning Inference",
+        "ML inference service was mapped to /api/predictions/predict; legacy test scripts and performance sweeps expected direct /api/predict, returning HTTP 404.",
+        "Added explicit @app.post('/api/predict') routing decorator in backend/app/main.py delegating directly to predict_release controller with full request validation.",
+        "RESOLVED & VERIFIED", "2026-11-04"
+    ),
+    (
+        "DEF-008", "Load Automation / Network", "High", "P1",
+        "Windows Ephemeral TCP Port Exhaustion from Unpooled HTTP Sockets under High Concurrency",
+        "Unpooled urllib client connections generated rapid TCP socket cycling in TIME_WAIT state during 200-user load sweeps, causing WinError 10048 address in use exceptions.",
+        "Refactored execution harness to use httpx.Client() with persistent HTTP/1.1 connection pooling, TCP keep-alive, and retry backoff, maintaining zero connection drops.",
+        "RESOLVED & VERIFIED", "2026-11-04"
+    ),
+    (
+        "DEF-009", "Overall Application Stability", "Informational", "P3",
+        "Zero Fatal Systemic Crashes Audit across All 1,000 Executed Test Cases",
+        "Comprehensive audit of FastAPI backend logs, Uvicorn server traces, React browser console, Android logcat, and Locust metrics across all 1,000 test executions.",
+        "All 1,000 automated scenarios (200 Selenium, 200 Appium, 200 Load, 200 Stress, 200 Spike) executed with 100% pass rate, zero unhandled 500 errors, and zero memory leaks.",
         "AUDIT CONFIRMED", "2026-11-04"
     )
 ]

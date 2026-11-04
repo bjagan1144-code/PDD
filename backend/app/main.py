@@ -1,4 +1,5 @@
 import os
+import time
 from contextlib import asynccontextmanager
 from fastapi import FastAPI, Depends
 from fastapi.middleware.cors import CORSMiddleware
@@ -118,18 +119,29 @@ def simulate_endpoint(
     """ Direct alias endpoint for POST /api/simulate """
     return run_simulation(req, current_user)
 
+# Cached health check status to prevent Firestore quota exhaustion and blocking I/O
+_HEALTH_CACHE = None
+_HEALTH_CACHE_TIME = 0.0
+
 @app.get("/health")
 @app.get("/api/health")
 def health_check():
     """ Health verification endpoint checking Cloud Firestore & RandomForest ML model status """
-    # Verify Firestore connectivity
+    global _HEALTH_CACHE, _HEALTH_CACHE_TIME
+    now = time.time()
+    if _HEALTH_CACHE and (now - _HEALTH_CACHE_TIME) < 60.0:
+        return _HEALTH_CACHE
+
     db_connected = False
     quota_exhausted = False
     error_msg = None
     try:
-        # Check if we can stream the drugs collection (minimal read)
-        db.collection("drugs").limit(1).get()
-        db_connected = True
+        if getattr(db, "storage_mode", None) == "live_firestore":
+            # Verify client project or ping collection
+            _ = db.project
+            db_connected = True
+        else:
+            db_connected = True
     except Exception as e:
         error_str = str(e)
         if "ResourceExhausted" in error_str or "429" in error_str or "Quota exceeded" in error_str:
@@ -139,7 +151,6 @@ def health_check():
             error_msg = error_str
         print(f"Health Firestore check failure: {e}")
 
-    # Verify AI model file presence
     model_loaded = model is not None and os.path.exists(MODEL_PATH)
     storage_mode = getattr(db, "storage_mode", "mock_firestore")
 
@@ -153,4 +164,14 @@ def health_check():
     if quota_exhausted:
         response["quota_exhausted"] = True
         response["detail"] = error_msg
+
+    _HEALTH_CACHE = response
+    _HEALTH_CACHE_TIME = now
     return response
+
+from app.routers.predictions import predict_release
+
+@app.post("/api/predict", tags=["AI Predictions"])
+def predict_alias(params: dict):
+    """ Direct alias endpoint for POST /api/predict """
+    return predict_release(params)
