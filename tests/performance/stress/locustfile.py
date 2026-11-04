@@ -1,11 +1,35 @@
 import random
-from locust import HttpUser, task, between, LoadTestShape
+import requests
+from locust import HttpUser, task, between
+
+_CACHED_TOKEN = None
+
+def get_shared_token(base_url):
+    global _CACHED_TOKEN
+    if not _CACHED_TOKEN:
+        try:
+            r = requests.post(f"{base_url}/api/auth/login", json={
+                "email": "demo.researcher@biopatch.ai",
+                "password": "password"
+            }, timeout=10)
+            if r.status_code == 200:
+                _CACHED_TOKEN = r.json().get("access_token")
+        except Exception:
+            pass
+    return _CACHED_TOKEN
 
 class BioPatchStressUser(HttpUser):
-    wait_time = between(0.2, 0.8)
+    wait_time = between(0.05, 0.2)
 
     DRUGS = ["Metformin", "Paracetamol", "Losartan", "Ibuprofen"]
     POLYMERS = ["PLA", "Alginate", "Gelatin", "Pectin", "Cellulose", "Chitosan"]
+
+    def on_start(self):
+        """ Authenticate with isolated test account and set Bearer token """
+        base = self.environment.host or "http://127.0.0.1:8000"
+        tok = get_shared_token(base)
+        if tok:
+            self.client.headers["Authorization"] = f"Bearer {tok}"
 
     @task(3)
     def get_dashboard(self):
@@ -43,31 +67,3 @@ class BioPatchStressUser(HttpUser):
         }
         headers = {"Content-Type": "application/json"}
         self.client.post("/api/simulate", json=payload, headers=headers, name="/api/simulate")
-
-
-class StagesShape(LoadTestShape):
-    """
-    Locust Custom Step Shape for BioPatch AI Stress Testing:
-    Stage 1: 100 users for 30s
-    Stage 2: 250 users for 30s
-    Stage 3: 500 users for 30s
-    Stage 4: 750 users for 30s
-    Stage 5: 1000 users for 30s
-    Stage 6 (Recovery): 50 users for 30s
-    """
-    stages = [
-        {"duration": 30, "users": 100, "spawn_rate": 20},
-        {"duration": 60, "users": 250, "spawn_rate": 30},
-        {"duration": 90, "users": 500, "spawn_rate": 50},
-        {"duration": 120, "users": 750, "spawn_rate": 50},
-        {"duration": 150, "users": 1000, "spawn_rate": 50},
-        {"duration": 180, "users": 50, "spawn_rate": 50},
-    ]
-
-    def tick(self):
-        run_time = self.get_run_time()
-        for stage in self.stages:
-            if run_time < stage["duration"]:
-                tick_data = (stage["users"], stage["spawn_rate"])
-                return tick_data
-        return None

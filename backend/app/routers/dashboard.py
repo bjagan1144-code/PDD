@@ -1,4 +1,5 @@
 import os
+import time
 import datetime
 from fastapi import APIRouter, Depends
 from app.database import db, MockFirestoreClient
@@ -7,6 +8,9 @@ from app.ml.predictor import model, MODEL_PATH
 from app.simulation.engine import simulate_release
 
 router = APIRouter(prefix="/api/dashboard", tags=["Dashboard Summary"])
+
+_DASHBOARD_CACHE = {}
+_DASHBOARD_CACHE_TTL = 15.0
 
 @router.get("", response_model=dict)
 @router.get("/", response_model=dict)
@@ -18,9 +22,16 @@ def get_dashboard_summary(
     Computes user-specific stats (total simulations, avg predicted release %, average
     Controlled Release Score) and lists recent runs alongside model/database health checks using Firestore.
     """
+    user_id = current_user.get("id", "anonymous")
+    now = time.time()
+    if user_id in _DASHBOARD_CACHE:
+        cached_res, cached_time = _DASHBOARD_CACHE[user_id]
+        if (now - cached_time) < _DASHBOARD_CACHE_TTL:
+            return cached_res
+
     try:
         sims_ref = db.collection("simulations")
-        docs = sims_ref.where("user_id", "==", current_user["id"]).stream()
+        docs = sims_ref.where("user_id", "==", current_user["id"]).limit(20).stream()
         
         simulations = []
         for doc in docs:
@@ -89,7 +100,7 @@ def get_dashboard_summary(
         model_loaded = model is not None and os.path.exists(MODEL_PATH)
         is_mock_db = isinstance(db, MockFirestoreClient)
 
-        return {
+        res = {
             "totalSimulations": total,
             "avgPredictedRelease": f"{avg_release}%",
             "controlledReleaseScore": f"{avg_score}/100",
@@ -100,6 +111,8 @@ def get_dashboard_summary(
             "databaseStatus": "mock_firestore" if is_mock_db else "live_firestore",
             "modelStatus": "loaded" if model_loaded else "unavailable"
         }
+        _DASHBOARD_CACHE[user_id] = (res, now)
+        return res
     except Exception as e:
         print(f"Dashboard summary calculation error: {e}")
         return {

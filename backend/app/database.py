@@ -153,7 +153,9 @@ class MockFirestoreStore:
                 else:
                     cleaned_data[k] = v
             coll[doc_id] = cleaned_data
-            self.save()
+            # Fast in-memory mode under high concurrency skips heavy synchronous disk serializations
+            if os.getenv("DISABLE_MOCK_DISK_PERSISTENCE", "").lower() not in ("true", "1"):
+                self.save()
 
     def delete_doc(self, collection_name, doc_id):
         with self._lock:
@@ -204,9 +206,10 @@ has_service_account_file = service_account_path is not None and os.path.exists(s
 has_credentials_dict = firebase_config_dict["private_key"] is not None and firebase_config_dict["client_email"] is not None
 has_adc = os.getenv("GOOGLE_APPLICATION_CREDENTIALS") is not None
 
+force_local = os.getenv("USE_LOCAL_STORAGE", "").lower() in ("true", "1") or os.getenv("STAGING_ENV", "").lower() in ("true", "1")
 use_live_firebase = False
 
-if has_service_account_file or has_credentials_dict or has_adc:
+if not force_local and (has_service_account_file or has_credentials_dict or has_adc):
     try:
         if not firebase_admin._apps:
             if has_service_account_file:

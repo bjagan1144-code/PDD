@@ -229,3 +229,4 @@ with open(CATALOG_PATH, "w", encoding="utf-8") as f:
     json.dump(selenium_cases, f, indent=2)
 
 print(f"Updated {CATALOG_PATH} with rerun results.")
+

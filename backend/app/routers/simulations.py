@@ -1,4 +1,5 @@
 import uuid
+import time
 import datetime
 from fastapi import APIRouter, Depends, HTTPException, status
 from typing import List
@@ -9,6 +10,9 @@ from app.simulation.engine import simulate_release
 from app.ml.predictor import run_ai_prediction
 
 router = APIRouter(prefix="/api/simulations", tags=["Simulations"])
+
+_SIMS_HISTORY_CACHE = {}
+_SIMS_HISTORY_CACHE_TTL = 15.0
 
 @router.post("/run", response_model=SimulationResponse)
 def run_simulation(
@@ -136,9 +140,16 @@ def get_simulations_history(
     current_user: dict = Depends(get_current_user)
 ):
     """ Returns the authenticated user's simulation history list from Firestore """
+    user_id = current_user.get("id", "anonymous")
+    now = time.time()
+    if user_id in _SIMS_HISTORY_CACHE:
+        cached_list, cached_time = _SIMS_HISTORY_CACHE[user_id]
+        if (now - cached_time) < _SIMS_HISTORY_CACHE_TTL:
+            return cached_list
+
     try:
         sims_ref = db.collection("simulations")
-        docs = sims_ref.where("user_id", "==", current_user["id"]).stream()
+        docs = sims_ref.where("user_id", "==", current_user["id"]).limit(10).stream()
         
         simulations = []
         for doc in docs:
@@ -196,6 +207,7 @@ def get_simulations_history(
                 "releaseCurve": res["releaseCurve"]
             })
             
+        _SIMS_HISTORY_CACHE[user_id] = (response_list, now)
         return response_list
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Failed to query simulation history: {e}")

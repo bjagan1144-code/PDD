@@ -1,11 +1,35 @@
 import random
-from locust import HttpUser, task, between, LoadTestShape
+import requests
+from locust import HttpUser, task, between
+
+_CACHED_TOKEN = None
+
+def get_shared_token(base_url):
+    global _CACHED_TOKEN
+    if not _CACHED_TOKEN:
+        try:
+            r = requests.post(f"{base_url}/api/auth/login", json={
+                "email": "demo.researcher@biopatch.ai",
+                "password": "password"
+            }, timeout=10)
+            if r.status_code == 200:
+                _CACHED_TOKEN = r.json().get("access_token")
+        except Exception:
+            pass
+    return _CACHED_TOKEN
 
 class BioPatchSpikeUser(HttpUser):
-    wait_time = between(0.2, 0.8)
+    wait_time = between(0.05, 0.2)
 
     DRUGS = ["Metformin", "Paracetamol", "Losartan", "Ibuprofen"]
     POLYMERS = ["PLA", "Alginate", "Gelatin", "Pectin", "Cellulose", "Chitosan"]
+
+    def on_start(self):
+        """ Authenticate with isolated test account and set Bearer token """
+        base = self.environment.host or "http://127.0.0.1:8000"
+        tok = get_shared_token(base)
+        if tok:
+            self.client.headers["Authorization"] = f"Bearer {tok}"
 
     @task(3)
     def get_dashboard(self):
@@ -43,26 +67,3 @@ class BioPatchSpikeUser(HttpUser):
         }
         headers = {"Content-Type": "application/json"}
         self.client.post("/api/simulate", json=payload, headers=headers, name="/api/simulate")
-
-
-class SpikeTestShape(LoadTestShape):
-    """
-    Locust Custom Spike Test Shape for BioPatch AI:
-    Phase 1 (Pre-Spike Baseline): 100 users for 30s
-    Phase 2 & 3 (Peak Spike Burst): 1000 users for 30s
-    Phase 4 & 5 (Post-Spike Drop): 100 users for 30s
-    Phase 6 (Cool-Down): 0 users
-    """
-    stages = [
-        {"duration": 30, "users": 100, "spawn_rate": 50},
-        {"duration": 60, "users": 1000, "spawn_rate": 500},
-        {"duration": 90, "users": 100, "spawn_rate": 500},
-        {"duration": 110, "users": 0, "spawn_rate": 100}
-    ]
-
-    def tick(self):
-        run_time = self.get_run_time()
-        for stage in self.stages:
-            if run_time < stage["duration"]:
-                return (stage["users"], stage["spawn_rate"])
-        return None

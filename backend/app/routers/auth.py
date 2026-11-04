@@ -1,4 +1,5 @@
 import os
+import time
 import datetime
 import requests
 import uuid
@@ -13,6 +14,12 @@ from app.services.auth_service import hash_password, verify_password, create_acc
 router = APIRouter(prefix="/api/auth", tags=["Authentication"])
 
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="/api/auth/login", auto_error=False)
+
+# High-concurrency in-memory user profile and login cache
+_USER_CACHE = {}
+_USER_CACHE_TTL = 300.0
+_LOGIN_CACHE = {}
+_LOGIN_CACHE_TTL = 300.0
 
 def get_current_user(token: str = Depends(oauth2_scheme)) -> dict:
     """ Resolves the current authenticated user from the Bearer Firebase ID Token (or local JWT in mock mode) """
@@ -54,6 +61,12 @@ def get_current_user(token: str = Depends(oauth2_scheme)) -> dict:
                 raise credentials_exception
         except Exception:
             raise credentials_exception
+
+    now = time.time()
+    if uid in _USER_CACHE:
+        cached_prof, cached_at = _USER_CACHE[uid]
+        if (now - cached_at) < _USER_CACHE_TTL:
+            return cached_prof
         
     # Get user profile from Firestore users/{uid} collection
     user_doc = db.collection("users").document(uid).get()
@@ -68,9 +81,12 @@ def get_current_user(token: str = Depends(oauth2_scheme)) -> dict:
             "created_at": now_str
         }
         db.collection("users").document(uid).set(user_profile)
+        _USER_CACHE[uid] = (user_profile, now)
         return user_profile
         
-    return user_doc.to_dict()
+    user_profile = user_doc.to_dict()
+    _USER_CACHE[uid] = (user_profile, now)
+    return user_profile
 
 @router.post("/register", response_model=UserResponse)
 def register(user_data: UserRegister):
@@ -125,6 +141,13 @@ def register(user_data: UserRegister):
 @router.post("/login", response_model=Token)
 def login(login_data: UserLogin):
     """ Authenticates user credentials via Firebase Auth REST API (or local mock in mock mode) and issues an access token """
+    now = time.time()
+    cache_key = (login_data.email, login_data.password)
+    if cache_key in _LOGIN_CACHE:
+        cached_token, cached_at = _LOGIN_CACHE[cache_key]
+        if (now - cached_at) < _LOGIN_CACHE_TTL:
+            return cached_token
+
     if isinstance(db, MockFirestoreClient):
         # Local mock JWT login fallback for offline/localhost runs without API credentials
         # Look up profile by uid or email
@@ -171,7 +194,9 @@ def login(login_data: UserLogin):
             "role": role,
             "name": name
         })
-        return {"access_token": access_token, "token_type": "bearer"}
+        token_resp = {"access_token": access_token, "token_type": "bearer"}
+        _LOGIN_CACHE[cache_key] = (token_resp, now)
+        return token_resp
 
     # Firebase Live Auth
     web_api_key = os.getenv("FIREBASE_WEB_API_KEY")

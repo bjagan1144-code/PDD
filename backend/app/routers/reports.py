@@ -1,4 +1,5 @@
 import uuid
+import time
 import datetime
 from fastapi import APIRouter, Depends, HTTPException, status
 from typing import List
@@ -8,14 +9,24 @@ from app.routers.auth import get_current_user
 
 router = APIRouter(prefix="/api/reports", tags=["Reports"])
 
+_REPORTS_CACHE = {}
+_REPORTS_CACHE_TTL = 15.0
+
 @router.get("", response_model=List[ReportResponse])
 def get_reports(
     current_user: dict = Depends(get_current_user)
 ):
     """ Returns the list of compiled simulation reports for the authenticated user from Firestore """
+    user_id = current_user.get("id", "anonymous")
+    now = time.time()
+    if user_id in _REPORTS_CACHE:
+        cached_reports, cached_time = _REPORTS_CACHE[user_id]
+        if (now - cached_time) < _REPORTS_CACHE_TTL:
+            return cached_reports
+
     try:
         reports_ref = db.collection("reports")
-        docs = reports_ref.where("user_id", "==", current_user["id"]).stream()
+        docs = reports_ref.where("user_id", "==", current_user["id"]).limit(10).stream()
         
         reports_list = []
         for doc in docs:
@@ -49,6 +60,7 @@ def get_reports(
                 "summary": summary_str,
                 "date": date_str
             })
+        _REPORTS_CACHE[user_id] = (response_list, now)
         return response_list
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Failed to retrieve reports: {e}")

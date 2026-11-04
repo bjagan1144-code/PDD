@@ -1,25 +1,35 @@
 import random
+import requests
 from locust import HttpUser, task, between
 
+_CACHED_TOKEN = None
+
+def get_shared_token(base_url):
+    global _CACHED_TOKEN
+    if not _CACHED_TOKEN:
+        try:
+            r = requests.post(f"{base_url}/api/auth/login", json={
+                "email": "demo.researcher@biopatch.ai",
+                "password": "password"
+            }, timeout=10)
+            if r.status_code == 200:
+                _CACHED_TOKEN = r.json().get("access_token")
+        except Exception:
+            pass
+    return _CACHED_TOKEN
+
 class BioPatchUser(HttpUser):
-    wait_time = between(0.1, 0.5)
+    wait_time = between(0.05, 0.2)
 
     DRUGS = ["Metformin", "Paracetamol", "Losartan", "Ibuprofen"]
     POLYMERS = ["PLA", "Alginate", "Gelatin", "Pectin", "Cellulose", "Chitosan"]
-    token = None
 
     def on_start(self):
         """ Authenticate with isolated test account and set Bearer token """
-        if not BioPatchUser.token:
-            res = self.client.post("/api/auth/login", json={
-                "email": "demo.researcher@biopatch.ai",
-                "password": "password"
-            }, name="/api/auth/login")
-            if res.status_code == 200:
-                BioPatchUser.token = res.json().get("access_token")
-        
-        if BioPatchUser.token:
-            self.client.headers["Authorization"] = f"Bearer {BioPatchUser.token}"
+        base = self.environment.host or "http://127.0.0.1:8000"
+        tok = get_shared_token(base)
+        if tok:
+            self.client.headers["Authorization"] = f"Bearer {tok}"
 
     @task(3)
     def get_dashboard(self):
